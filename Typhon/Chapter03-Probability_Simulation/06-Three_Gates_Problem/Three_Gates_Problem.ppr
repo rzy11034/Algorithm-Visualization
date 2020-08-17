@@ -1,0 +1,27 @@
+﻿program Three_Gates_Problem;
+
+{$mode objfpc}{$H+}
+
+uses {$IFDEF UNIX}
+  cthreads, {$ENDIF}
+  Classes,
+  SysUtils,
+  ThreeGatesExperiment { you can add units after this };
+
+var
+  N: integer = 10000000;
+  exp: TThreeGatesExperiment;
+
+begin
+  try
+    exp := TThreeGatesExperiment.Create(N);
+    exp.Run(True);
+    Writeln;
+    exp.Run(False);
+
+    Readln;
+  except
+    on E: Exception do
+      Writeln(E.ClassName, ': ', E.Message);
+  end;
+end.

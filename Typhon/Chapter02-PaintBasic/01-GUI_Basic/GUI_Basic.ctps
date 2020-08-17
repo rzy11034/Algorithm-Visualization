@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Debug"/>
+    <Units>
+      <Unit>
+        <Filename Value="GUI_Basic.ppr"/>
+        <FRMtype Value="0"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="27" Y="7"/>
+        <UsageCount Value="301"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
+        <FRMtype Value="200"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="AlgoForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <TopLine Value="28"/>
+        <CursorPos X="60" Y="43"/>
+        <UsageCount Value="295"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="45"/>
+        <CursorPos Y="128"/>
+        <UsageCount Value="256"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\components\pl_BGRAbitmap\source\bgrapixel.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="23"/>
+        <CursorPos X="3" Y="33"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\lcl\graphics.pp"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="Graphics"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="185"/>
+        <CursorPos X="3" Y="202"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\components\pl_BGRAbitmap\source\bgracanvas2d.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="BGRACanvas2D"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="315"/>
+        <CursorPos X="14" Y="332"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\components\pl_BGRAbitmap\source\bgragraphics.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="BGRAGraphics"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="83"/>
+        <CursorPos X="3" Y="99"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\fpcsrc\packages\fcl-image\src\fpcanvas.pp"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="FPCanvas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="94"/>
+        <CursorPos X="3" Y="111"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\components\pl_BGRAbitmap\source\bgracustombitmap.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="155"/>
+        <CursorPos X="15" Y="170"/>
+        <UsageCount Value="10"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="2">
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
+        <Caret Line="10" Column="11"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
+        <Caret Line="48" Column="33" TopLine="34"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
+        <Caret Line="132" TopLine="53"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

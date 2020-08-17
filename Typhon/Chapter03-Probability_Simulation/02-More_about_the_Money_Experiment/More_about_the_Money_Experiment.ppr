@@ -1,0 +1,22 @@
+program More_about_the_Money_Experiment;
+
+{$mode objfpc}{$H+}
+
+uses {$IFDEF UNIX}
+  cthreads, {$ENDIF}
+  Interfaces, // this includes the CT adLCL widgetset
+  Forms,
+  VisibleDSA.AlgoForm,
+  VisibleDSA.AlgoVisualizer,
+  VisibleDSA.AlgoVisHelper { you can add units after this };
+
+{$R *.res}
+
+begin
+  RequireDerivedFormResource := True;
+  Application.Scaled := True;
+  Application.Initialize;
+  Application.CreateForm(TAlgoForm, AlgoForm);
+  Application.Run;
+end.
+

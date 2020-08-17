@@ -1,0 +1,22 @@
+﻿program Animation_Basic;
+
+{$mode objfpc}{$H+}
+
+uses {$IFDEF UNIX}
+  cthreads, {$ENDIF}
+  Interfaces, // this includes the CT adLCL widgetset
+  Forms,
+  VisibleDSA.Circle,
+  VisibleDSA.AlgoForm,
+  VisibleDSA.AlgoVisHelper,
+  VisibleDSA.AlgoVisualizer { you can add units after this };
+
+{$R *.res}
+
+begin
+  RequireDerivedFormResource := True;
+  Application.Scaled:=True;
+  Application.Initialize;
+  Application.CreateForm(TAlgoForm, AlgoForm);
+  Application.Run;
+end.

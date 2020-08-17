@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Debug"/>
+    <Units>
+      <Unit>
+        <Filename Value="Winning_the_Prize.ppr"/>
+        <FRMtype Value="0"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="23" Y="20"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\WinningPrize.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="45"/>
+        <CursorPos X="5" Y="79"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\..\..\..\..\Desktop\n1pr8g\03-Probability-Simulation\07-Winning-the-Prize\src\WinningPrize.java"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="19"/>
+        <CursorPos X="31" Y="24"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Java"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="5">
+      <Position>
+        <Filename Value="Source\WinningPrize.pas"/>
+        <Caret Line="36" Column="21" TopLine="22"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\WinningPrize.pas"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\WinningPrize.pas"/>
+        <Caret Line="18" Column="30"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\WinningPrize.pas"/>
+        <Caret Line="53" TopLine="44"/>
+      </Position>
+      <Position>
+        <Filename Value="Winning_the_Prize.ppr"/>
+        <Caret Line="12" Column="34"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\WinningPrize.pas"/>
+        <Caret Line="6" Column="24"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

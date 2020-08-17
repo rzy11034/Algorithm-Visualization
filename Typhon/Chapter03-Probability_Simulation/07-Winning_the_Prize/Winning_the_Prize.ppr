@@ -1,0 +1,29 @@
+﻿program Winning_the_Prize;
+
+{$mode objfpc}{$H+}
+
+uses {$IFDEF UNIX}
+  cthreads, {$ENDIF}
+  Classes,
+  SysUtils,
+  WinningPrize { you can add units after this };
+
+var
+  chance: double = 0.2;
+  playTime: integer = 5;
+  n: integer = 1000000;
+  exp: TWinningPrize;
+
+begin
+  try
+    exp := TWinningPrize.Create(chance, playTime, n);
+    exp.Run;
+    exp.Free;
+
+    WriteLn('-------------------');
+    Readln;
+  except
+    on E: Exception do
+      Writeln(E.ClassName, ': ', E.Message);
+  end;
+end.

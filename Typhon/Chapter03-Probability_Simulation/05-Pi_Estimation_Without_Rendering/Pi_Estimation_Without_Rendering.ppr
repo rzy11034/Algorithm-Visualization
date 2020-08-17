@@ -1,0 +1,27 @@
+﻿program Pi_Estimation_Without_Rendering;
+
+{$mode objfpc}{$H+}
+
+uses {$IFDEF UNIX}
+  cthreads, {$ENDIF}
+  Classes,
+  SysUtils,
+  VisibleDSA.MonteCarloExperiment;
+
+var
+  Exp: TMonteCarloExperiment;
+  squareSide: integer = 800;
+  N: integer = 100000000;
+
+begin
+  try
+    Exp := TMonteCarloExperiment.Create(squareSide, N);
+    Exp.SetOutputInterval(100000);
+    Exp.Run;
+    WriteLn('------------');
+    Readln;
+  except
+    on E: Exception do
+      Writeln(E.ClassName, ': ', E.Message);
+  end;
+end.
