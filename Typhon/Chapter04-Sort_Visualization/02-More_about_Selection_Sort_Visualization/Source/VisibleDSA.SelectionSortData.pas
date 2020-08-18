@@ -14,7 +14,12 @@ type
     _numbers: specialize TArray<integer>;
 
   public
+    OrderedIndex: integer;         // [0...orderedIndex) 是有序的
+    CurrentCompareIndex: integer;  // 当前正在比较的元素索引
+    CurrentMinIndex: integer;     // 当前找到的最小元素的索引
+
     constructor Create(n, randomBound: integer);
+    destructor Destroy; override;
 
     procedure Swap(i, j: integer);
 
@@ -30,12 +35,20 @@ constructor TSelectionSortData.Create(n, randomBound: integer);
 var
   i: integer;
 begin
-  Randomize;
+   OrderedIndex := -1;
+  CurrentCompareIndex := -1;
+  CurrentMinIndex := -1;
 
+  Randomize;
   SetLength(_numbers, n);
 
   for i := 0 to N - 1 do
     _numbers[i] := Random(randomBound) + 1;
+end;
+
+destructor TSelectionSortData.Destroy;
+begin
+  inherited Destroy;
 end;
 
 function TSelectionSortData.Length: integer;
