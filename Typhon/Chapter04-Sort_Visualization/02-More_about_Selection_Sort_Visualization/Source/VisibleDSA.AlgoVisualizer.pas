@@ -21,7 +21,7 @@ type
     _data: TSelectionSortData;
     _form: TForm;
 
-    procedure _setData(orderedIndex, currentMinIndex, currentCompareIndex: integer);
+    procedure __setData(orderedIndex, currentMinIndex, currentCompareIndex: integer);
 
   public
     constructor Create(form: TForm; sceneWidth, sceneHeight, n: integer);
@@ -84,21 +84,21 @@ procedure TAlgoVisualizer.Run;
 var
   i, j, minIndex: integer;
 begin
-  _setData(0, -1, -1);
+  __setData(0, -1, -1);
 
   for i := 0 to _data.Length - 1 do
   begin
     minIndex := i;
-    _setData(i, minIndex, -1);
+    __setData(i, minIndex, -1);
 
     for j := i + 1 to _data.Length - 1 do
     begin
-      _setData(i, minIndex, j);
+      __setData(i, minIndex, j);
 
       if _data.GetValue(j) < _data.GetValue(minIndex) then
       begin
         minIndex := j;
-        _setData(i, minIndex, j);
+        __setData(i, minIndex, j);
       end;
 
       if AlgoForm.Stop then
@@ -106,16 +106,16 @@ begin
     end;
 
     _data.swap(i, minIndex);
-    _setData(i+1, -1, -1);
+    __setData(i+1, -1, -1);
 
     if AlgoForm.Stop then
       Exit;
   end;
 
-  _setData(_data.Length, -1, -1);
+  __setData(_data.Length, -1, -1);
 end;
 
-procedure TAlgoVisualizer._setData(orderedIndex, currentMinIndex, currentCompareIndex: integer);
+procedure TAlgoVisualizer.__setData(orderedIndex, currentMinIndex, currentCompareIndex: integer);
 begin
   _data.OrderedIndex := orderedIndex;
   _data.CurrentMinIndex := currentMinIndex;

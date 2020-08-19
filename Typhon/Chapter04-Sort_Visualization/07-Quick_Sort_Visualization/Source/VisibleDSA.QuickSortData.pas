@@ -1,4 +1,4 @@
-﻿unit VisibleDSA.MergeSortData;
+﻿unit VisibleDSA.QuickSortData;
 
 {$mode objfpc}{$H+}
 
@@ -12,7 +12,7 @@ uses
 type
   ArrType = (Default, NearlyOrdered);
 
-  TMergeSortData = class
+  TQuickSortData = class
   public
     L: integer;
     R: integer;
@@ -33,9 +33,9 @@ implementation
 type
   TArrayHelper_int = specialize TArrayHelper<integer>;
 
-{ TMergeSortData }
+{ TQuickSortData }
 
-constructor TMergeSortData.Create(n, randomBound: integer; dataType: ArrType);
+constructor TQuickSortData.Create(n, randomBound: integer; dataType: ArrType);
 var
   i, swapTime, a, b: integer;
 begin
@@ -64,17 +64,17 @@ begin
   end;
 end;
 
-destructor TMergeSortData.Destroy;
+destructor TQuickSortData.Destroy;
 begin
   inherited Destroy;
 end;
 
-function TMergeSortData.Length: integer;
+function TQuickSortData.Length: integer;
 begin
   Result := System.Length(Numbers);
 end;
 
-function TMergeSortData.GetValue(index: integer): integer;
+function TQuickSortData.GetValue(index: integer): integer;
 begin
   if (index < 0) or (index >= Length) then
     raise Exception.Create('Invalid index to access Sort Data.');
@@ -82,7 +82,7 @@ begin
   Result := Numbers[index];
 end;
 
-procedure TMergeSortData.Swap(i, j: integer);
+procedure TQuickSortData.Swap(i, j: integer);
 var
   temp: integer;
 begin

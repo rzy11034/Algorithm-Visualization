@@ -39,16 +39,15 @@
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="113"/>
-        <CursorPos X="80" Y="113"/>
+        <CursorPos X="19" Y="24"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.SelectionSortData.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
         <TopLine Value="30"/>
         <CursorPos X="44" Y="46"/>
@@ -127,7 +126,7 @@
       </Position>
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
-        <Caret Line="24" Column="73" TopLine="7"/>
+        <Caret Line="24" Column="24"/>
       </Position>
     </JumpHistory>
     <RunParams>

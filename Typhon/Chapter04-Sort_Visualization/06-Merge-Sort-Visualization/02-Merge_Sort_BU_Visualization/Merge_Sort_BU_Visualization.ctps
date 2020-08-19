@@ -6,7 +6,7 @@
     <BuildModes Active="Debug"/>
     <Units>
       <Unit>
-        <Filename Value="Insertion_Sort_Visualization.ppr"/>
+        <Filename Value="Merge_Sort_BU_Visualization.ppr"/>
         <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
         <CursorPos Y="20"/>
@@ -29,6 +29,7 @@
         <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="2"/>
+        <TopLine Value="28"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
@@ -37,48 +38,27 @@
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="84"/>
-        <CursorPos X="31" Y="108"/>
+        <TopLine Value="142"/>
+        <CursorPos X="14" Y="158"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
-        <Filename Value="Source\VisibleDSA.InsertionSortData.pas"/>
+        <Filename Value="Source\VisibleDSA.MergeSortData.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="4"/>
-        <CursorPos X="12" Y="12"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="6">
+    <JumpHistory HistoryIndex="1">
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
-        <Caret Line="24" Column="51" TopLine="7"/>
+        <Caret TopLine="19"/>
       </Position>
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
-        <Caret Line="97" Column="14" TopLine="64"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
-        <Caret Line="93" Column="64" TopLine="73"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
-        <Caret Line="101" Column="30" TopLine="85"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.InsertionSortData.pas"/>
-        <Caret Line="12" Column="21"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
-        <Caret Line="108" Column="31" TopLine="84"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
-        <Caret Line="24" Column="24" TopLine="7"/>
+        <Caret Line="153" Column="61" TopLine="141"/>
       </Position>
     </JumpHistory>
     <RunParams>

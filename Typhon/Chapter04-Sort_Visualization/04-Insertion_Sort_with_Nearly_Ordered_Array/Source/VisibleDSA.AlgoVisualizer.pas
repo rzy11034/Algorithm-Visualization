@@ -21,7 +21,7 @@ type
     _data: TInsertionSortData;
     _form: TForm;
 
-    procedure _setData(orderedIndex, currentIndex: integer);
+    procedure __setData(orderedIndex, currentIndex: integer);
 
   public
     constructor Create(form: TForm; sceneWidth, sceneHeight, n: integer);
@@ -81,7 +81,7 @@ procedure TAlgoVisualizer.Run;
 var
   i, j: integer;
 begin
-  _setData(0, -1);
+  __setData(0, -1);
 
   for i := 0 to _data.Length - 1 do
   begin
@@ -90,7 +90,7 @@ begin
     while (j > 0) and (_data.GetValue(j) < _data.GetValue(j - 1)) do
     begin
       _data.swap(j, j - 1);
-      _setData(i + 1, j - 1);
+      __setData(i + 1, j - 1);
 
       j -= 1;
 
@@ -102,10 +102,10 @@ begin
       Exit;
   end;
 
-  _setData(_data.Length, -1);
+  __setData(_data.Length, -1);
 end;
 
-procedure TAlgoVisualizer._setData(orderedIndex, currentIndex: integer);
+procedure TAlgoVisualizer.__setData(orderedIndex, currentIndex: integer);
 begin
   _data.OrderedIndex := orderedIndex;
   _data.CurrentIndex := currentIndex;

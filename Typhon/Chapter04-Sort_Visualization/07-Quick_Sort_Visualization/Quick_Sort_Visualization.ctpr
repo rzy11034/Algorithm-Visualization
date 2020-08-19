@@ -5,7 +5,7 @@
     <PathDelim Value="\"/>
     <General>
       <SessionStorage Value="InProjectDir"/>
-      <Title Value="Merge_Sort_TD_Visualization"/>
+      <Title Value="Quick_Sort_Visualization"/>
       <Scaled Value="True"/>
       <ResourceType Value="res"/>
       <UseXPManifest Value="True"/>
@@ -43,6 +43,7 @@
             <Debugging>
               <DebugInfoType Value="dsDwarf2Set"/>
               <TrashVariables Value="True"/>
+              <UseExternalDbgSyms Value="True"/>
             </Debugging>
             <Options>
               <Win32>
@@ -90,15 +91,12 @@
     </RunParams>
     <RequiredPackages>
       <Item>
-        <PackageName Value="pl_BGRAcontrols"/>
-      </Item>
-      <Item>
         <PackageName Value="adLCL"/>
       </Item>
     </RequiredPackages>
     <Units>
       <Unit>
-        <Filename Value="Merge_Sort_TD_Visualization.ppr"/>
+        <Filename Value="Quick_Sort_Visualization.ppr"/>
         <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
       </Unit>
@@ -119,7 +117,7 @@
         <IsPartOfProject Value="True"/>
       </Unit>
       <Unit>
-        <Filename Value="Source\VisibleDSA.MergeSortData.pas"/>
+        <Filename Value="Source\VisibleDSA.QuickSortData.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
     </Units>

@@ -7,6 +7,7 @@ interface
 uses
   Classes,
   SysUtils,
+  Math,
   Graphics,
   Forms,
   BGRACanvas2D,
@@ -137,28 +138,32 @@ procedure TAlgoVisualizer.Run;
     end;
   end;
 
-  procedure __mergeSort__(l, r: integer);
-  var
-    mid: integer;
-  begin
-    if AlgoForm.Stop then
-      Exit;
-
-    if (l >= r) then
-      Exit;
-
-    __setData(l, r, -1);
-
-    mid := l + (r - l) div 2;
-
-    __mergeSort__(l, mid);
-    __mergeSort__(mid + 1, r);
-    __merge__(l, mid, r);
-  end;
-
+var
+  sz, i: integer;
 begin
   __setData(-1, -1, -1);
-  __mergeSort__(0, _data.Length - 1);
+
+  sz := 1;
+  while sz < _data.Length do
+  begin
+    i := 0;
+    while i < _data.Length - sz do
+    begin
+      // 对 arr[i...i+sz-1] 和 arr[i+sz...i+2*sz-1] 进行归并
+      __merge__(i, i + sz - 1, Min(i + sz + sz - 1, _data.Length - 1));
+
+      i += sz * 2;
+
+      if AlgoForm.Stop then
+        Exit;
+    end;
+
+    sz *= 2;
+
+    if AlgoForm.Stop then
+      Exit;
+  end;
+
   __setData(0, _data.Length - 1, _data.Length - 1);
 end;
 

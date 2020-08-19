@@ -1,11 +1,9 @@
-﻿program Merge_Sort_TD_Visualization;
+program Quick_Sort_Visualization;
 
 {$mode objfpc}{$H+}
 
-uses
- {$IFDEF UNIX}
-  cthreads,
- {$ENDIF}
+uses {$IFDEF UNIX}
+  cthreads, {$ENDIF}
   Interfaces, // this includes the CT adLCL widgetset
   Forms,
   VisibleDSA.AlgoForm;
@@ -13,9 +11,11 @@ uses
 {$R *.res}
 
 begin
-  RequireDerivedFormResource := true;
-  Application.Scaled:=True;
+  RequireDerivedFormResource := True;
+  Application.Scaled := True;
   Application.Initialize;
   Application.CreateForm(TAlgoForm, AlgoForm);
   Application.Run;
 end.
+
+
