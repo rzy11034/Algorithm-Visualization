@@ -11,7 +11,7 @@ uses
 type
   TSelectionSortData = class
   private
-    _numbers: specialize TArray<integer>;
+    _numbers: array of integer;
 
   public
     constructor Create(n, randomBound: integer);

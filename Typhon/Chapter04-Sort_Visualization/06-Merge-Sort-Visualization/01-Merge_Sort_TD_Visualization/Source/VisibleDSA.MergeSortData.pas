@@ -1,4 +1,4 @@
-﻿unit VisibleDSA.InsertionSortData;
+﻿unit VisibleDSA.MergeSortData;
 
 {$mode objfpc}{$H+}
 
@@ -12,7 +12,7 @@ uses
 type
   ArrType = (Default, NearlyOrdered);
 
-  TInsertionSortData = class
+  TMergeSortData = class
   private
     _numbers: array of integer;
 
@@ -20,7 +20,7 @@ type
     OrderedIndex: integer;  // [0...orderedIndex) 是有序的
     CurrentIndex: integer;  // 当前元素的索引
 
-    constructor Create(n, randomBound: integer; dataType: ArrType = NearlyOrdered);
+    constructor Create(n, randomBound: integer; dataType: ArrType = ArrType.Default);
     destructor Destroy; override;
 
     procedure Swap(i, j: integer);
@@ -34,9 +34,9 @@ implementation
 type
   TArrayHelper_int = specialize TArrayHelper<integer>;
 
-{ TInsertionSortData }
+{ TMergeSortData }
 
-constructor TInsertionSortData.Create(n, randomBound: integer; dataType: ArrType);
+constructor TMergeSortData.Create(n, randomBound: integer; dataType: ArrType);
 var
   i, swapTime, a, b: integer;
 begin
@@ -64,17 +64,17 @@ begin
   end;
 end;
 
-destructor TInsertionSortData.Destroy;
+destructor TMergeSortData.Destroy;
 begin
   inherited Destroy;
 end;
 
-function TInsertionSortData.Length: integer;
+function TMergeSortData.Length: integer;
 begin
   Result := System.Length(_numbers);
 end;
 
-function TInsertionSortData.GetValue(index: integer): integer;
+function TMergeSortData.GetValue(index: integer): integer;
 begin
   if (index < 0) or (index >= Length) then
     raise Exception.Create('Invalid index to access Sort Data.');
@@ -82,7 +82,7 @@ begin
   Result := _numbers[index];
 end;
 
-procedure TInsertionSortData.Swap(i, j: integer);
+procedure TMergeSortData.Swap(i, j: integer);
 var
   temp: integer;
 begin

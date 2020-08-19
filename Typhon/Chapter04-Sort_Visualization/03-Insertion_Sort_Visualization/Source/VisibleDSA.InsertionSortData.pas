@@ -11,7 +11,7 @@ uses
 type
   TInsertionSortData = class
   private
-    _numbers: specialize TArray<integer>;
+    _numbers: array of integer;
 
   public
     OrderedIndex: integer;  // [0...orderedIndex) 是有序的

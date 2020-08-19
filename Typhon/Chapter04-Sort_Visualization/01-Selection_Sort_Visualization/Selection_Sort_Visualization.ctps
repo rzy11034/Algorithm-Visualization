@@ -20,9 +20,8 @@
         <ComponentName Value="AlgoForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="35"/>
+        <TopLine Value="46"/>
         <CursorPos X="32" Y="38"/>
         <UsageCount Value="25"/>
         <Loaded Value="True"/>
@@ -48,8 +47,10 @@
       <Unit>
         <Filename Value="Source\VisibleDSA.SelectionSortData.pas"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
-        <CursorPos X="53" Y="63"/>
+        <TopLine Value="4"/>
+        <CursorPos X="31" Y="14"/>
         <UsageCount Value="25"/>
         <Loaded Value="True"/>
       </Unit>

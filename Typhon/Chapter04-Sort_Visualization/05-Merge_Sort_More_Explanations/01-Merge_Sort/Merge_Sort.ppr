@@ -1,0 +1,38 @@
+﻿program Merge_Sort;
+
+{$mode objfpc}{$H+}
+
+uses
+ {$IFDEF UNIX}
+  cthreads,
+ {$ENDIF}
+  Classes,
+  SysUtils,
+  VisibleDSA.MergeSort,
+  VisibleDSA.SortTestHelper;
+
+  procedure Run();
+  var
+    arr: TArray_int;
+    i: integer;
+  begin
+    SetLength(arr, 8);
+
+    for i := 0 to 7 do
+    begin
+      arr[i] := 8 - i;
+    end;
+
+    TMergeSort.Sort(arr);
+    TSortTestHelper.PrintArray(arr);
+  end;
+
+begin
+  try
+    Run;
+    Readln;
+  except
+    on E: Exception do
+      Writeln(E.ClassName, ': ', E.Message);
+  end;
+end.
