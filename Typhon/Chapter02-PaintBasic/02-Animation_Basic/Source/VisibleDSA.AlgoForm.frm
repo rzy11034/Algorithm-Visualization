@@ -1,12 +1,11 @@
 object AlgoForm: TAlgoForm
-  Left = 581
-  Height = 240
-  Top = 149
-  Width = 320
+  Left = 418
+  Height = 192
+  Top = 119
+  Width = 256
   Caption = 'AlgoForm'
-  ClientHeight = 240
-  ClientWidth = 320
-  DesignTimePPI = 120
+  ClientHeight = 192
+  ClientWidth = 256
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
@@ -14,14 +13,15 @@ object AlgoForm: TAlgoForm
   Position = poDesktopCenter
   object BGRAVirtualScreen: TBGRAVirtualScreen
     Left = 0
-    Height = 240
+    Height = 192
     Top = 0
-    Width = 320
+    Width = 256
     OnRedraw = BGRAVirtualScreenRedraw
     Align = alClient
     Alignment = taLeftJustify
     Color = clNone
     ParentColor = False
+    ParentFont = False
     TabOrder = 0
     OnMouseDown = BGRAVirtualScreenMouseDown
   end

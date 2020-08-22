@@ -91,6 +91,9 @@
     </RunParams>
     <RequiredPackages>
       <Item>
+        <PackageName Value="pl_BGRAcontrols"/>
+      </Item>
+      <Item>
         <PackageName Value="adLCL"/>
       </Item>
     </RequiredPackages>

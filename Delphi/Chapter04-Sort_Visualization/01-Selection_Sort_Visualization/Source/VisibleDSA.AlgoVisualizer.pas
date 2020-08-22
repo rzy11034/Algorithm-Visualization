@@ -41,7 +41,6 @@ begin
   _data := TSelectionSortData.Create(n, _height);
 
   _form.Caption := 'Selection Sort Visualization';
-
 end;
 
 destructor TAlgoVisualizer.Destroy;
@@ -80,11 +79,8 @@ begin
 
     _data.swap(i, minIndex);
 
-    TAlgoVisHelper.Pause(40);
+    TAlgoVisHelper.Pause(100);
     AlgoForm.PaintBox.Repaint;
-
-    if AlgoForm.Stop then
-      Break;
   end;
 end;
 

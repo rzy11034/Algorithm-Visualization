@@ -26,13 +26,14 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
 
   private
+    _thread: TThread;
     _av: TAlgoVisualizer;
     _stop: Boolean;
 
     procedure _desktopCenter;
 
   public
-    property Stop: boolean read _stop;
+    property Stop: Boolean read _stop;
 
   end;
 
@@ -46,12 +47,15 @@ implementation
 
 procedure TAlgoForm.FormActivate(Sender: TObject);
 begin
-  _av.Run;
+  _thread := TThread.CreateAnonymousThread(_av.Run);
+  _thread.FreeOnTerminate := true;
+  _thread.Start;
 end;
 
 procedure TAlgoForm.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
-  _stop := True;
+  _thread.Suspended := True;
+  _thread.Terminate
 end;
 
 procedure TAlgoForm.FormCreate(Sender: TObject);
@@ -76,11 +80,11 @@ procedure TAlgoForm._desktopCenter;
 var
   top, left: Double;
 begin
-  top := ((Screen.Height div 2) - (Self.Height div 2)) * (Self.Height / Screen.Height);
-  left := ((Screen.Width div 2) - (Self.Width div 2)) * 0.9;
+  top := ((Screen.Height div 2) - (self.Height div 2)) * (self.Height / Screen.Height);
+  left := ((Screen.Width div 2) - (self.Width div 2)) * 0.9;
 
-  Self.Top := Trunc(top);
-  Self.Left := Trunc(left);
+  self.top := Trunc(top);
+  self.left := Trunc(left);
 end;
 
 end.

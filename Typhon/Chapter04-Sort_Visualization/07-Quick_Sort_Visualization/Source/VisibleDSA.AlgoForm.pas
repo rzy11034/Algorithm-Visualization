@@ -25,6 +25,7 @@ type
   private
     _av: TAlgoVisualizer;
     _stop: boolean;
+    t: TThread;
 
   public
     property Stop: boolean read _stop;
@@ -47,12 +48,13 @@ end;
 
 procedure TAlgoForm.FormActivate(Sender: TObject);
 begin
-  _av.Run;
+  TThread.CreateAnonymousThread(_av.run).Start;
 end;
 
 procedure TAlgoForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
-  _stop := True;
+  //_stop := true;
+  t.Terminate;
 end;
 
 procedure TAlgoForm.FormCreate(Sender: TObject);
@@ -61,9 +63,9 @@ begin
   ClientHeight := 600;
   Position := TPosition.poDesktopCenter;
   BorderStyle := TFormBorderStyle.bsSingle;
-  DoubleBuffered := True;
+  DoubleBuffered := true;
   Caption := 'AlgoForm';
-  _stop := False;
+  _stop := false;
 
   BGRAVirtualScreen.Color := clForm;
 

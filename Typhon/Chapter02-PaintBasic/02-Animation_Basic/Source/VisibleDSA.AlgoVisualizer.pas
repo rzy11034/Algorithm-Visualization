@@ -104,7 +104,7 @@ begin
     circle.Move(0, 0, _canvasWidth, _canvasHeight);
   end;
 
-  TAlgoVisHelper.Pause(10);
+  TAlgoVisHelper.Pause(5);
   AlgoForm.BGRAVirtualScreen.RedrawBitmap;
 end;
 

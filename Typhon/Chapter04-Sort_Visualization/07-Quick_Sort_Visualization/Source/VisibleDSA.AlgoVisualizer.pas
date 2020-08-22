@@ -7,22 +7,21 @@ interface
 uses
   Classes,
   SysUtils,
-  Math,
   Graphics,
   Forms,
   BGRACanvas2D,
   VisibleDSA.AlgoVisHelper,
-  VisibleDSA.MergeSortData;
+  VisibleDSA.QuickSortData;
 
 type
   TAlgoVisualizer = class(TObject)
   private
     _width: integer;
     _height: integer;
-    _data: TMergeSortData;
+    _data: TQuickSortData;
     _form: TForm;
 
-    procedure __setData(l, r, mergeIndex: integer);
+    procedure __setData(l, r, fixedPivot, curPivot, curElement: integer);
 
   public
     constructor Create(form: TForm; sceneWidth, sceneHeight, n: integer);
@@ -37,9 +36,6 @@ implementation
 uses
   VisibleDSA.AlgoForm;
 
-type
-  TArray_int = array of integer;
-
 { TAlgoVisualizer }
 
 constructor TAlgoVisualizer.Create(form: TForm; sceneWidth, sceneHeight, n: integer);
@@ -47,7 +43,7 @@ begin
   _form := form;
   _width := form.ClientWidth;
   _height := form.ClientHeight;
-  _data := TMergeSortData.Create(n, _height);
+  _data := TQuickSortData.Create(n, _height);
 
   _form.Caption := 'Insertion Sort Visualization';
 
@@ -74,7 +70,11 @@ begin
     else
       TAlgoVisHelper.SetFill(CL_GREY);
 
-    if (i >= _data.L) and (i <= _data.MergeIndex) then
+    if i = _data.CurPivot then
+      TAlgoVisHelper.SetFill(CL_INDIGO);
+    if i = _data.CurElement then
+      TAlgoVisHelper.SetFill(CL_LIGHTBLUE);
+    if _data.FixedPivots[i] then
       TAlgoVisHelper.SetFill(CL_RED);
 
     TAlgoVisHelper.FillRectangle(canvas, i * w, _height - _data.GetValue(i), w - 1, _data.GetValue(i));
@@ -83,95 +83,66 @@ end;
 
 procedure TAlgoVisualizer.Run;
 
-  function __arrayCopyOfRange__(arr: TArray_int; l, r: integer): TArray_int;
+  function __partition__(l, r: integer): integer;
   var
-    res: TArray_int;
-    i: integer;
+    v, j, i: integer;
   begin
-    SetLength(res, r - l + 1);
+    __setData(l, r, -1, l, -1);
 
-    for i := l to r do
-      res[i - l] := arr[i];
-
-    Result := res;
-  end;
-
-  procedure __merge__(l, mid, r: integer);
-  var
-    aux: array of integer;
-    i, leftIndex, rightIndex: integer;
-  begin
-    aux := __arrayCopyOfRange__(_data.Numbers, l, r);
-
-    // 初始化，leftIndex 指向左半部分的起始索引位置 l；
-    // rightIndex 指向右半部分起始索引位置 mid+1
-    leftIndex := l;
-    rightIndex := mid + 1;
-
-    for i := l to r do
+    j := l; // arr[l+1...j] < v ; arr[j+1...i) > v
+    for i := l + 1 to r do
     begin
-      if leftIndex > mid then // 如果左半部分元素已经全部处理完毕
+      __setData(l, r, -1, l, i);
+
+      if (_data.GetValue(i) < v) then
       begin
-        _data.Numbers[i] := aux[rightIndex - l];
-        rightIndex += 1;
-      end
-      else if rightIndex > r then // 如果右半部分元素已经全部处理完毕
-      begin
-        _data.Numbers[i] := aux[leftIndex - l];
-        leftIndex += 1;
-      end
-      else if aux[leftIndex - l] < aux[rightIndex - l] then // 左半部分所指元素 < 右半部分所指元素
-      begin
-        _data.Numbers[i] := aux[leftIndex - l];
-        leftIndex += 1;
-      end
-      else // 左半部分所指元素 >= 右半部分所指元素
-      begin
-        _data.Numbers[i] := aux[rightIndex - l];
-        rightIndex += 1;
+        j += 1;
+        _data.Swap(j, i);
+        __setData(l, r, -1, l, i);
       end;
-
-      __setData(l, r, i);
-
-      if AlgoForm.Stop then
-        Exit;
     end;
+
+    _data.swap(l, j);
+    __setData(l, r, j, -1, -1);
+
+    Result := j;
   end;
 
-var
-  sz, i: integer;
-begin
-  __setData(-1, -1, -1);
-
-  sz := 1;
-  while sz < _data.Length do
+  procedure __quickSort__(l, r: integer);
+  var
+    p: integer;
   begin
-    i := 0;
-    while i < _data.Length - sz do
+    if l > r then
+      Exit;
+
+    if l = r then
     begin
-      // 对 arr[i...i+sz-1] 和 arr[i+sz...i+2*sz-1] 进行归并
-      __merge__(i, i + sz - 1, Min(i + sz + sz - 1, _data.Length - 1));
-
-      i += sz * 2;
-
-      if AlgoForm.Stop then
-        Exit;
+      __setData(l, r, l, -1, -1);
+      Exit;
     end;
 
-    sz *= 2;
+    __setData(l, r, -1, -1, -1);
 
-    if AlgoForm.Stop then
-      Exit;
+    p := __partition__(l, r);
+    __quickSort__(l, p - 1);
+    __quickSort__(p + 1, r);
   end;
 
-  __setData(0, _data.Length - 1, _data.Length - 1);
+begin
+  __setData(-1, -1, -1, -1, -1);
+  __quickSort__(0, _data.Length - 1);
+  __setData(-1, -1, -1, -1, -1);
 end;
 
-procedure TAlgoVisualizer.__setData(l, r, mergeIndex: integer);
+procedure TAlgoVisualizer.__setData(l, r, fixedPivot, curPivot, curElement: integer);
 begin
   _data.L := l;
   _data.R := r;
-  _data.MergeIndex := mergeIndex;
+  _data.CurPivot := curPivot;
+  _data.CurElement := curElement;
+
+  if fixedPivot <> -1 then
+    _data.FixedPivots[fixedPivot] := true;
 
   TAlgoVisHelper.Pause(10);
   AlgoForm.BGRAVirtualScreen.RedrawBitmap;

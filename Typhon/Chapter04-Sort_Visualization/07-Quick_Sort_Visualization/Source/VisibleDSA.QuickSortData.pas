@@ -10,14 +10,17 @@ uses
   Generics.Collections;
 
 type
+  TArray_int = array of integer;
   ArrType = (Default, NearlyOrdered);
 
   TQuickSortData = class
   public
     L: integer;
     R: integer;
-    MergeIndex: integer;
-    Numbers: array of integer;
+    FixedPivots: array of boolean;
+    CurPivot: integer;
+    CurElement: integer;
+    Numbers: TArray_int;
 
     constructor Create(n, randomBound: integer; dataType: ArrType = ArrType.Default);
     destructor Destroy; override;
@@ -39,15 +42,15 @@ constructor TQuickSortData.Create(n, randomBound: integer; dataType: ArrType);
 var
   i, swapTime, a, b: integer;
 begin
-  L := -1;
-  R := -1;
-  MergeIndex := -1;
-
   Randomize;
   SetLength(Numbers, n);
+  SetLength(FixedPivots, n);
 
   for i := 0 to n - 1 do
+  begin
     Numbers[i] := Random(randomBound) + 1;
+    FixedPivots[i] := false;
+  end;
 
   if dataType = ArrType.NearlyOrdered then
   begin

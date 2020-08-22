@@ -14,12 +14,15 @@ uses
   VisibleDSA.SelectionSortData;
 
 type
-  TAlgoVisualizer = class(TObject)
+  TAlgoVisualizer = class(TThread)
   private
     _width: integer;
     _height: integer;
     _data: TSelectionSortData;
     _form: TForm;
+
+  protected
+    procedure Execute; override;
 
   public
     constructor Create(form: TForm; sceneWidth, sceneHeight, n: integer);
@@ -53,6 +56,11 @@ begin
   inherited Destroy;
 end;
 
+procedure TAlgoVisualizer.Execute;
+begin
+  Synchronize(@Self.Run);
+end;
+
 procedure TAlgoVisualizer.Paint(canvas: TBGRACanvas2D);
 var
   w: integer;
@@ -83,10 +91,9 @@ begin
 
     _data.swap(i, minIndex);
 
-    TAlgoVisHelper.Pause(40);
+    Application.ProcessMessages;
+    TAlgoVisHelper.Pause(10);
     AlgoForm.BGRAVirtualScreen.RedrawBitmap;
-
-    if AlgoForm.Stop then Break;
   end;
 end;
 
