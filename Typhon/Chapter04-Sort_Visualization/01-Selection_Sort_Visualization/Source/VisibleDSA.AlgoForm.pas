@@ -16,25 +16,18 @@ uses
   VisibleDSA.AlgoVisualizer;
 
 type
-  TMyThread = class(TThread)
-    procedure Execute; override;
-    procedure Run;
-  end;
-
   TAlgoForm = class(TForm)
     BGRAVirtualScreen: TBGRAVirtualScreen;
     procedure BGRAVirtualScreenRedraw(Sender: TObject; Bitmap: TBGRABitmap);
     procedure FormActivate(Sender: TObject);
-    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
+    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure FormCreate(Sender: TObject);
 
   private
     _av: TAlgoVisualizer;
-    _stop: boolean;
     _thread: TThread;
 
   public
-    property Stop: boolean read _stop;
 
   end;
 
@@ -45,25 +38,6 @@ implementation
 
 {$R *.frm}
 
-procedure Run;
-begin
-  AlgoForm._av.Run;
-end;
-
-{ TMyThread }
-
-procedure TMyThread.Execute;
-begin
-  if not Self.Suspended then
-    Synchronize(@Self.Run);
-end;
-
-procedure TMyThread.Run;
-begin
-  if not Self.Terminated then
-    AlgoForm._av.Run;
-end;
-
 { TAlgoForm }
 
 procedure TAlgoForm.BGRAVirtualScreenRedraw(Sender: TObject; Bitmap: TBGRABitmap);
@@ -72,18 +46,21 @@ begin
 end;
 
 procedure TAlgoForm.FormActivate(Sender: TObject);
-begin
-  _thread := TThread.CreateAnonymousThread(@Run);
-  _thread.FreeOnTerminate := true;
-  _thread.Resume;
+  procedure __run__;
+  begin
+    AlgoForm._av.Run;
+  end;
 
-  //_av.Run;
+begin
+  _thread := TThread.CreateAnonymousThread(TProcedure(@__run__));
+  _thread.FreeOnTerminate := True;
+  _thread.Start;
 end;
 
-procedure TAlgoForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+procedure TAlgoForm.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 begin
-  _av.Suspended := true;
-  _av.Terminate;
+  _thread.Suspended := True;
+  _thread.Terminate;
 end;
 
 procedure TAlgoForm.FormCreate(Sender: TObject);
@@ -92,9 +69,8 @@ begin
   ClientHeight := 600;
   Position := TPosition.poDesktopCenter;
   BorderStyle := TFormBorderStyle.bsSingle;
-  DoubleBuffered := true;
+  DoubleBuffered := True;
   Caption := 'AlgoForm';
-  _stop := false;
 
   BGRAVirtualScreen.Color := clForm;
 

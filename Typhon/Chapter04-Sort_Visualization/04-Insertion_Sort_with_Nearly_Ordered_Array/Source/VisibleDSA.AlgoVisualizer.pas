@@ -93,13 +93,7 @@ begin
       __setData(i + 1, j - 1);
 
       j -= 1;
-
-      if AlgoForm.Stop then
-        Exit;
     end;
-
-    if AlgoForm.Stop then
-      Exit;
   end;
 
   __setData(_data.Length, -1);
@@ -110,7 +104,7 @@ begin
   _data.OrderedIndex := orderedIndex;
   _data.CurrentIndex := currentIndex;
 
-  TAlgoVisHelper.Pause(400);
+  TAlgoVisHelper.Pause(0);
   AlgoForm.BGRAVirtualScreen.RedrawBitmap;
 end;
 

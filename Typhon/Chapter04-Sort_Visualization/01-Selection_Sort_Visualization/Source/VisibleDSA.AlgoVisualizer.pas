@@ -91,8 +91,7 @@ begin
 
     _data.swap(i, minIndex);
 
-    Application.ProcessMessages;
-    TAlgoVisHelper.Pause(10);
+    TAlgoVisHelper.Pause(20);
     AlgoForm.BGRAVirtualScreen.RedrawBitmap;
   end;
 end;

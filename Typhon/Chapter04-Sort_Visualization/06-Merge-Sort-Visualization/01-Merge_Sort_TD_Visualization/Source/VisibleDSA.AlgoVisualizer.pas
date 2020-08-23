@@ -131,9 +131,6 @@ procedure TAlgoVisualizer.Run;
       end;
 
       __setData(l, r, i);
-
-      if AlgoForm.Stop then
-        Exit;
     end;
   end;
 
@@ -141,9 +138,6 @@ procedure TAlgoVisualizer.Run;
   var
     mid: integer;
   begin
-    if AlgoForm.Stop then
-      Exit;
-
     if (l >= r) then
       Exit;
 

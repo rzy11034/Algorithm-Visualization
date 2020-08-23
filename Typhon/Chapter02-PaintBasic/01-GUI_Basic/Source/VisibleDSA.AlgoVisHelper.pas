@@ -100,7 +100,6 @@ end;
 class procedure TAlgoVisHelper.Pause(interval: integer);
 begin
   Sleep(interval);
-  Application.ProcessMessages;
 end;
 
 class procedure TAlgoVisHelper.FillCircle(canvas: TBGRACanvas2D; x, y, r: integer);

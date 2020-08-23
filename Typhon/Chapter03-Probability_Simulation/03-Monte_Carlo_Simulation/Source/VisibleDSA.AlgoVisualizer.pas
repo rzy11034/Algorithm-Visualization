@@ -80,7 +80,7 @@ begin
       TAlgoVisHelper.SetFill(CL_RED);
     end;
 
-    TAlgoVisHelper.FillCircle(canvas, p.X, p.Y, 3);
+    TAlgoVisHelper.FillCircle(canvas, p.X, p.Y, 1);
   end;
 end;
 

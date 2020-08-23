@@ -8,9 +8,10 @@ object AlgoForm: TAlgoForm
   ClientWidth = 320
   DesignTimePPI = 120
   OnActivate = FormActivate
-  OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
   Position = poDesktopCenter
+  LCLVersion = '7.1'
   object BGRAVirtualScreen: TBGRAVirtualScreen
     Left = 0
     Height = 240

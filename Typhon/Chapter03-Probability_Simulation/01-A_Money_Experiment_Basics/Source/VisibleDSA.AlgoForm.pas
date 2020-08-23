@@ -20,11 +20,11 @@ type
     BGRAVirtualScreen: TBGRAVirtualScreen;
     procedure BGRAVirtualScreenRedraw(Sender: TObject; Bitmap: TBGRABitmap);
     procedure FormActivate(Sender: TObject);
-    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
+    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure FormCreate(Sender: TObject);
   private
-    _stop: boolean;
     _av: TAlgoVisualizer;
+    _stop: Boolean;
 
   public
 
@@ -48,23 +48,22 @@ procedure TAlgoForm.FormActivate(Sender: TObject);
 begin
   repeat
     _av.Run;
-  until _stop = True;
+  until _stop;
 end;
 
-procedure TAlgoForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+procedure TAlgoForm.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 begin
   _stop := True;
 end;
 
 procedure TAlgoForm.FormCreate(Sender: TObject);
 begin
-  ClientWidth := 800;
+  ClientWidth := 600;
   ClientHeight := 600;
   Position := TPosition.poDesktopCenter;
   BorderStyle := TFormBorderStyle.bsSingle;
   DoubleBuffered := True;
   Caption := 'AlgoForm';
-  _stop := False;
 
   BGRAVirtualScreen.Color := clForm;
 
@@ -72,4 +71,3 @@ begin
 end;
 
 end.
-

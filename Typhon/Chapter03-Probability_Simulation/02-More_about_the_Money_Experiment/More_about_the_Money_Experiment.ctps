@@ -10,7 +10,7 @@
         <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
         <CursorPos X="24" Y="3"/>
-        <UsageCount Value="76"/>
+        <UsageCount Value="77"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -20,10 +20,11 @@
         <ComponentName Value="AlgoForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="48"/>
-        <CursorPos Y="73"/>
-        <UsageCount Value="76"/>
+        <TopLine Value="35"/>
+        <CursorPos X="17" Y="56"/>
+        <UsageCount Value="77"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -31,19 +32,18 @@
         <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="107"/>
-        <CursorPos X="28" Y="98"/>
-        <UsageCount Value="76"/>
+        <TopLine Value="84"/>
+        <CursorPos X="31" Y="103"/>
+        <UsageCount Value="77"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="66"/>
-        <CursorPos X="17" Y="91"/>
-        <UsageCount Value="76"/>
+        <TopLine Value="64"/>
+        <CursorPos X="119" Y="75"/>
+        <UsageCount Value="77"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -54,8 +54,26 @@
         <UsageCount Value="15"/>
         <DefaultSyntaxHighlighter Value="FRM"/>
       </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\components\pl_BGRAcontrols\source\bgravirtualscreen.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="BGRAVirtualScreen"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="336"/>
+        <CursorPos X="33" Y="350"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\components\pl_BGRAbitmap\source\bgracanvas2d.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="BGRACanvas2D"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1203"/>
+        <CursorPos Y="1214"/>
+        <UsageCount Value="10"/>
+      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="5">
+    <JumpHistory HistoryIndex="9">
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
         <Caret Line="65" Column="31" TopLine="50"/>
@@ -79,6 +97,22 @@
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <Caret Line="17"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="91" Column="24" TopLine="72"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
+        <Caret Line="57" Column="66" TopLine="46"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
+        <Caret Line="60" TopLine="48"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
+        <Caret Line="66" Column="16" TopLine="47"/>
       </Position>
     </JumpHistory>
     <RunParams>

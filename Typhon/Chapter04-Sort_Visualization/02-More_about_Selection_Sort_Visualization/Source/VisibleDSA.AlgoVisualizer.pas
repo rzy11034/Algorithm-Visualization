@@ -100,16 +100,10 @@ begin
         minIndex := j;
         __setData(i, minIndex, j);
       end;
-
-      if AlgoForm.Stop then
-        Exit;
     end;
 
     _data.swap(i, minIndex);
     __setData(i+1, -1, -1);
-
-    if AlgoForm.Stop then
-      Exit;
   end;
 
   __setData(_data.Length, -1, -1);

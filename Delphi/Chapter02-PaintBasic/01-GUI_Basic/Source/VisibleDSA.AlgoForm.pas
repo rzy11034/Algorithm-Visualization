@@ -36,8 +36,6 @@ implementation
 
 
 procedure TAlgoForm.FormCreate(Sender: TObject);
-var
-  scale: Single;
 begin
   ClientWidth := 800;
   ClientHeight := 600;

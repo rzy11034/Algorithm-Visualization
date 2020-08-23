@@ -93,13 +93,7 @@ begin
       __setData(i + 1, j - 1);
 
       j -= 1;
-
-      if AlgoForm.Stop then
-        Exit;
     end;
-
-    if AlgoForm.Stop then
-      Exit;
   end;
 
   __setData(_data.Length, -1);

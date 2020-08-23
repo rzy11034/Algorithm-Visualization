@@ -132,9 +132,6 @@ procedure TAlgoVisualizer.Run;
       end;
 
       __setData(l, r, i);
-
-      if AlgoForm.Stop then
-        Exit;
     end;
   end;
 
@@ -153,15 +150,9 @@ begin
       __merge__(i, i + sz - 1, Min(i + sz + sz - 1, _data.Length - 1));
 
       i += sz * 2;
-
-      if AlgoForm.Stop then
-        Exit;
     end;
 
     sz *= 2;
-
-    if AlgoForm.Stop then
-      Exit;
   end;
 
   __setData(0, _data.Length - 1, _data.Length - 1);

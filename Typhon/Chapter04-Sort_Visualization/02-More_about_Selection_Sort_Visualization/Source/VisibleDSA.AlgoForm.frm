@@ -1,14 +1,14 @@
-﻿object AlgoForm: TAlgoForm
+object AlgoForm: TAlgoForm
   Left = 581
   Height = 240
-  Top = 152
+  Top = 149
   Width = 320
   Caption = 'AlgoForm'
   ClientHeight = 240
   ClientWidth = 320
   DesignTimePPI = 120
   OnActivate = FormActivate
-  OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
   Position = poDesktopCenter
   LCLVersion = '7.1'

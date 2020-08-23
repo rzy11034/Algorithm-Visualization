@@ -20,8 +20,9 @@
         <ComponentName Value="AlgoForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <TopLine Value="44"/>
-        <CursorPos X="45" Y="77"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="20"/>
+        <CursorPos X="31" Y="89"/>
         <UsageCount Value="27"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -30,8 +31,8 @@
         <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="113"/>
-        <CursorPos X="96" Y="99"/>
+        <TopLine Value="83"/>
+        <CursorPos X="31" Y="103"/>
         <UsageCount Value="27"/>
         <Loaded Value="True"/>
       </Unit>
@@ -46,9 +47,8 @@
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="87"/>
+        <TopLine Value="81"/>
         <CursorPos X="25" Y="107"/>
         <UsageCount Value="26"/>
         <Loaded Value="True"/>

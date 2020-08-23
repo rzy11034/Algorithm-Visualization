@@ -28,12 +28,10 @@ type
   private
     _thread: TThread;
     _av: TAlgoVisualizer;
-    _stop: Boolean;
 
     procedure _desktopCenter;
 
   public
-    property Stop: Boolean read _stop;
 
   end;
 
@@ -48,7 +46,7 @@ implementation
 procedure TAlgoForm.FormActivate(Sender: TObject);
 begin
   _thread := TThread.CreateAnonymousThread(_av.Run);
-  _thread.FreeOnTerminate := true;
+  _thread.FreeOnTerminate := True;
   _thread.Start;
 end;
 
@@ -65,7 +63,6 @@ begin
   Position := TFormPosition.ScreenCenter;
   BorderStyle := TFmxFormBorderStyle.Single;
   Caption := 'AlgoForm: ';
-  _stop := False;
   _desktopCenter;
 
   _av := TAlgoVisualizer.Create(self, ClientWidth, ClientHeight, 100);

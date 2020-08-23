@@ -43,7 +43,7 @@ begin
   _form := form;
   _width := form.ClientWidth;
   _height := form.ClientHeight;
-  _data := TQuickSortData.Create(n, _height);
+  _data := TQuickSortData.Create(n, _height, ArrType.Default);
 
   _form.Caption := 'Insertion Sort Visualization';
 

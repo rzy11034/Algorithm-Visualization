@@ -138,7 +138,6 @@ end;
 class procedure TAlgoVisHelper.Pause(interval: integer);
 begin
   Sleep(interval);
-  Application.ProcessMessages;
 end;
 
 class procedure TAlgoVisHelper.FillCircle(canvas: TCanvas; x, y, r: integer);

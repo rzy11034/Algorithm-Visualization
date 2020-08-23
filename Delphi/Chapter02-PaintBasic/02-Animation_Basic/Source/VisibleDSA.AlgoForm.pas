@@ -49,13 +49,9 @@ implementation
 
 procedure TAlgoForm.FormActivate(Sender: TObject);
 begin
-  while True do
-  begin
+  repeat
     _av.Run;
-
-    if _stop then
-      Break;
-  end;
+  until (_stop);
 end;
 
 procedure TAlgoForm.FormClose(Sender: TObject; var Action: TCloseAction);

@@ -5,7 +5,7 @@
     <PathDelim Value="\"/>
     <General>
       <SessionStorage Value="InProjectDir"/>
-      <Title Value="Monte_Carlo_Simulation"/>
+      <Title Value="Quick_Sort_Visualization_with_Random_Pivot"/>
       <Scaled Value="True"/>
       <ResourceType Value="res"/>
       <UseXPManifest Value="True"/>
@@ -41,7 +41,7 @@
           </CodeGeneration>
           <Linking>
             <Debugging>
-              <DebugInfoType Value="dsDwarf2Set"/>
+              <DebugInfoType Value="dsDwarf3"/>
               <TrashVariables Value="True"/>
             </Debugging>
             <Options>
@@ -98,7 +98,7 @@
     </RequiredPackages>
     <Units>
       <Unit>
-        <Filename Value="Monte_Carlo_Simulation.ppr"/>
+        <Filename Value="Quick_Sort_Visualization_with_Random_Pivot.ppr"/>
         <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
       </Unit>
@@ -119,7 +119,7 @@
         <IsPartOfProject Value="True"/>
       </Unit>
       <Unit>
-        <Filename Value="Source\VisibleDSA.Circle.pas"/>
+        <Filename Value="Source\VisibleDSA.QuickSortData.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
     </Units>
