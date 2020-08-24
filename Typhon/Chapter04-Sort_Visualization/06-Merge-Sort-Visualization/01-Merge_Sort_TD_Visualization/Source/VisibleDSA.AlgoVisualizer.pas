@@ -48,7 +48,7 @@ begin
   _height := form.ClientHeight;
   _data := TMergeSortData.Create(n, _height);
 
-  _form.Caption := 'Insertion Sort Visualization';
+  _form.Caption := 'Merge Sort Visualization';
 
 end;
 

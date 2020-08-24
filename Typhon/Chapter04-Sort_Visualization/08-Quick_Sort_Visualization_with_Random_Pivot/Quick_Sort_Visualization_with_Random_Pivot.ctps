@@ -3,13 +3,13 @@
   <ProjectSession>
     <PathDelim Value="\"/>
     <Version Value="12"/>
-    <BuildModes Active="Release"/>
+    <BuildModes Active="Debug"/>
     <Units>
       <Unit>
         <Filename Value="Quick_Sort_Visualization_with_Random_Pivot.ppr"/>
         <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
-        <CursorPos Y="20"/>
+        <CursorPos X="20" Y="18"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
       </Unit>
@@ -20,10 +20,9 @@
         <ComponentName Value="AlgoForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="55"/>
-        <CursorPos X="37" Y="77"/>
+        <TopLine Value="62"/>
+        <CursorPos X="19" Y="70"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -31,7 +30,7 @@
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="4"/>
         <TopLine Value="91"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
@@ -39,18 +38,19 @@
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="25"/>
-        <CursorPos X="61" Y="46"/>
+        <TopLine Value="124"/>
+        <CursorPos X="50" Y="44"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.QuickSortData.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="4"/>
-        <TopLine Value="44"/>
-        <CursorPos X="26" Y="67"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="47"/>
+        <CursorPos X="42" Y="51"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
       </Unit>
@@ -80,11 +80,7 @@
         <UsageCount Value="10"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="10">
-      <Position>
-        <Filename Value="Source\VisibleDSA.QuickSortData.pas"/>
-        <Caret Line="67" Column="26" TopLine="70"/>
-      </Position>
+    <JumpHistory HistoryIndex="14">
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
         <Caret Line="63" Column="54" TopLine="52"/>
@@ -124,6 +120,26 @@
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
         <Caret Line="63" TopLine="43"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.QuickSortData.pas"/>
+        <Caret Line="53" TopLine="47"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.QuickSortData.pas"/>
+        <Caret Line="55" TopLine="47"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.QuickSortData.pas"/>
+        <Caret Line="56" TopLine="47"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.QuickSortData.pas"/>
+        <Caret Line="57" TopLine="47"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.QuickSortData.pas"/>
+        <Caret Line="62" Column="51" TopLine="44"/>
       </Position>
     </JumpHistory>
     <RunParams>

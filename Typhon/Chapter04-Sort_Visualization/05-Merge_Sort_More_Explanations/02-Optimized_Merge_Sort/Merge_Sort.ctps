@@ -17,9 +17,7 @@
       <Unit>
         <Filename Value="Source\VisibleDSA.MergeSort.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="109"/>
         <CursorPos X="30" Y="123"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
@@ -27,8 +25,8 @@
       <Unit>
         <Filename Value="Source\VisibleDSA.SortTestHelper.pas"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="39"/>
         <CursorPos X="30" Y="18"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>

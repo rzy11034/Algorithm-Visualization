@@ -6,10 +6,9 @@
     <BuildModes Active="Debug"/>
     <Units>
       <Unit>
-        <Filename Value="Merge_Sort_BU_Visualization.ppr"/>
+        <Filename Value="Quick_Sort_Visualization_with_Identical.ppr"/>
         <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
-        <CursorPos Y="20"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
@@ -21,8 +20,6 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="43"/>
-        <CursorPos X="76" Y="59"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -30,9 +27,7 @@
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="3"/>
-        <TopLine Value="82"/>
-        <CursorPos Y="103"/>
+        <EditorIndex Value="4"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
@@ -41,27 +36,24 @@
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="36"/>
-        <CursorPos X="26" Y="52"/>
+        <TopLine Value="37"/>
+        <CursorPos X="63" Y="46"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
-        <Filename Value="Source\VisibleDSA.MergeSortData.pas"/>
+        <Filename Value="Source\VisibleDSA.QuickSortData.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="3"/>
+        <CursorPos X="58" Y="9"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="1">
+    <JumpHistory>
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
-        <Caret Line="153" Column="61" TopLine="141"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
-        <Caret Line="77" TopLine="44"/>
+        <Caret Line="46" Column="54" TopLine="37"/>
       </Position>
     </JumpHistory>
     <RunParams>

@@ -43,7 +43,7 @@ begin
   _form := form;
   _width := form.ClientWidth;
   _height := form.ClientHeight;
-  _data := TQuickSortData.Create(n, _height);
+  _data := TQuickSortData.Create(n, _height, ArrType.NearlyOrdered);
 
   _form.Caption := 'Quick Sort Visualization';
 
@@ -85,8 +85,15 @@ procedure TAlgoVisualizer.Run;
 
   function __partition__(l, r: integer): integer;
   var
-    v, j, i: integer;
+    v, j, i, p: integer;
   begin
+    Randomize;
+
+    p := Random(r - l + 1) + l;
+    __setData(l, r, -1, p, -1);
+
+    _data.Swap(l, p);
+
     v := _data.GetValue(l);
     __setData(l, r, -1, l, -1);
 
@@ -109,7 +116,7 @@ procedure TAlgoVisualizer.Run;
     Result := j;
   end;
 
-  procedure __quickSort__(l, r: integer);
+  procedure __quickSort2Ways__(l, r: integer);
   var
     p: integer;
   begin
@@ -125,13 +132,13 @@ procedure TAlgoVisualizer.Run;
     __setData(l, r, -1, -1, -1);
 
     p := __partition__(l, r);
-    __quickSort__(l, p - 1);
-    __quickSort__(p + 1, r);
+    __quickSort2Ways__(l, p - 1);
+    __quickSort2Ways__(p + 1, r);
   end;
 
 begin
   __setData(-1, -1, -1, -1, -1);
-  __quickSort__(0, _data.Length - 1);
+  __quickSort2Ways__(0, _data.Length - 1);
   __setData(-1, -1, -1, -1, -1);
 end;
 

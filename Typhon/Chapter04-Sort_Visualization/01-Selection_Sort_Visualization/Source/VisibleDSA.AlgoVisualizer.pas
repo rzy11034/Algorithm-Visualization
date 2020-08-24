@@ -14,15 +14,12 @@ uses
   VisibleDSA.SelectionSortData;
 
 type
-  TAlgoVisualizer = class(TThread)
+  TAlgoVisualizer = class
   private
     _width: integer;
     _height: integer;
     _data: TSelectionSortData;
     _form: TForm;
-
-  protected
-    procedure Execute; override;
 
   public
     constructor Create(form: TForm; sceneWidth, sceneHeight, n: integer);
@@ -54,11 +51,6 @@ destructor TAlgoVisualizer.Destroy;
 begin
   FreeAndNil(_data);
   inherited Destroy;
-end;
-
-procedure TAlgoVisualizer.Execute;
-begin
-  Synchronize(@Self.Run);
 end;
 
 procedure TAlgoVisualizer.Paint(canvas: TBGRACanvas2D);
