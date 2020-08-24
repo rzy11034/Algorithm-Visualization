@@ -43,7 +43,7 @@ begin
   _form := form;
   _width := form.ClientWidth;
   _height := form.ClientHeight;
-  _data := TQuickSortData.Create(n, _height, ArrType.NearlyOrdered);
+  _data := TQuickSortData.Create(n, _height, ArrType.Default);
 
   _form.Caption := 'Quick Sort Visualization';
 
@@ -85,55 +85,9 @@ end;
 
 procedure TAlgoVisualizer.Run;
 
-  function __partition__(l, r: integer): integer;
+  procedure __quickSort3Ways__(l, r: integer);
   var
-    v, j, i, p: integer;
-  begin
-    Randomize;
-
-    p := Random(r - l + 1) + l;
-    __setData(l, r, -1, p, -1, -1);
-
-    _data.Swap(l, p);
-    v := _data.GetValue(l);
-    __setData(l, r, -1, l, -1, -1);
-
-    // arr[l+1...i) <= v; arr(j...r] >= v
-    i := l + 1;
-    j := r;
-    __setData(l, r, -1, l, i, j);
-    while True do
-    begin
-      while (i <= r) and (_data.GetValue(i) < v) do
-      begin
-        i += 1;
-        __setData(l, r, -1, l, i, j);
-      end;
-
-      while (j >= l + 1) and (_data.GetValue(j) > v) do
-      begin
-        j -= 1;
-        __setData(l, r, -1, l, i, j);
-      end;
-
-      if i > j then
-        Break;
-
-      _data.swap(i, j);
-      i += 1;
-      j -= 1;
-      __setData(l, r, -1, l, i, j);
-    end;
-
-    _data.Swap(l, j);
-    __setData(l, r, j, -1, -1, -1);
-
-    Result := j;
-  end;
-
-  procedure __quickSort2Ways__(l, r: integer);
-  var
-    p: integer;
+    p, v, lt, gt, i: integer;
   begin
     if l > r then
       Exit;
@@ -146,18 +100,57 @@ procedure TAlgoVisualizer.Run;
 
     __setData(l, r, -1, -1, -1, -1);
 
-    p := __partition__(l, r);
-    __quickSort2Ways__(l, p - 1);
-    __quickSort2Ways__(p + 1, r);
+    // 随机在arr[l...r]的范围中, 选择一个数值作为标定点pivot
+    Randomize;
+    p := Random(r - l + 1) + l;
+    __setData(l, r, -1, p, -1, -1);
+
+    _data.Swap(l, p);
+    v := _data.GetValue(l);
+    __setData(l, r, -1, -1, -1, -1);
+
+    lt := l;     // arr[l+1...lt] < v
+    gt := r + 1; // arr[gt...r] > v
+    i := l + 1;  // arr[lt+1...i) == v
+    __setData(l, r, -1, l, lt, gt);
+
+    while (i < gt) do
+    begin
+      if _data.GetValue(i) < v then
+      begin
+        _data.Swap(i, lt + 1);
+        i += 1;
+        lt += 1;
+      end
+      else if _data.GetValue(i) > v then
+      begin
+        _data.Swap(i, gt - 1);
+        gt -= 1;
+      end
+      else // arr[i] == v
+      begin
+        i += 1;
+      end;
+
+      __setData(l, r, -1, l, i, gt);
+    end;
+
+    _data.Swap(l, lt);
+    __setData(l, r, lt, -1, -1, -1);
+
+    __quickSort3Ways__(l, lt - 1);
+    __quickSort3Ways__(gt, r);
   end;
 
 begin
   __setData(-1, -1, -1, -1, -1, -1);
-  __quickSort2Ways__(0, _data.Length - 1);
+  __quickSort3Ways__(0, _data.Length - 1);
   __setData(-1, -1, -1, -1, -1, -1);
 end;
 
 procedure TAlgoVisualizer.__setData(l, r, fixedPivot, curPivot, curL, curR: integer);
+var
+  i: integer;
 begin
   _data.L := l;
   _data.R := r;
@@ -166,7 +159,16 @@ begin
   _data.CurR := curR;
 
   if fixedPivot <> -1 then
+  begin
     _data.FixedPivots[fixedPivot] := True;
+
+    i := fixedPivot;
+    while (i < _data.Length) and (_data.GetValue(i) = _data.GetValue(fixedPivot)) do
+    begin
+      _data.FixedPivots[i] := True;
+      i += 1;
+    end;
+  end;
 
   TAlgoVisHelper.Pause(0);
   AlgoForm.BGRAVirtualScreen.RedrawBitmap;

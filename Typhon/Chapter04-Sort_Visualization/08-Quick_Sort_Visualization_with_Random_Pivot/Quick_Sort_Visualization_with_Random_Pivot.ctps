@@ -21,8 +21,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="62"/>
-        <CursorPos X="19" Y="70"/>
+        <TopLine Value="53"/>
+        <CursorPos X="24" Y="71"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -40,7 +40,7 @@
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="124"/>
+        <TopLine Value="122"/>
         <CursorPos X="50" Y="44"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
@@ -49,8 +49,8 @@
         <Filename Value="Source\VisibleDSA.QuickSortData.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="47"/>
-        <CursorPos X="42" Y="51"/>
+        <TopLine Value="70"/>
+        <CursorPos X="33" Y="100"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
       </Unit>
@@ -78,6 +78,13 @@
         <TopLine Value="599"/>
         <CursorPos Y="611"/>
         <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\VisibleDSA.AlgoForm.frm"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="FRM"/>
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="14">
