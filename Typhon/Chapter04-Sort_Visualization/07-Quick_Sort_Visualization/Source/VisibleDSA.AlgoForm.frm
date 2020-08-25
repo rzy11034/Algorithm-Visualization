@@ -1,4 +1,4 @@
-﻿object AlgoForm: TAlgoForm
+object AlgoForm: TAlgoForm
   Left = 418
   Height = 192
   Top = 119
@@ -7,7 +7,7 @@
   ClientHeight = 192
   ClientWidth = 256
   OnActivate = FormActivate
-  OnCloseQuery = FormCloseQuery
+  OnClose = FormClose
   OnCreate = FormCreate
   Position = poDesktopCenter
   object BGRAVirtualScreen: TBGRAVirtualScreen

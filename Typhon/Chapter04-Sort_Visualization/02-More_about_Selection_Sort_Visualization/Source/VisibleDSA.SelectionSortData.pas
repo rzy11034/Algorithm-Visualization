@@ -14,9 +14,9 @@ type
     _numbers: array of integer;
 
   public
-    OrderedIndex: integer;         // [0...orderedIndex) 是有序的
-    CurrentCompareIndex: integer;  // 当前正在比较的元素索引
-    CurrentMinIndex: integer;     // 当前找到的最小元素的索引
+    OrderedIndex: integer;          // [0...orderedIndex) 是有序的
+    CurrentCompareIndex: integer;   // 当前正在比较的元素索引
+    CurrentMinIndex: integer;       // 当前找到的最小元素的索引
 
     constructor Create(n, randomBound: integer);
     destructor Destroy; override;
@@ -35,7 +35,7 @@ constructor TSelectionSortData.Create(n, randomBound: integer);
 var
   i: integer;
 begin
-   OrderedIndex := -1;
+  OrderedIndex := -1;
   CurrentCompareIndex := -1;
   CurrentMinIndex := -1;
 
@@ -68,9 +68,9 @@ procedure TSelectionSortData.Swap(i, j: integer);
 var
   temp: integer;
 begin
-if (i < 0) or (i >= Self.Length) or (j < 0) or (j >= Self.Length) then
-    raise Exception.Create('Invalid index to access Sort Data.');  
-	
+  if (i < 0) or (i >= Self.Length) or (j < 0) or (j >= Self.Length) then
+    raise Exception.Create('Invalid index to access Sort Data.');
+
   temp := _numbers[j];
   _numbers[j] := _numbers[i];
   _numbers[i] := temp;

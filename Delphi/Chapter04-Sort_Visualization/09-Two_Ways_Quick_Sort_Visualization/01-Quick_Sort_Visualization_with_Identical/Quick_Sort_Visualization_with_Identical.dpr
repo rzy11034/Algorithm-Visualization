@@ -1,0 +1,12 @@
+﻿program Quick_Sort_Visualization_with_Identical;
+
+uses
+  System.StartUpCopy,
+  FMX.Forms;
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.Run;
+end.

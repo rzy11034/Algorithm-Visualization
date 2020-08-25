@@ -9,7 +9,6 @@
         <Filename Value="Three_Ways_Quick_Sort_Visualization.ppr"/>
         <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <CursorPos Y="20"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
@@ -22,8 +21,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="43"/>
-        <CursorPos Y="52"/>
+        <TopLine Value="56"/>
+        <CursorPos X="32" Y="64"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -49,9 +48,10 @@
       <Unit>
         <Filename Value="Source\VisibleDSA.QuickSortData.pas"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
-        <TopLine Value="53"/>
-        <CursorPos Y="64"/>
+        <TopLine Value="42"/>
+        <CursorPos Y="52"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
@@ -66,18 +66,6 @@
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
-        <Caret Line="117" TopLine="106"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
-        <Caret Line="119" Column="27" TopLine="106"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
-        <Caret Line="121" TopLine="106"/>
-      </Position>
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <Caret Line="122" TopLine="106"/>
@@ -186,6 +174,18 @@
         <Filename Value="Source\VisibleDSA.QuickSortData.pas"/>
         <Caret Line="63" TopLine="53"/>
       </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
+        <Caret Line="76" Column="19" TopLine="73"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
+        <Caret Line="64" Column="32" TopLine="56"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.QuickSortData.pas"/>
+        <Caret Line="52" TopLine="42"/>
+      </Position>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
@@ -193,15 +193,6 @@
     </RunParams>
   </ProjectSession>
   <Debugging>
-    <BreakPoints>
-      <Item>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="Source\VisibleDSA.QuickSortData.pas"/>
-        <Line Value="52"/>
-      </Item>
-    </BreakPoints>
     <Watches>
       <Item>
         <Expression Value="self"/>

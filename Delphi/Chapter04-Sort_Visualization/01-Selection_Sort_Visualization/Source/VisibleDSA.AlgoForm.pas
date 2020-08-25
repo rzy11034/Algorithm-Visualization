@@ -53,7 +53,6 @@ end;
 procedure TAlgoForm.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   _thread.Suspended := True;
-  _thread.Terminate
 end;
 
 procedure TAlgoForm.FormCreate(Sender: TObject);

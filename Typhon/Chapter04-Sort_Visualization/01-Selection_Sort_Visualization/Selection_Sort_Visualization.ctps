@@ -20,9 +20,10 @@
         <ComponentName Value="AlgoForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="39"/>
-        <CursorPos X="21" Y="63"/>
+        <TopLine Value="49"/>
+        <CursorPos X="3" Y="62"/>
         <UsageCount Value="35"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -39,9 +40,8 @@
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="32"/>
+        <TopLine Value="38"/>
         <CursorPos Y="91"/>
         <UsageCount Value="35"/>
         <Loaded Value="True"/>
@@ -84,8 +84,8 @@
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\classes\classesh.inc"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="1945"/>
-        <CursorPos X="20" Y="1961"/>
+        <TopLine Value="1983"/>
+        <CursorPos X="7" Y="1992"/>
         <UsageCount Value="12"/>
       </Unit>
       <Unit>
@@ -131,14 +131,6 @@
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
-        <Caret Line="75" Column="3" TopLine="65"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
-        <Caret Line="45" Column="5" TopLine="39"/>
-      </Position>
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
         <Caret Line="20" Column="35" TopLine="10"/>
@@ -250,6 +242,14 @@
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
         <Caret Line="57" Column="17" TopLine="36"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
+        <Caret Line="69" Column="21" TopLine="46"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
+        <Caret Line="63" Column="21" TopLine="49"/>
       </Position>
     </JumpHistory>
     <RunParams>

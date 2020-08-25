@@ -20,9 +20,10 @@
         <ComponentName Value="AlgoForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="56"/>
-        <CursorPos Y="78"/>
+        <TopLine Value="51"/>
+        <CursorPos Y="63"/>
         <UsageCount Value="28"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -39,9 +40,8 @@
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="41"/>
+        <TopLine Value="32"/>
         <CursorPos X="26" Y="51"/>
         <UsageCount Value="28"/>
         <Loaded Value="True"/>
@@ -66,10 +66,6 @@
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
-        <Caret Line="100" Column="39" TopLine="92"/>
-      </Position>
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <Caret Line="108" Column="104" TopLine="100"/>
@@ -185,6 +181,10 @@
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
         <Caret Line="62" TopLine="38"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
+        <Caret Line="67" Column="3" TopLine="51"/>
       </Position>
     </JumpHistory>
     <RunParams>

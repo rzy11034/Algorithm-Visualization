@@ -115,7 +115,7 @@ begin
   _data.CurrentMinIndex := currentMinIndex;
   _data.CurrentCompareIndex := currentCompareIndex;
 
-  TAlgoVisHelper.Pause(40);
+  TAlgoVisHelper.Pause(0);
   AlgoForm.BGRAVirtualScreen.RedrawBitmap;
 end;
 

@@ -20,7 +20,7 @@ type
     BGRAVirtualScreen: TBGRAVirtualScreen;
     procedure BGRAVirtualScreenRedraw(Sender: TObject; Bitmap: TBGRABitmap);
     procedure FormActivate(Sender: TObject);
-    procedure FormCloseQuery(Sender: TObject; var CanClose: boolean);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
   private
     _av: TAlgoVisualizer;
@@ -52,14 +52,13 @@ procedure TAlgoForm.FormActivate(Sender: TObject);
 
 begin
   _thread := TThread.CreateAnonymousThread(TProcedure(@__run__));
-  _thread.FreeOnTerminate := True;
+  _thread.FreeOnTerminate := true;
   _thread.Start;
 end;
 
-procedure TAlgoForm.FormCloseQuery(Sender: TObject; var CanClose: boolean);
+procedure TAlgoForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
-  _thread.Suspended := True;
-  _thread.Terminate;
+  _thread.Suspended := true;
 end;
 
 procedure TAlgoForm.FormCreate(Sender: TObject);
@@ -68,7 +67,7 @@ begin
   ClientHeight := 600;
   Position := TPosition.poDesktopCenter;
   BorderStyle := TFormBorderStyle.bsSingle;
-  DoubleBuffered := True;
+  DoubleBuffered := true;
   Caption := 'AlgoForm';
 
   BGRAVirtualScreen.Color := clForm;

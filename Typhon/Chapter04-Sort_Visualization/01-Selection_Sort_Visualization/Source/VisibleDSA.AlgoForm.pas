@@ -20,7 +20,7 @@ type
     BGRAVirtualScreen: TBGRAVirtualScreen;
     procedure BGRAVirtualScreenRedraw(Sender: TObject; Bitmap: TBGRABitmap);
     procedure FormActivate(Sender: TObject);
-    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
 
   private
@@ -57,10 +57,9 @@ begin
   _thread.Start;
 end;
 
-procedure TAlgoForm.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+procedure TAlgoForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
   _thread.Suspended := True;
-  _thread.Terminate;
 end;
 
 procedure TAlgoForm.FormCreate(Sender: TObject);

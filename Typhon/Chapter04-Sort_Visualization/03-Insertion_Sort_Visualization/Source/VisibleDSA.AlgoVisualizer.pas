@@ -104,7 +104,7 @@ begin
   _data.OrderedIndex := orderedIndex;
   _data.CurrentIndex := currentIndex;
 
-  TAlgoVisHelper.Pause(400);
+  TAlgoVisHelper.Pause(0);
   AlgoForm.BGRAVirtualScreen.RedrawBitmap;
 end;
 
