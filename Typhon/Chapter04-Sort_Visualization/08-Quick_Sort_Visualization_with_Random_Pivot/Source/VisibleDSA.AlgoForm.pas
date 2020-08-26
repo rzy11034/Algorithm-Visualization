@@ -55,13 +55,14 @@ begin
   _thread := TThread.CreateAnonymousThread(TProcedure(@__run__));
   _thread.FreeOnTerminate := True;
   _thread.Start;
-
-  //_av.Run;
 end;
 
 procedure TAlgoForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
-  _thread.Suspended := True;
+  if _thread.Finished <> True then
+  begin
+    _thread.Suspended := True;
+  end;
 end;
 
 procedure TAlgoForm.FormCreate(Sender: TObject);

@@ -52,13 +52,16 @@ procedure TAlgoForm.FormActivate(Sender: TObject);
 
 begin
   _thread := TThread.CreateAnonymousThread(TProcedure(@__run__));
-  _thread.FreeOnTerminate := true;
+  _thread.FreeOnTerminate := True;
   _thread.Start;
 end;
 
 procedure TAlgoForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
-  _thread.Suspended := true;
+  if _thread.Finished <> True then
+  begin
+    _thread.Suspended := True;
+  end;
 end;
 
 procedure TAlgoForm.FormCreate(Sender: TObject);
@@ -67,12 +70,12 @@ begin
   ClientHeight := 600;
   Position := TPosition.poDesktopCenter;
   BorderStyle := TFormBorderStyle.bsSingle;
-  DoubleBuffered := true;
+  DoubleBuffered := True;
   Caption := 'AlgoForm';
 
   BGRAVirtualScreen.Color := clForm;
 
-  _av := TAlgoVisualizer.Create(self, ClientWidth, ClientHeight, 100);
+  _av := TAlgoVisualizer.Create(self, ClientWidth, ClientHeight, 10);
 end;
 
 end.

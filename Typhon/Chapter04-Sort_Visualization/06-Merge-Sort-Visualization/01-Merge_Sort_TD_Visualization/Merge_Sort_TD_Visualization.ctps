@@ -10,7 +10,7 @@
         <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
         <CursorPos X="5" Y="21"/>
-        <UsageCount Value="28"/>
+        <UsageCount Value="29"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -20,11 +20,10 @@
         <ComponentName Value="AlgoForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="51"/>
-        <CursorPos Y="63"/>
-        <UsageCount Value="28"/>
+        <TopLine Value="48"/>
+        <CursorPos X="43" Y="64"/>
+        <UsageCount Value="29"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -34,25 +33,26 @@
         <EditorIndex Value="3"/>
         <TopLine Value="91"/>
         <CursorPos Y="103"/>
-        <UsageCount Value="28"/>
+        <UsageCount Value="29"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="32"/>
+        <TopLine Value="26"/>
         <CursorPos X="26" Y="51"/>
-        <UsageCount Value="28"/>
+        <UsageCount Value="29"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.MergeSortData.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="4"/>
-        <TopLine Value="52"/>
-        <CursorPos X="108" Y="16"/>
-        <UsageCount Value="28"/>
+        <TopLine Value="22"/>
+        <CursorPos X="25" Y="44"/>
+        <UsageCount Value="29"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -66,10 +66,6 @@
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
-        <Caret Line="108" Column="104" TopLine="100"/>
-      </Position>
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <Caret Line="140" Column="30" TopLine="112"/>
@@ -185,6 +181,10 @@
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
         <Caret Line="67" Column="3" TopLine="51"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.MergeSortData.pas"/>
+        <Caret Line="15" Column="3"/>
       </Position>
     </JumpHistory>
     <RunParams>

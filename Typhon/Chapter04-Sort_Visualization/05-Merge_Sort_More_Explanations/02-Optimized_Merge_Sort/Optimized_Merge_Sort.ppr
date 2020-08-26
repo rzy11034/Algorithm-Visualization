@@ -1,15 +1,14 @@
-﻿program Merge_Sort;
+program Optimized_Merge_Sort;
 
 {$mode objfpc}{$H+}
 
-uses
- {$IFDEF UNIX}
-  cthreads,
- {$ENDIF}
+uses {$IFDEF UNIX}
+  cthreads, {$ENDIF}
   Classes,
   SysUtils,
+  VisibleDSA.InsertionSort,
   VisibleDSA.MergeSort,
-  VisibleDSA.SortTestHelper, VisibleDSA.InsertionSort;
+  VisibleDSA.SortTestHelper;
 
   procedure Run();
   var

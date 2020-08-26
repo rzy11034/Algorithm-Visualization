@@ -52,8 +52,10 @@ end;
 
 procedure TAlgoForm.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 begin
-  _thread.Suspended := True;
-  _thread.Terminate;
+  if _thread.Finished <> True then
+  begin
+    _thread.Suspended := True;
+  end;
 end;
 
 procedure TAlgoForm.FormCreate(Sender: TObject);

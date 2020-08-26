@@ -24,7 +24,7 @@ type
 
 implementation
 
-{ TSelectionSortData }
+{ TInsertionSortData }
 
 constructor TInsertionSortData.Create(n, randomBound: integer);
 var

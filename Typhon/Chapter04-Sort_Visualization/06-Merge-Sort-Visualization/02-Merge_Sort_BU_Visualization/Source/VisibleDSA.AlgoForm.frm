@@ -1,11 +1,12 @@
 object AlgoForm: TAlgoForm
-  Left = 418
-  Height = 192
-  Top = 119
-  Width = 256
+  Left = 581
+  Height = 240
+  Top = 152
+  Width = 320
   Caption = 'AlgoForm'
-  ClientHeight = 192
-  ClientWidth = 256
+  ClientHeight = 240
+  ClientWidth = 320
+  DesignTimePPI = 120
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
@@ -13,9 +14,9 @@ object AlgoForm: TAlgoForm
   LCLVersion = '7.1'
   object BGRAVirtualScreen: TBGRAVirtualScreen
     Left = 0
-    Height = 192
+    Height = 240
     Top = 0
-    Width = 256
+    Width = 320
     OnRedraw = BGRAVirtualScreenRedraw
     Align = alClient
     Alignment = taLeftJustify

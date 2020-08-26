@@ -20,10 +20,9 @@
         <ComponentName Value="AlgoForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="43"/>
-        <CursorPos Y="62"/>
+        <TopLine Value="52"/>
+        <CursorPos X="7" Y="64"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -32,7 +31,7 @@
         <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="82"/>
+        <TopLine Value="90"/>
         <CursorPos Y="103"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
@@ -40,9 +39,10 @@
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="36"/>
-        <CursorPos X="26" Y="52"/>
+        <TopLine Value="89"/>
+        <CursorPos X="27" Y="154"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
@@ -53,8 +53,17 @@
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\math.pp"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="Math"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="143"/>
+        <CursorPos X="10" Y="160"/>
+        <UsageCount Value="10"/>
+      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="2">
+    <JumpHistory HistoryIndex="3">
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <Caret Line="153" Column="61" TopLine="141"/>
@@ -66,6 +75,10 @@
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
         <Caret Line="67" Column="3" TopLine="44"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="154" Column="27" TopLine="133"/>
       </Position>
     </JumpHistory>
     <RunParams>

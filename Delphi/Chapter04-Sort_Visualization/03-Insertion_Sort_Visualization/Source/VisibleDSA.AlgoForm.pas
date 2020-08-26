@@ -23,7 +23,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure PaintBoxPaint(Sender: TObject; Canvas: TCanvas);
     procedure FormActivate(Sender: TObject);
-    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
 
   private
     _thread: TThread;
@@ -50,9 +50,12 @@ begin
   _thread.Start;
 end;
 
-procedure TAlgoForm.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+procedure TAlgoForm.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
-  _thread.Suspended := True;
+  if _thread.Finished <> True then
+  begin
+    _thread.Suspended := True;
+  end;
 end;
 
 procedure TAlgoForm.FormCreate(Sender: TObject);

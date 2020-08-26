@@ -9,17 +9,18 @@
         <Filename Value="Merge_Sort.ppr"/>
         <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <TopLine Value="7"/>
-        <CursorPos Y="19"/>
+        <CursorPos X="35" Y="38"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.MergeSort.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <CursorPos X="40" Y="91"/>
+        <TopLine Value="4"/>
+        <CursorPos X="26" Y="120"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
@@ -27,7 +28,8 @@
         <Filename Value="Source\VisibleDSA.SortTestHelper.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="2"/>
-        <CursorPos X="3" Y="99"/>
+        <TopLine Value="69"/>
+        <CursorPos X="5" Y="103"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
@@ -47,7 +49,7 @@
         <UsageCount Value="10"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="9">
+    <JumpHistory HistoryIndex="10">
       <Position>
         <Filename Value="Source\VisibleDSA.MergeSort.pas"/>
         <Caret Line="21" Column="25" TopLine="7"/>
@@ -87,6 +89,10 @@
       <Position>
         <Filename Value="Merge_Sort.ppr"/>
         <Caret Line="28" Column="39" TopLine="4"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.SortTestHelper.pas"/>
+        <Caret Line="14" Column="15"/>
       </Position>
     </JumpHistory>
     <RunParams>
