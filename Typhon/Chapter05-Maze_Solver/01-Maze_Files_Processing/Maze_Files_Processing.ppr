@@ -1,0 +1,21 @@
+﻿program Maze_Files_Processing;
+
+{$mode objfpc}{$H+}
+
+uses {$IFDEF UNIX}
+  cthreads, {$ENDIF}
+  Classes,
+  SysUtils,
+  Main, DeepStar.Utils.UString;
+
+begin
+  try
+    Run;
+
+    Writeln(END_OF_PROGRAM_CH);
+    Readln;
+  except
+    on E: Exception do
+      Writeln(E.ClassName, ': ', E.Message);
+  end;
+end.
