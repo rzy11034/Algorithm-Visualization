@@ -1,0 +1,22 @@
+﻿program Temp;
+
+{$mode objfpc}{$H+}
+
+uses
+ {$IFDEF UNIX}
+  cthreads,
+ {$ENDIF}
+  Interfaces, // this includes the CT adLCL widgetset
+  Forms,
+  VisibleDSA.AlgoForm
+  { you can add units after this };
+
+{$R *.res}
+
+begin
+  RequireDerivedFormResource := true;
+  Application.Scaled := true;
+  Application.Initialize;
+  Application.CreateForm(TAlgoForm, AlgoForm);
+  Application.Run;
+end.

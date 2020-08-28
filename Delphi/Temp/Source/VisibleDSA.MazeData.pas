@@ -1,15 +1,16 @@
 ﻿unit VisibleDSA.MazeData;
 
-{$mode objfpc}{$H+}
-
 interface
 
 uses
-  Classes,
-  SysUtils,
-  DeepStar.Utils.UString;
+  System.SysUtils,
+  System.Classes,
+  System.StrUtils;
 
 type
+  UString = string;
+  UChar = Char;
+
   TArr2D_int = array of array of integer;
   TArr2D_chr = array of array of UChar;
   TArr2D_bool = array of array of boolean;
@@ -18,7 +19,7 @@ type
   const
     ROAD: UChar = ' ';
     WALL: UChar = '#';
-    FILE_NAME: UString = '..\..\..\..\..\Resources\maze_01.txt';
+    FILE_NAME: UString = '..\..\..\..\Resources\maze_01.txt';
 
   private
     _n: integer;

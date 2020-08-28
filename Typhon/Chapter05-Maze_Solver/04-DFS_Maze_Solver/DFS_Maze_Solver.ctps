@@ -30,8 +30,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="58"/>
-        <CursorPos X="39" Y="77"/>
+        <TopLine Value="67"/>
+        <CursorPos X="59" Y="58"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -48,48 +48,83 @@
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="118"/>
-        <CursorPos X="13" Y="139"/>
+        <TopLine Value="121"/>
+        <CursorPos X="35" Y="142"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.MazeData.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="3"/>
-        <TopLine Value="4"/>
-        <CursorPos X="42" Y="13"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="99"/>
+        <CursorPos X="44" Y="69"/>
         <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\classes\classesh.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1981"/>
+        <CursorPos X="15" Y="1993"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\components\pl_BGRAcontrols\source\bgravirtualscreen.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="BGRAVirtualScreen"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="339"/>
+        <CursorPos X="3" Y="348"/>
+        <UsageCount Value="10"/>
         <Loaded Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\lcl\controls.pp"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="Controls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2325"/>
+        <CursorPos X="15" Y="2339"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\lcl\include\wincontrol.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="4432"/>
+        <CursorPos X="44" Y="4443"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\lcl\widgetset\wscontrols.pp"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="WSControls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="344"/>
+        <CursorPos X="25" Y="354"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\lcl\include\winapih.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="269"/>
+        <CursorPos X="16" Y="283"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\lcl\include\winapi.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1041"/>
+        <CursorPos X="3" Y="1049"/>
+        <UsageCount Value="10"/>
+      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="15">
-      <Position>
-        <Filename Value="Source\VisibleDSA.MazeData.pas"/>
-        <Caret Line="70" Column="30" TopLine="49"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.MazeData.pas"/>
-        <Caret Line="68" TopLine="56"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.MazeData.pas"/>
-        <Caret Line="69" TopLine="56"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.MazeData.pas"/>
-        <Caret Line="70" TopLine="56"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.MazeData.pas"/>
-        <Caret Line="34" Column="9" TopLine="21"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.MazeData.pas"/>
-        <Caret Line="35" Column="12" TopLine="16"/>
-      </Position>
+    <JumpHistory HistoryIndex="16">
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <Caret Line="19" Column="34" TopLine="2"/>
@@ -129,6 +164,34 @@
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <Caret Line="143" Column="12" TopLine="118"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="139" Column="13" TopLine="124"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="136" Column="6" TopLine="124"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
+        <Caret Line="55" Column="17" TopLine="40"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="141" Column="8" TopLine="127"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="142" Column="35" TopLine="121"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\codetyphon\typhon\components\pl_BGRAcontrols\source\bgravirtualscreen.pas"/>
+        <Caret Line="81" Column="15" TopLine="68"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\codetyphon\typhon\components\pl_BGRAcontrols\source\bgravirtualscreen.pas"/>
+        <Caret Line="348" Column="3" TopLine="339"/>
       </Position>
     </JumpHistory>
     <RunParams>

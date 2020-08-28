@@ -18,7 +18,7 @@ type
   const
     ROAD: UChar = ' ';
     WALL: UChar = '#';
-    FILE_NAME: UString = '..\..\..\..\..\Resources\maze_01.txt';
+    FILE_NAME: UString = '..\..\..\..\Resources\maze_01.txt';
 
   private
     _n: integer;

@@ -1,22 +1,21 @@
 ﻿unit VisibleDSA.AlgoVisualizer;
 
-{$mode objfpc}{$H+}
-
 interface
 
 uses
-  Classes,
-  SysUtils,
-  Graphics,
-  Forms,
-  BGRACanvas2D,
+  System.SysUtils,
+  System.StrUtils,
+  System.Types,
+  System.Math,
+  Vcl.Graphics,
+  Vcl.Forms,
   VisibleDSA.AlgoVisHelper,
   VisibleDSA.MazeData;
 
 type
   TAlgoVisualizer = class(TObject)
   const
-    D: TArr2D_int = ((-1, 0), (0, 1), (1, 0), (0, -1));
+    D: TArr2D_int = [[-1, 0], [0, 1], [1, 0], [0, -1]];
 
   private
     _width: integer;
@@ -30,7 +29,7 @@ type
     constructor Create(form: TForm);
     destructor Destroy; override;
 
-    procedure Paint(canvas: TBGRACanvas2D);
+    procedure Paint(canvas: TCanvas);
     procedure Run;
   end;
 
@@ -63,7 +62,7 @@ begin
   inherited Destroy;
 end;
 
-procedure TAlgoVisualizer.Paint(canvas: TBGRACanvas2D);
+procedure TAlgoVisualizer.Paint(canvas: TCanvas);
 var
   w, h: integer;
   i, j: integer;
@@ -86,6 +85,10 @@ begin
       TAlgoVisHelper.FillRectangle(canvas, j * w, i * h, h, w);
     end;
   end;
+
+  //canvas.Brush.Color := CL_RED;
+  //canvas.FillRect(0, 0, 50, 50);
+  //canvas.FillRect(50, 50, 100, 100);
 end;
 
 procedure TAlgoVisualizer.Run;
@@ -124,24 +127,21 @@ begin
   __setData(-1, -1);
 end;
 
-var
-  can: integer;
-
 procedure TAlgoVisualizer.__setData(x, y: integer);
 begin
   if _data.InArea(x, y) then
     _data.Path[x, y] := true;
 
-  //TAlgoVisHelper.Pause(0);
-  //AlgoForm.BGRAVirtualScreen.RedrawBitmap;
+  TAlgoVisHelper.Pause(10);
+  AlgoForm.Repaint;
 
-  if can < 10 then
-    can += 1
-  else
-  begin
-    AlgoForm.BGRAVirtualScreen.RedrawBitmap;
-    can := 0;
-  end;
+  //if can < 10 then
+  //  can += 1
+  //else
+  //begin
+  //  AlgoForm.BGRAVirtualScreen.RedrawBitmap;
+  //  can := 0;
+  //end;
 end;
 
 end.
