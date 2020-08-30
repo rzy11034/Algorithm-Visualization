@@ -21,7 +21,7 @@ type
     _data: TMazeData;
     _form: TForm;
 
-    procedure __setData(heapIndex: integer);
+    procedure __setData();
 
   public
     constructor Create(form: TForm);
@@ -42,16 +42,17 @@ constructor TAlgoVisualizer.Create(form: TForm);
 var
   blockSide: integer;
 begin
-  blockSide := 6;
+  blockSide := 8;
   _data := TMazeData.Create(TMazeData.FILE_NAME);
 
   _form := form;
-  _form.ClientWidth := blockSide * _data.M;
-  _form.ClientHeight := blockSide * _data.N;
+  _form.Width := blockSide * _data.M;
+  _form.Height := blockSide * _data.N;
 
-  _width := _form.ClientWidth;
-  _height := _form.ClientHeight;
-  _form.Caption := 'Maze solver visualization';
+  _width := _form.Width;
+  _height := _form.Height;
+  _form.Caption := 'Maze solver visualization --- ' +
+    Format('W: %d, H: %d', [_width, _height]);
 end;
 
 destructor TAlgoVisualizer.Destroy;
@@ -87,7 +88,7 @@ begin
 
 end;
 
-procedure TAlgoVisualizer.__setData(heapIndex: integer);
+procedure TAlgoVisualizer.__setData();
 begin
 
   TAlgoVisHelper.Pause(0);

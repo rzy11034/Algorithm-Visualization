@@ -67,8 +67,8 @@ end;
 
 procedure TAlgoForm.FormCreate(Sender: TObject);
 begin
-  ClientWidth := 600;
-  ClientHeight := 600;
+  Width := 600;
+  Height := 600;
   Position := TPosition.poDesktopCenter;
   BorderStyle := TFormBorderStyle.bsSingle;
   DoubleBuffered := True;

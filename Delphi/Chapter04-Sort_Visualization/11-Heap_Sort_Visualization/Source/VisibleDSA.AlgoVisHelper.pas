@@ -125,10 +125,14 @@ begin
   canvas.Fill.Color := _fillColor;
   canvas.Fill.Kind := _fillStyle;
 
+  canvas.Stroke.Color := _fillColor;
+  canvas.Stroke.Thickness := 1;
+  canvas.Stroke.Kind := TBrushKind.Solid;
+
   if canvas.BeginScene then
   begin
     try
-      canvas.FillRect(a, 0, 0, AllCorners, 1)
+      canvas.FillRect(a, 0, 0, AllCorners, 1);
     finally
       canvas.EndScene;
     end;

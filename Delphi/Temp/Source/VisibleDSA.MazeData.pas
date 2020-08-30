@@ -50,42 +50,40 @@ type
     property ExitY: integer read _exitY;
   end;
 
-
 implementation
+
+uses
+  VisibleDSA.Maze;
 
 { TMazeData }
 
 constructor TMazeData.Create(fileName: UString);
 var
-  strList: TStringList;
   line: UString;
   i, j: integer;
+  arr: TArr2D_str;
 begin
-  strList := TStringList.Create;
-  try
-    strList.LoadFromFile(string(fileName));
-    _n := strList.Count;
-    _m := UString(strList[0]).Length;
+  arr := maze01;
 
-    SetLength(_maze, N, M);
-    SetLength(Path, N, M);
-    SetLength(Visited, N, M);
+  _n := Length(arr);
+  _m := Length(arr[0]);
 
-    for i := 0 to N - 1 do
-    begin
-      line := UString(strList[i]);
+  SetLength(_maze, N, M);
+  SetLength(Path, N, M);
+  SetLength(Visited, N, M);
 
-      for j := 0 to line.Length - 1 do
-        _maze[i, j] := line.Chars[j];
-    end;
+  for i := 0 to N - 1 do
+  begin
+    line := arr[i];
 
-    _entranceX := 1;
-    _entranceY := 0;
-    _exitX := N - 2;
-    _exitY := M - 1;
-  finally
-    FreeAndNil(strList);
+    for j := 0 to M - 1 do
+      _maze[i, j] := line.Chars[j];
   end;
+
+  _entranceX := 1;
+  _entranceY := 0;
+  _exitX := N - 2;
+  _exitY := M - 1;
 end;
 
 destructor TMazeData.Destroy;

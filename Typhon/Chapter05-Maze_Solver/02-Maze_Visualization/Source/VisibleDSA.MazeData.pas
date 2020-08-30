@@ -29,8 +29,8 @@ type
     function InArea(x, y: integer): boolean;
     procedure PrintMaze;
 
-    property N: integer read _N;
-    property M: integer read _M;
+    property N: integer read _n;
+    property M: integer read _m;
   end;
 
 

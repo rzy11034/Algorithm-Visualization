@@ -52,7 +52,7 @@ end;
 
 procedure TAlgoForm.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
-  if _thread.Finished <> True then
+  if _thread.Finished = False then
   begin
     _thread.Suspended := True;
   end;

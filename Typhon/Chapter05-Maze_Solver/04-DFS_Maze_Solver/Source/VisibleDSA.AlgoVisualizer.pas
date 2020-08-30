@@ -97,7 +97,7 @@ procedure TAlgoVisualizer.Run;
     if not _data.InArea(x, y) then
       raise Exception.Create('X, Y are out of index in go function!');
 
-    _data.Visited[x, y] := true;
+    _data.Visited[x, y] := True;
     __setData(x, y);
 
     if (x = _data.ExitX) and (y = _data.ExitY) then
@@ -110,12 +110,11 @@ procedure TAlgoVisualizer.Run;
 
       if (_data.InArea(newX, newY)) and
         (_data.GetMaze(newX, newY) = TMazeData.ROAD) and
-        (_data.Visited[newX, newY] = false) then
+        (_data.Visited[newX, newY] = False) then
       begin
         __go__(newX, newY);
       end;
     end;
-
   end;
 
 begin
@@ -124,24 +123,13 @@ begin
   __setData(-1, -1);
 end;
 
-var
-  can: integer;
-
 procedure TAlgoVisualizer.__setData(x, y: integer);
 begin
   if _data.InArea(x, y) then
-    _data.Path[x, y] := true;
+    _data.Path[x, y] := True;
 
-  //TAlgoVisHelper.Pause(0);
-  //AlgoForm.BGRAVirtualScreen.RedrawBitmap;
-
-  if can < 10 then
-    can += 1
-  else
-  begin
-    AlgoForm.BGRAVirtualScreen.RedrawBitmap;
-    can := 0;
-  end;
+  TAlgoVisHelper.Pause(0);
+  AlgoForm.BGRAVirtualScreen.RedrawBitmap;
 end;
 
 end.

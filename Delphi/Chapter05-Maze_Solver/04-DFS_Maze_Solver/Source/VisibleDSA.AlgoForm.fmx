@@ -1,0 +1,24 @@
+object AlgoForm: TAlgoForm
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = Single
+  Caption = 'Form2'
+  ClientHeight = 367
+  ClientWidth = 395
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  OnClose = FormClose
+  DesignerMasterStyle = 0
+  object PaintBox: TPaintBox
+    Align = Client
+    Size.Width = 395.000000000000000000
+    Size.Height = 367.000000000000000000
+    Size.PlatformDefault = False
+    OnPaint = PaintBoxPaint
+  end
+end

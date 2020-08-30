@@ -11,17 +11,21 @@ uses
   Controls,
   Graphics,
   Dialogs,
+  BGRABitmap,
+  BGRAVirtualScreen,
   VisibleDSA.AlgoVisualizer;
 
 type
   TAlgoForm = class(TForm)
+    BGRAVirtualScreen: TBGRAVirtualScreen;
+    procedure BGRAVirtualScreenRedraw(Sender: TObject; Bitmap: TBGRABitmap);
     procedure FormActivate(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
-    procedure FormPaint(Sender: TObject);
   private
     _av: TAlgoVisualizer;
     _thread: TThread;
+
   public
 
   end;
@@ -35,37 +39,44 @@ implementation
 
 { TAlgoForm }
 
+procedure TAlgoForm.BGRAVirtualScreenRedraw(Sender: TObject; Bitmap: TBGRABitmap);
+begin
+  _av.Paint(Bitmap.Canvas2D);
+end;
+
 procedure TAlgoForm.FormActivate(Sender: TObject);
+
   procedure __run__;
   begin
     AlgoForm._av.Run;
   end;
 
 begin
-  //_thread := TThread.CreateAnonymousThread(TProcedure(@__run__));
-  //_thread.FreeOnTerminate := true;
-  //_thread.Start;
-
-  _av.Run;
+  _thread := TThread.CreateAnonymousThread(TProcedure(@__run__));
+  _thread.FreeOnTerminate := True;
+  _thread.Start;
 end;
 
 procedure TAlgoForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
-  //if _thread.Finished <> true then
-  //begin
-  //  _thread.Suspended := true;
-  //end;
+  if _thread.Finished <> True then
+  begin
+    _thread.Suspended := True;
+  end;
 end;
 
 procedure TAlgoForm.FormCreate(Sender: TObject);
 begin
+  Width := 600;
+  Height := 600;
+  Position := TPosition.poDesktopCenter;
+  BorderStyle := TFormBorderStyle.bsSingle;
+  DoubleBuffered := True;
+  Caption := 'AlgoForm';
+
+  BGRAVirtualScreen.Color := clForm;
+
   _av := TAlgoVisualizer.Create(self);
-end;
-
-procedure TAlgoForm.FormPaint(Sender: TObject);
-begin
-  _av.Paint(Self.Canvas);
-
 end;
 
 end.
