@@ -19,11 +19,12 @@ type
     D: TArr2D_int = ((-1, 0), (0, 1), (1, 0), (0, -1));
 
   private
+    _runningStatus: integer;
     _width: integer;
     _height: integer;
     _data: TMazeData;
 
-    procedure __setData(x, y: integer; finished: boolean);
+    procedure __setData(finished: boolean);
 
   public
     constructor Create(form: TForm);
@@ -86,51 +87,21 @@ begin
 end;
 
 procedure TAlgoVisualizer.Run;
-  procedure __go__(x, y: integer);
-  var
-    i, newX, newY: integer;
-  begin
-    if not _data.InArea(x, y) then
-      raise Exception.Create('X, Y are out of index in go function!');
-
-    _data.Visited[x, y] := True;
-
-    for i := 0 to High(D) do
-    begin
-      newX := x + D[i, 0] * 2;
-      newY := y + D[i, 1] * 2;
-
-      if _data.InArea(newX, newY) and (not _data.Visited[newX, newY]) then
-      begin
-        __setData(x + D[i, 0], y + D[i, 1], False);
-        __go__(newX, newY);
-      end;
-    end;
-
-  end;
-
 begin
-  __setData(-1, -1, False);
-  __go__(_data.EntranceX, _data.EntranceY + 1);
-  __setData(-1, -1, True);
+  __setData(true);
 end;
 
-var can: integer;
-
-procedure TAlgoVisualizer.__setData(x, y: integer; finished: boolean);
+procedure TAlgoVisualizer.__setData(finished: boolean);
 begin
-  if _data.InArea(x, y) then
-    _data.Maze[x, y] := TMazeData.ROAD;
-
-  if finished or (can >= 5) then
+  if finished or (_runningStatus >= 5) then
   begin
     TAlgoVisHelper.Pause(0);
     AlgoForm.BGRAVirtualScreen.RedrawBitmap;
-    can := 0;
+    _runningStatus := 0;
   end
   else
   begin
-    can += 1;
+    _runningStatus += 1;
   end;
 end;
 

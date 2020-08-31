@@ -11,8 +11,7 @@ uses
   Forms,
   BGRACanvas2D,
   VisibleDSA.AlgoVisHelper,
-  VisibleDSA.MazeData,
-  VisibleDSA.Position;
+  VisibleDSA.MazeData;
 
 type
   TAlgoVisualizer = class(TObject)
@@ -38,11 +37,7 @@ type
 implementation
 
 uses
-  VisibleDSA.AlgoForm,
-  VisibleDSA.RandomQueue;
-
-type
-  TQueue_Position = specialize TRandomQueue<TPosition>;
+  VisibleDSA.AlgoForm;
 
 { TAlgoVisualizer }
 
@@ -50,13 +45,12 @@ constructor TAlgoVisualizer.Create(form: TForm);
 var
   blockSide, size: integer;
 begin
-  size := 101;
+  size := 5;
   blockSide := 808 div size;
   _data := TMazeData.Create(size, size);
 
   _width := blockSide * _data.M;
   _height := blockSide * _data.N;
-  _runningStatus := 0;
 
   form.ClientWidth := _width;
   form.ClientHeight := _height;
@@ -82,9 +76,7 @@ begin
   begin
     for j := 0 to _data.M - 1 do
     begin
-      if _data.InMist[i, j] = True then
-        TAlgoVisHelper.SetFill(CL_BROWN)
-      else if _data.Maze[i, j] = TMazeData.WALL then
+      if _data.Maze[i, j] = TMazeData.WALL then
         TAlgoVisHelper.SetFill(CL_LIGHTBLUE)
       else
         TAlgoVisHelper.SetFill(CL_WHITE);
@@ -95,41 +87,33 @@ begin
 end;
 
 procedure TAlgoVisualizer.Run;
-var
-  queue: TQueue_Position;
-  curPos: TPosition;
-  i, newX, newY: integer;
-begin
-  queue := TQueue_Position.Create;
-  try
-    curPos := TPosition.Create(_data.EntranceX, _data.EntranceY + 1);
-    queue.Enqueue(curPos);
-    _data.Visited[curPos.X, curPos.Y] := True;
-    _data.OpenMist(curPos.X, curPos.Y);
+  procedure __go__(x, y: integer);
+  var
+    i, newX, newY: integer;
+  begin
+    if not _data.InArea(x, y) then
+      raise Exception.Create('X, Y are out of index in go function!');
 
-    while queue.Count > 0 do
+    _data.Visited[x, y] := true;
+
+    for i := 0 to High(D) do
     begin
-      curPos := queue.Dequeue;
+      newX := x + D[i, 0] * 2;
+      newY := y + D[i, 1] * 2;
 
-      for i := 0 to High(D) do
+      if _data.InArea(newX, newY) and (_data.Visited[newX, newY] = false) then
       begin
-        newX := curPos.X + D[i, 0] * 2;
-        newY := curPos.Y + D[i, 1] * 2;
-
-        if _data.InArea(newX, newY) and (_data.Visited[newX, newY] = False) then
-        begin
-          queue.Enqueue(TPosition.Create(newX, newY));
-          _data.Visited[newX, newY] := True;
-          _data.OpenMist(newX, newY);
-          __setData(curPos.X + D[i, 0], curPos.Y + D[i, 1], False);
-        end;
+        __setData(x + D[i, 0], y + D[i, 1], false);
+        __go__(newX, newY);
       end;
     end;
-  finally
-    queue.Free;
+
   end;
 
-  __setData(-1, -1, True);
+begin
+  __setData(-1, -1, false);
+  __go__(_data.EntranceX, _data.EntranceY + 1);
+  __setData(-1, -1, true);
 end;
 
 procedure TAlgoVisualizer.__setData(x, y: integer; finished: boolean);
@@ -137,9 +121,9 @@ begin
   if _data.InArea(x, y) then
     _data.Maze[x, y] := TMazeData.ROAD;
 
-  if finished or (_runningStatus >= 100) then
+  if finished or (_runningStatus >= 5) then
   begin
-    TAlgoVisHelper.Pause(10);
+    TAlgoVisHelper.Pause(0);
     AlgoForm.BGRAVirtualScreen.RedrawBitmap;
     _runningStatus := 0;
   end
