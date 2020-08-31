@@ -44,7 +44,7 @@ end;
 function TRandomQueue.Dequeue: T;
 var
   res: T;
-  r: Double;
+  r: double;
 begin
   if _list.Count = 0 then
     raise Exception.Create('There''s no element to remove in Random Queue');
@@ -52,7 +52,7 @@ begin
   Randomize;
   r := Random;
 
-  if r > 0.5 then
+  if r < 0.5 then
   begin
     res := _list.Last;
     _list.Delete(_list.Count - 1);
@@ -73,13 +73,23 @@ begin
 end;
 
 procedure TRandomQueue.Enqueue(e: T);
+var
+  index: integer;
+  temp: T;
 begin
+  if _list.Count = 0 then
+  begin
+    _list.Add(e);
+    Exit;
+  end;
+
   Randomize;
 
-  if Random > 0.5 then
-    _list.Add(e)
-  else
-    _list.Insert(0, e);
+  index := Random(_list.Count);
+
+  temp := _list[index];
+  _list[index] := e;
+  _list.Add(temp);
 end;
 
 end.

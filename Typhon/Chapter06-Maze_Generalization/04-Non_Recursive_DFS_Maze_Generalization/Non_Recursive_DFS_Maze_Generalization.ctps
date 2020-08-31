@@ -30,6 +30,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="1"/>
+        <TopLine Value="22"/>
         <CursorPos X="3" Y="14"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
@@ -46,22 +47,23 @@
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="123"/>
-        <CursorPos X="71" Y="123"/>
+        <TopLine Value="120"/>
+        <CursorPos X="27" Y="138"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.MazeData.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="3"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.Position.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="7"/>
         <CursorPos X="3" Y="29"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
@@ -71,8 +73,8 @@
         <FRMtype Value="0"/>
         <UnitName Value="Generics.Collections"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="2184"/>
-        <CursorPos X="3" Y="2193"/>
+        <TopLine Value="2181"/>
+        <CursorPos X="17" Y="2193"/>
         <UsageCount Value="10"/>
       </Unit>
     </Units>
@@ -84,10 +86,6 @@
       <Position>
         <Filename Value="Source\VisibleDSA.Position.pas"/>
         <Caret Line="18" Column="38" TopLine="10"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
-        <Caret TopLine="112"/>
       </Position>
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
@@ -132,6 +130,10 @@
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <Caret Line="116" Column="44" TopLine="97"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="109" Column="25" TopLine="86"/>
       </Position>
     </JumpHistory>
     <RunParams>

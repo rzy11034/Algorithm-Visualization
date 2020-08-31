@@ -11,7 +11,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="1"/>
         <CursorPos Y="20"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -21,7 +21,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="22"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
@@ -30,7 +30,7 @@
         <ComponentName Value="AlgoForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -41,25 +41,24 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="22"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="119"/>
-        <CursorPos X="29" Y="147"/>
-        <UsageCount Value="21"/>
+        <TopLine Value="125"/>
+        <CursorPos X="32" Y="137"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.MazeData.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
-        <TopLine Value="94"/>
-        <CursorPos X="30" Y="109"/>
-        <UsageCount Value="21"/>
+        <TopLine Value="127"/>
+        <CursorPos X="45" Y="80"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -69,15 +68,16 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="22"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.RandomQueue.pas"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="31"/>
-        <CursorPos X="25" Y="82"/>
-        <UsageCount Value="21"/>
+        <TopLine Value="34"/>
+        <CursorPos X="17" Y="67"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -85,40 +85,12 @@
         <FRMtype Value="0"/>
         <UnitName Value="Generics.Collections"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="1444"/>
-        <CursorPos X="22" Y="1465"/>
+        <TopLine Value="1427"/>
+        <CursorPos Y="1439"/>
         <UsageCount Value="10"/>
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="Source\VisibleDSA.RandomQueue.pas"/>
-        <Caret Line="55" TopLine="40"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.RandomQueue.pas"/>
-        <Caret Line="57" TopLine="40"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.RandomQueue.pas"/>
-        <Caret Line="53" TopLine="40"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.RandomQueue.pas"/>
-        <Caret Line="55" TopLine="40"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.RandomQueue.pas"/>
-        <Caret Line="83" Column="13"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.RandomQueue.pas"/>
-        <Caret Line="52" Column="38" TopLine="37"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.RandomQueue.pas"/>
-        <Caret Line="55" TopLine="47"/>
-      </Position>
       <Position>
         <Filename Value="Source\VisibleDSA.RandomQueue.pas"/>
         <Caret Line="57" TopLine="47"/>
@@ -210,6 +182,34 @@
       <Position>
         <Filename Value="Source\VisibleDSA.RandomQueue.pas"/>
         <Caret Line="62" TopLine="43"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.RandomQueue.pas"/>
+        <Caret Line="86" Column="20" TopLine="64"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.RandomQueue.pas"/>
+        <Caret Line="82" Column="30" TopLine="64"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.RandomQueue.pas"/>
+        <Caret Line="81" Column="49" TopLine="64"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.RandomQueue.pas"/>
+        <Caret Line="82" TopLine="64"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.RandomQueue.pas"/>
+        <Caret Line="84" Column="12" TopLine="64"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.RandomQueue.pas"/>
+        <Caret Line="88" TopLine="64"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.RandomQueue.pas"/>
+        <Caret Line="80" Column="20" TopLine="64"/>
       </Position>
     </JumpHistory>
     <RunParams>

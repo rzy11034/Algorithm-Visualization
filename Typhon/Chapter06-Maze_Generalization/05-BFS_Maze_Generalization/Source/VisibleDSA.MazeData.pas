@@ -29,9 +29,9 @@ type
     _exitY: integer;
 
     _maze: TArr2D_chr;
-
+    _visited: TArr2D_bool;
   public
-    Visited: TArr2D_bool;
+
 
     constructor Create(n, m: integer);
     destructor Destroy; override;
@@ -46,6 +46,7 @@ type
     property ExitX: integer read _exitX;
     property ExitY: integer read _exitY;
     property Maze: TArr2D_chr read _maze write _maze;
+    property Visited: TArr2D_bool read _visited write _visited;
   end;
 
 
@@ -75,7 +76,7 @@ begin
       else
         _maze[i, j] := WALL;
 
-      Visited[i, j] := False;
+      Visited[i, j] := false;
     end;
   end;
 

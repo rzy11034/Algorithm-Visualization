@@ -29,10 +29,9 @@ type
     _exitY: integer;
 
     _maze: TArr2D_chr;
+    _visited: TArr2D_bool;
 
   public
-    Visited: TArr2D_bool;
-
     constructor Create(n, m: integer);
     destructor Destroy; override;
     function GetMaze(i, j: integer): UChar;
@@ -46,6 +45,7 @@ type
     property ExitX: integer read _exitX;
     property ExitY: integer read _exitY;
     property Maze: TArr2D_chr read _maze write _maze;
+    property Visited: TArr2D_bool read _visited write _visited;
   end;
 
 
@@ -64,7 +64,7 @@ begin
   _m := m;
 
   SetLength(_maze, N, M);
-  SetLength(Visited, N, M);
+  SetLength(_visited, N, M);
 
   for i := 0 to N - 1 do
   begin
@@ -75,7 +75,7 @@ begin
       else
         _maze[i, j] := WALL;
 
-      Visited[i, j] := False;
+      _visited[i, j] := False;
     end;
   end;
 

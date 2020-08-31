@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Debug"/>
+    <Units>
+      <Unit>
+        <Filename Value="Random_Generalization_with_Solver.ppr"/>
+        <FRMtype Value="0"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\DeepStar.Utils.UString.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="22"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
+        <FRMtype Value="200"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="AlgoForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="55"/>
+        <CursorPos X="66" Y="82"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="22"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="192"/>
+        <CursorPos X="27" Y="211"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\VisibleDSA.MazeData.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="93"/>
+        <CursorPos X="43" Y="83"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\VisibleDSA.Position.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="22"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\VisibleDSA.RandomQueue.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="86"/>
+        <CursorPos X="5" Y="116"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="164" TopLine="146"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="157" TopLine="146"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="159" TopLine="146"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="160" TopLine="146"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="162" TopLine="146"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="163" TopLine="146"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="157" TopLine="146"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="159" TopLine="146"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="160" TopLine="146"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="162" TopLine="146"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="157" TopLine="146"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="175" TopLine="164"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="162" TopLine="146"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="159" Column="22" TopLine="152"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="163" TopLine="152"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="162" TopLine="152"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="163" TopLine="152"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="164" TopLine="152"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="185" Column="22" TopLine="164"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="23"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.RandomQueue.pas"/>
+        <Caret Line="54" Column="8" TopLine="37"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="207" Column="35" TopLine="184"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.RandomQueue.pas"/>
+        <Caret Line="85" Column="26" TopLine="60"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.RandomQueue.pas"/>
+        <Caret Line="63" Column="7" TopLine="52"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="205" Column="37" TopLine="184"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="232" Column="15" TopLine="139"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="235" Column="3" TopLine="211"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="232" Column="23" TopLine="205"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="30" TopLine="5"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="215" Column="41" TopLine="203"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

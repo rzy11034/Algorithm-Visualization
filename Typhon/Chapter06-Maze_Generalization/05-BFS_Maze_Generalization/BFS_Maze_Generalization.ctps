@@ -9,10 +9,9 @@
         <Filename Value="BFS_Maze_Generalization.ppr"/>
         <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
         <CursorPos Y="20"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="24"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -22,7 +21,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="24"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
@@ -33,7 +32,7 @@
         <ResourceBaseClass Value="Form"/>
         <TopLine Value="52"/>
         <CursorPos X="40" Y="26"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="24"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -44,25 +43,26 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="24"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="103"/>
-        <CursorPos X="26" Y="124"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="100"/>
+        <CursorPos X="5" Y="129"/>
+        <UsageCount Value="24"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.MazeData.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="-1"/>
-        <TopLine Value="-1"/>
-        <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="20"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="99"/>
+        <CursorPos X="30" Y="79"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.Position.pas"/>
@@ -71,7 +71,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="24"/>
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="1">

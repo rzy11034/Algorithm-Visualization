@@ -82,7 +82,7 @@ begin
   begin
     for j := 0 to _data.M - 1 do
     begin
-      if _data.InMist[i, j] = True then
+      if _data.InMist[i, j] = false then
         TAlgoVisHelper.SetFill(CL_BROWN)
       else if _data.Maze[i, j] = TMazeData.WALL then
         TAlgoVisHelper.SetFill(CL_LIGHTBLUE)
@@ -105,7 +105,7 @@ begin
     curPos := TPosition.Create(_data.EntranceX, _data.EntranceY + 1);
     queue.Enqueue(curPos);
     _data.Visited[curPos.X, curPos.Y] := True;
-    _data.OpenMist(curPos.X, curPos.Y);
+    //_data.OpenMist(curPos.X, curPos.Y);
 
     while queue.Count > 0 do
     begin
@@ -120,7 +120,7 @@ begin
         begin
           queue.Enqueue(TPosition.Create(newX, newY));
           _data.Visited[newX, newY] := True;
-          _data.OpenMist(newX, newY);
+          //_data.OpenMist(newX, newY);
           __setData(curPos.X + D[i, 0], curPos.Y + D[i, 1], False);
         end;
       end;
@@ -137,9 +137,9 @@ begin
   if _data.InArea(x, y) then
     _data.Maze[x, y] := TMazeData.ROAD;
 
-  if finished or (_runningStatus >= 100) then
+  if finished or (_runningStatus = 0) then
   begin
-    TAlgoVisHelper.Pause(10);
+    TAlgoVisHelper.Pause(1);
     AlgoForm.BGRAVirtualScreen.RedrawBitmap;
     _runningStatus := 0;
   end

@@ -50,7 +50,7 @@ constructor TAlgoVisualizer.Create(form: TForm);
 var
   blockSide, size: integer;
 begin
-  size := 51;
+  size := 101;
   blockSide := 808 div size;
   _data := TMazeData.Create(size, size);
 

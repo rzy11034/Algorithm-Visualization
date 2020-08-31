@@ -51,7 +51,7 @@ var
   blockSide, size: integer;
 begin
   size := 101;
-  blockSide := 808 div size;
+  blockSide := 606 div size;
   _data := TMazeData.Create(size, size);
 
   _width := blockSide * _data.M;
@@ -137,7 +137,7 @@ begin
   if _data.InArea(x, y) then
     _data.Maze[x, y] := TMazeData.ROAD;
 
-  if finished or (_runningStatus >= 10) then
+  if finished or (_runningStatus >= 30) then
   begin
     TAlgoVisHelper.Pause(0);
     AlgoForm.BGRAVirtualScreen.RedrawBitmap;

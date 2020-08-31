@@ -54,7 +54,7 @@ constructor TAlgoVisualizer.Create(form: TForm);
 var
   blockSide, size: integer;
 begin
-  size := 101;
+  size := 31;
   blockSide := 808 div size;
   _data := TMazeData.Create(size, size);
 
@@ -192,7 +192,13 @@ begin
 end;
 
 procedure TAlgoVisualizer.__KeyPress(Sender: TObject; var Key: char);
+var
+  i, j: Integer;
 begin
+  for i := 0 to High(_data.Path) do
+    for j := 0 to High(_data.Path[i]) do
+      _data.Path[i, j] := false;
+
   if key = ' ' then
     Go;
 end;
@@ -219,14 +225,15 @@ begin
   if _data.InArea(x, y) then
     _data.Maze[x, y] := TMazeData.ROAD;
 
-  if finished or (_runningStatus >= 20) then
+  if finished or (_runningStatus = 0) then
   begin
-    TAlgoVisHelper.Pause(0);
+    TAlgoVisHelper.Pause(1);
     AlgoForm.BGRAVirtualScreen.RedrawBitmap;
     _runningStatus := 0;
   end
   else
   begin
+    TAlgoVisHelper.Pause(0);
     _runningStatus += 1;
   end;
 end;

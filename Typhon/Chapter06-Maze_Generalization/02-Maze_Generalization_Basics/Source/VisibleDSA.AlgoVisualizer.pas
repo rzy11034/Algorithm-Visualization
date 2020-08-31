@@ -93,9 +93,9 @@ end;
 
 procedure TAlgoVisualizer.__setData(finished: boolean);
 begin
-  if finished or (_runningStatus >= 5) then
+  if finished or (_runningStatus =0) then
   begin
-    TAlgoVisHelper.Pause(0);
+    TAlgoVisHelper.Pause(1);
     AlgoForm.BGRAVirtualScreen.RedrawBitmap;
     _runningStatus := 0;
   end

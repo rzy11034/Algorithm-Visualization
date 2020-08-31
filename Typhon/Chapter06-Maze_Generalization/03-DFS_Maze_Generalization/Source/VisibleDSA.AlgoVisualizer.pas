@@ -45,7 +45,7 @@ constructor TAlgoVisualizer.Create(form: TForm);
 var
   blockSide, size: integer;
 begin
-  size := 5;
+  size := 101;
   blockSide := 808 div size;
   _data := TMazeData.Create(size, size);
 
@@ -121,9 +121,9 @@ begin
   if _data.InArea(x, y) then
     _data.Maze[x, y] := TMazeData.ROAD;
 
-  if finished or (_runningStatus >= 5) then
+  if finished or (_runningStatus = 0) then
   begin
-    TAlgoVisHelper.Pause(0);
+    TAlgoVisHelper.Pause(1);
     AlgoForm.BGRAVirtualScreen.RedrawBitmap;
     _runningStatus := 0;
   end

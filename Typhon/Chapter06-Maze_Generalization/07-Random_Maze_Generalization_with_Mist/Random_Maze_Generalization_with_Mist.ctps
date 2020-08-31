@@ -46,19 +46,19 @@
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="3"/>
-        <TopLine Value="129"/>
-        <CursorPos X="39" Y="140"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="121"/>
+        <CursorPos X="25" Y="139"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.MazeData.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="19"/>
-        <CursorPos X="11" Y="36"/>
+        <TopLine Value="58"/>
+        <CursorPos X="30" Y="74"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
@@ -74,14 +74,13 @@
       <Unit>
         <Filename Value="Source\VisibleDSA.RandomQueue.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="-1"/>
-        <TopLine Value="-1"/>
-        <CursorPos X="-1" Y="-1"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="52"/>
         <UsageCount Value="20"/>
+        <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="2">
+    <JumpHistory HistoryIndex="3">
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <Caret Line="86" Column="40" TopLine="70"/>
@@ -93,6 +92,10 @@
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <Caret Line="85" Column="40" TopLine="77"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="140" Column="39" TopLine="111"/>
       </Position>
     </JumpHistory>
     <RunParams>

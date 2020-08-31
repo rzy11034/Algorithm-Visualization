@@ -102,7 +102,7 @@ begin
   try
     curPos := TPosition.Create(_data.EntranceX, _data.EntranceY + 1);
     queue.Enqueue(curPos);
-    _data.Visited[curPos.X, curPos.Y] := True;
+    _data.Visited[curPos.X, curPos.Y] := true;
 
     while queue.Count > 0 do
     begin
@@ -113,11 +113,11 @@ begin
         newX := curPos.X + D[i, 0] * 2;
         newY := curPos.Y + D[i, 1] * 2;
 
-        if _data.InArea(newX, newY) and (_data.Visited[newX, newY] = False) then
+        if _data.InArea(newX, newY) and (_data.Visited[newX, newY] = false) then
         begin
           queue.Enqueue(TPosition.Create(newX, newY));
-          _data.Visited[newX, newY] := True;
-          __setData(curPos.X + D[i, 0], curPos.Y + D[i, 1], False);
+          _data.Visited[newX, newY] := true;
+          __setData(curPos.X + D[i, 0], curPos.Y + D[i, 1], false);
         end;
       end;
     end;
@@ -125,7 +125,7 @@ begin
     queue.Free;
   end;
 
-  __setData(-1, -1, True);
+  __setData(-1, -1, true);
 end;
 
 procedure TAlgoVisualizer.__setData(x, y: integer; finished: boolean);
@@ -133,9 +133,9 @@ begin
   if _data.InArea(x, y) then
     _data.Maze[x, y] := TMazeData.ROAD;
 
-  if finished or (_runningStatus >= 5) then
+  if finished or (_runningStatus = 0) then
   begin
-    TAlgoVisHelper.Pause(0);
+    TAlgoVisHelper.Pause(1);
     AlgoForm.BGRAVirtualScreen.RedrawBitmap;
     _runningStatus := 0;
   end
