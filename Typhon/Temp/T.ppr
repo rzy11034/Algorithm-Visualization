@@ -6,13 +6,13 @@ uses {$IFDEF UNIX}
   cthreads, {$ENDIF}
   Interfaces, // this includes the CT adLCL widgetset
   Forms,
-  VisibleDSA.AlgoForm;
+  VisibleDSA.AlgoForm, VisibleDSA.InspectForm;
 
 {$R *.res}
 
 begin
-  RequireDerivedFormResource := True;
-  Application.Scaled := True;
+  RequireDerivedFormResource := true;
+  Application.Scaled:=True;
   Application.Initialize;
   Application.CreateForm(TAlgoForm, AlgoForm);
   Application.Run;

@@ -52,17 +52,20 @@ procedure TAlgoForm.FormActivate(Sender: TObject);
   end;
 
 begin
-  _thread := TThread.CreateAnonymousThread(TProcedure(@__run__));
-  _thread.FreeOnTerminate := True;
-  _thread.Start;
+  //_thread := TThread.CreateAnonymousThread(TProcedure(@__run__));
+  //_thread.FreeOnTerminate := True;
+  //_thread.Start;
+
+  __run__;
+  //Application.ProcessMessages;
 end;
 
 procedure TAlgoForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
-  if _thread.Finished <> True then
-  begin
-    _thread.Suspended := True;
-  end;
+  //if _thread.Finished <> True then
+  //begin
+  //  _thread.Suspended := True;
+  //end;
 end;
 
 procedure TAlgoForm.FormCreate(Sender: TObject);

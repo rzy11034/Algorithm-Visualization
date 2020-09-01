@@ -3,24 +3,30 @@
 interface
 
 uses
+  System.Classes,
   System.SysUtils,
   System.Types,
   System.Math,
   FMX.Graphics,
   FMX.Forms,
-  FMX.Objects,
   VisibleDSA.AlgoVisHelper,
   VisibleDSA.MazeData;
 
 type
   TAlgoVisualizer = class(TObject)
+  private const
+    D: TArr2D_int = [[-1, 0], [0, 1], [1, 0], [0, -1]];
+
   private
+    _runningStatus: integer;
     _width: integer;
     _height: integer;
     _data: TMazeData;
     _form: TForm;
 
-    procedure __setData();
+    procedure __setRoadData(x, y: integer);
+    procedure __setPathdata(x, y: integer; isPath, finished: boolean);
+    procedure __KeyPress(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
 
   public
     constructor Create(form: TForm);
@@ -33,32 +39,34 @@ type
 implementation
 
 uses
-  VisibleDSA.AlgoForm;
+  VisibleDSA.RandomQueue,
+  VisibleDSA.AlgoForm,
+  VisibleDSA.Position;
 
 type
-  TArray_int = TArray<integer>;
+  TQueue_Position = TRandomQueue<TPosition>;
 
 { TAlgoVisualizer }
 
 constructor TAlgoVisualizer.Create(form: TForm);
 var
-  blockSide: integer;
-  a, b: Integer;
+  blockSide, size: integer;
 begin
-  blockSide := 8;
-  _data := TMazeData.Create(TMazeData.FILE_NAME);
+  size := 101;
+  blockSide := 606 div size;
+  _data := TMazeData.Create(size, size);
+
   _form := form;
-
-  a := blockSide * _data.M;
-  b := blockSide * _data.N;
-
-  _form.ClientWidth := a;
-  _form.ClientHeight := b;
+  _form.ClientWidth := blockSide * _data.M;
+  _form.ClientHeight := blockSide * _data.N;
 
   _width := _form.ClientWidth;
   _height := _form.ClientHeight;
-  _form.Caption := 'Maze solver visualization --- ' +
-    Format('W: %d, H: %d', [_width, _height]);
+
+  _form.OnKeyDown := __KeyPress;
+
+  _form.Caption := 'Maze solver visualization' +
+    Format('W: %d, H: %d, S: %0.0f', [_Width, _Height, _form.Handle.Scale]);;
 end;
 
 destructor TAlgoVisualizer.Destroy;
@@ -79,25 +87,141 @@ begin
   begin
     for j := 0 to _data.M - 1 do
     begin
-      if _data.GetMaze(i, j) = TMazeData.WALL then
+      if _data.InMist[i, j] = true then
+        TAlgoVisHelper.SetFill(CL_BLACK)
+      else if _data.Path[i, j] = true then
+        TAlgoVisHelper.SetFill(CL_YELLOW)
+      else if _data.Maze[i, j] = TMazeData.WALL then
         TAlgoVisHelper.SetFill(CL_LIGHTBLUE)
       else
         TAlgoVisHelper.SetFill(CL_WHITE);
 
-      TAlgoVisHelper.FillRectangle(canvas, j * w, i * h, w+1, h+1);
+      TAlgoVisHelper.FillRectangle(canvas, j * w, i * h, w, h);
     end;
   end;
 end;
 
 procedure TAlgoVisualizer.Run;
+var
+  queue: TQueue_Position;
+  curPos: TPosition;
+  i, newX, newY: integer;
 begin
+  queue := TQueue_Position.Create;
+  try
+    curPos := TPosition.Create(_data.EntranceX, _data.EntranceY + 1);
+    queue.Enqueue(curPos);
+    _data.Visited[curPos.X, curPos.Y] := true;
+    _data.OpenMist(curPos.X, curPos.Y);
+
+    while queue.Count > 0 do
+    begin
+      curPos := queue.Dequeue;
+
+      for i := 0 to high(D) do
+      begin
+        newX := curPos.X + D[i, 0] * 2;
+        newY := curPos.Y + D[i, 1] * 2;
+
+        if _data.InArea(newX, newY) and (_data.Visited[newX, newY] = false) then
+        begin
+          queue.Enqueue(TPosition.Create(newX, newY));
+          _data.Visited[newX, newY] := true;
+          _data.OpenMist(newX, newY);
+          __setRoadData(curPos.X + D[i, 0], curPos.Y + D[i, 1]);
+        end;
+      end;
+    end;
+  finally
+    queue.Free;
+  end;
+
+  AlgoForm.PaintBox.Repaint;
 end;
 
-procedure TAlgoVisualizer.__setData();
-begin
+procedure TAlgoVisualizer.__KeyPress(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
+  procedure __go__;
 
-  TAlgoVisHelper.Pause(10);
-  AlgoForm.PaintBox.Repaint;
+    function __go__(x, y: integer): boolean;
+    var
+      i, newX, newY: integer;
+    begin
+      _data.Visited[x, y] := true;
+      __setPathdata(x, y, true, false);
+
+      if (x = _data.ExitX) and (y = _data.ExitY) then
+      begin
+        Result := true;
+        Exit;
+      end;
+
+      for i := 0 to high(D) do
+      begin
+        newX := x + D[i, 0];
+        newY := y + D[i, 1];
+
+        if (_data.InArea(newX, newY)) and
+          (_data.GetMaze(newX, newY) = TMazeData.ROAD) and
+          (_data.Visited[newX, newY] = false) then
+        begin
+          if __go__(newX, newY) then
+          begin
+            Result := true;
+            Exit;
+          end;
+        end;
+      end;
+
+      // 回溯
+      __setPathdata(x, y, false, false);
+      _data.Path[x, y] := false;
+      Result := false;
+    end;
+
+  var
+    i, j: integer;
+  begin
+    for i := 0 to _data.N - 1 do
+    begin
+      for j := 0 to _data.M - 1 do
+      begin
+        _data.Visited[i, j] := false;
+        _data.Path[i, j] := false;
+      end;
+    end;
+
+    if __go__(_data.EntranceX, _data.EntranceY) = false then
+      raise Exception.Create('The maze has NO solution!');
+
+    __setPathData(-1, -1, false, true);
+  end;
+
+begin
+  if KeyChar = ' ' then
+    __go__;
+end;
+
+procedure TAlgoVisualizer.__setPathdata(x, y: integer; isPath, finished: boolean);
+begin
+  if _data.InArea(x, y) then
+    _data.Path[x, y] := isPath;
+
+  if finished or (_runningStatus = 20) then
+  begin
+    TAlgoVisHelper.Pause(0);
+    AlgoForm.PaintBox.Repaint;
+    _runningStatus := 0;
+  end
+  else
+  begin
+    _runningStatus := _runningStatus + 1;
+  end;
+end;
+
+procedure TAlgoVisualizer.__setRoadData(x, y: integer);
+begin
+  if _data.InArea(x, y) then
+    _data.Maze[x, y] := TMazeData.ROAD;
 end;
 
 end.

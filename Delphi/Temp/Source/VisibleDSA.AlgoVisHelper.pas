@@ -54,7 +54,7 @@ type
     class procedure FillCircle(canvas: TCanvas; x, y, r: integer);
 
     // 矩形
-    class procedure FillRectangle(canvas: TCanvas; x, y, w, h: integer);
+    class procedure FillRectangle(canvas: TCanvas; x, y, w, h: Single);
 
     // 直角坐标
     class procedure DrawCoordinates(canvas: TCanvas);
@@ -117,7 +117,7 @@ begin
   end;
 end;
 
-class procedure TAlgoVisHelper.FillRectangle(canvas: TCanvas; x, y, w, h: integer);
+class procedure TAlgoVisHelper.FillRectangle(canvas: TCanvas; x, y, w, h: Single);
 var
   a: TRectF;
 begin
@@ -125,15 +125,10 @@ begin
   canvas.Fill.Color := _fillColor;
   canvas.Fill.Kind := _fillStyle;
 
-//  canvas.Stroke.Color := _fillColor;
-//  canvas.Stroke.Thickness := 1;
-//  canvas.Stroke.Kind := TBrushKind.Solid;
-
   if canvas.BeginScene then
   begin
     try
       canvas.FillRect(a, 0, 0, AllCorners, 1);
-      //canvas.DrawRect(a, 0, 0, AllCorners, 1);
     finally
       canvas.EndScene;
     end;
@@ -143,6 +138,7 @@ end;
 class procedure TAlgoVisHelper.Pause(interval: integer);
 begin
   Sleep(interval);
+  //Application.ProcessMessages;
 end;
 
 class procedure TAlgoVisHelper.FillCircle(canvas: TCanvas; x, y, r: integer);
@@ -156,7 +152,7 @@ begin
   if canvas.BeginScene then
   begin
     try
-      canvas.FillEllipse(a, 1, TBrush.Create(TBrushKind.Solid, _fillColor));
+      canvas.FillEllipse(a, 1);
     finally
       canvas.EndScene;
     end;
@@ -167,10 +163,6 @@ class procedure TAlgoVisHelper.SetFill(color: TColor; style: TBrushKind);
 begin
   _fillColor := color;
   _fillStyle := style;
-
-  _strokeColor := color;
-  _strokeWidth := 1;
-  _strokeStyle := TBrushKind.Solid;
 end;
 
 class procedure TAlgoVisHelper.SetStroke(strokeWidth: integer; color: TColor; style: TBrushKind);

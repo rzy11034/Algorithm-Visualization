@@ -53,7 +53,7 @@ var
   blockSide, size: integer;
 begin
   size := 101;
-  blockSide := 808 div size;
+  blockSide := 606 div size;
   _data := TMazeData.Create(size, size);
 
   _form := form;
@@ -66,7 +66,7 @@ begin
   _form.OnKeyDown := __KeyPress;
 
   _form.Caption := 'Maze solver visualization' +
-    Format('W: %d, H: %d', [_Width, _Height]);;
+    Format('W: %d, H: %d, S: %0.0f', [_Width, _Height, _form.Handle.Scale]);;
 end;
 
 destructor TAlgoVisualizer.Destroy;
@@ -206,7 +206,7 @@ begin
   if _data.InArea(x, y) then
     _data.Path[x, y] := isPath;
 
-  if finished or (_runningStatus = 1) then
+  if finished or (_runningStatus = 20) then
   begin
     TAlgoVisHelper.Pause(0);
     AlgoForm.PaintBox.Repaint;
@@ -223,15 +223,14 @@ begin
   if _data.InArea(x, y) then
     _data.Maze[x, y] := TMazeData.ROAD;
 
-  if finished or (_runningStatus = 0) then
+  if finished or (_runningStatus = 10) then
   begin
-    TAlgoVisHelper.Pause(1);
+    TAlgoVisHelper.Pause(0);
     AlgoForm.PaintBox.Repaint;
     _runningStatus := 0;
   end
   else
   begin
-    TAlgoVisHelper.Pause(0);
     _runningStatus := _runningStatus + 1;
   end;
 end;

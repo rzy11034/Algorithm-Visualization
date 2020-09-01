@@ -8,13 +8,13 @@ uses
   System.UITypes,
   System.Classes,
   System.Variants,
-  FMX.Platform.Win,
   FMX.Types,
   FMX.Controls,
   FMX.Forms,
   FMX.Graphics,
   FMX.Dialogs,
   FMX.Objects,
+  FMX.Platform.Win,
   VisibleDSA.AlgoVisHelper,
   VisibleDSA.AlgoVisualizer;
 
@@ -42,7 +42,7 @@ var
 implementation
 
 {$R *.fmx}
-{$R *.Windows.fmx MSWINDOWS}
+
 
 procedure TAlgoForm.FormActivate(Sender: TObject);
 begin
@@ -62,7 +62,7 @@ end;
 procedure TAlgoForm.FormCreate(Sender: TObject);
 begin
   TWinWindowHandle.SetForcedScale(1);
-  Position := TFormPosition.ScreenCenter;
+  Position := TFormPosition.DesktopCenter;
   BorderStyle := TFmxFormBorderStyle.Single;
   Caption := 'AlgoForm: ';
   _desktopCenter;
@@ -73,10 +73,6 @@ end;
 procedure TAlgoForm.PaintBoxPaint(Sender: TObject; Canvas: TCanvas);
 begin
   _av.Paint(Canvas);
-//  TAlgoVisHelper.SetFill(CL_RED);
-//  TAlgoVisHelper.FillRectangle(Canvas, 0, 0, 50, 50);
-//  TAlgoVisHelper.FillRectangle(Canvas, 50, 0, 50, 50);
-//  TAlgoVisHelper.FillRectangle(Canvas, 0, 50, 50, 50);
 end;
 
 procedure TAlgoForm._desktopCenter;

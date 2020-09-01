@@ -1,3 +1,0 @@
-inherited AlgoForm_Windows: TAlgoForm_Windows
-  DesignerMasterStyle = 0
-end

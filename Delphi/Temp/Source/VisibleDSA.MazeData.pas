@@ -3,23 +3,22 @@
 interface
 
 uses
-  System.SysUtils,
   System.Classes,
-  System.StrUtils;
+  System.SysUtils;
 
 type
   UString = string;
   UChar = Char;
 
-  TArr2D_int = array of array of integer;
-  TArr2D_chr = array of array of UChar;
-  TArr2D_bool = array of array of boolean;
+  TArr2D_int = TArray<TArray<integer>>;
+  TArr2D_chr = TArray<TArray<UChar>>;
+  TArr2D_bool = TArray<TArray<boolean>>;
 
+type
   TMazeData = class(TObject)
-  const
+  public const
     ROAD: UChar = ' ';
     WALL: UChar = '#';
-    FILE_NAME: UString = '..\..\..\..\Resources\maze_01.txt';
 
   private
     _n: integer;
@@ -31,16 +30,17 @@ type
     _exitY: integer;
 
     _maze: TArr2D_chr;
+    _path: TArr2D_bool;
+    _InMist: TArr2D_bool;
+    _visited: TArr2D_bool;
 
   public
-    Path: TArr2D_bool;
-    Visited: TArr2D_bool;
-
-    constructor Create(fileName: UString);
+    constructor Create(n, m: integer);
     destructor Destroy; override;
     function GetMaze(i, j: integer): UChar;
     function InArea(x, y: integer): boolean;
     procedure PrintMaze;
+    procedure OpenMist(x, y: integer);
 
     property N: integer read _N;
     property M: integer read _M;
@@ -48,42 +48,53 @@ type
     property EntranceY: integer read _entranceY;
     property ExitX: integer read _exitX;
     property ExitY: integer read _exitY;
+    property Maze: TArr2D_chr read _maze write _maze;
+    property Visited: TArr2D_bool read _visited write _visited;
+    property InMist: TArr2D_bool read _InMist write _InMist;
+    property Path: TArr2D_bool read _path write _path;
   end;
 
 implementation
 
-uses
-  VisibleDSA.Maze;
-
 { TMazeData }
 
-constructor TMazeData.Create(fileName: UString);
+constructor TMazeData.Create(n, m: integer);
 var
-  line: UString;
   i, j: integer;
-  arr: TArr2D_str;
 begin
-  arr := maze01;
+  if (n mod 2 = 0) or (m mod 2 = 0) then
+    raise Exception.Create('Maze Generalization Algorihtm requires the width and height of the maze are odd numbers');
 
-  _n := Length(arr);
-  _m := Length(arr[0]);
+  _n := n;
+  _m := m;
 
   SetLength(_maze, N, M);
-  SetLength(Path, N, M);
-  SetLength(Visited, N, M);
+  SetLength(_Visited, N, M);
+  SetLength(_InMist, N, M);
+  SetLength(_path, N, M);
 
   for i := 0 to N - 1 do
   begin
-    line := arr[i];
-
     for j := 0 to M - 1 do
-      _maze[i, j] := line.Chars[j];
+    begin
+      if (i mod 2 = 1) and (j mod 2 = 1) then
+        _maze[i, j] := ROAD
+      else
+        _maze[i, j] := WALL;
+
+      _visited[i, j] := false;
+      _inMist[i, j] := true;
+      _path[i, j] := false;
+    end;
   end;
 
   _entranceX := 1;
   _entranceY := 0;
   _exitX := N - 2;
   _exitY := M - 1;
+
+  _maze[_entranceX, _entranceY] := ROAD;
+  _maze[_exitX, _exitY] := ROAD;
 end;
 
 destructor TMazeData.Destroy;
@@ -104,6 +115,23 @@ begin
   Result := (x >= 0) and (x < N) and (y >= 0) and (y < M);
 end;
 
+procedure TMazeData.OpenMist(x, y: integer);
+var
+  i, j: integer;
+begin
+  if not InArea(x, y) then
+    raise Exception.Create('x or y is out of index in openMist function!');
+
+  for i := x - 1 to x + 1 do
+  begin
+    for j := y - 1 to y + 1 do
+    begin
+      if InArea(x, y) then
+        _inMist[i, j] := False;
+    end;
+  end;
+end;
+
 procedure TMazeData.PrintMaze;
 var
   i, j: integer;
@@ -112,7 +140,7 @@ begin
   begin
     for j := 0 to High(_maze[i]) do
     begin
-      Write(_maze[i, j]);
+      write(_maze[i, j]);
     end;
 
     WriteLn;

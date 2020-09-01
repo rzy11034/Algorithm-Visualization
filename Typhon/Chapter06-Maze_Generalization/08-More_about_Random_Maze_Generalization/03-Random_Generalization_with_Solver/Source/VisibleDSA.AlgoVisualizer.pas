@@ -52,8 +52,8 @@ constructor TAlgoVisualizer.Create(form: TForm);
 var
   blockSide, size: integer;
 begin
-  size := 31;
-  blockSide := 808 div size;
+  size := 101;
+  blockSide := 606 div size;
   _data := TMazeData.Create(size, size);
 
   _width := blockSide * _data.M;
@@ -65,7 +65,8 @@ begin
 
   form.OnKeyPress := @__keyPress;
 
-  form.Caption := 'Maze solver visualization --- ' + Format('W: %d, H: %d', [_width, _height]);
+  form.Caption := 'Maze solver visualization --- ' +
+    Format('W: %d, H: %d', [_width, _height]);
 end;
 
 destructor TAlgoVisualizer.Destroy;
@@ -206,9 +207,9 @@ begin
   if _data.InArea(x, y) then
     _data.Path[x, y] := isPath;
 
-  if finished or (_runningStatus = 0) then
+  if finished or (_runningStatus >= 10) then
   begin
-    TAlgoVisHelper.Pause(5);
+    TAlgoVisHelper.Pause(0);
     AlgoForm.BGRAVirtualScreen.RedrawBitmap;
     _runningStatus := 0;
   end
@@ -223,17 +224,16 @@ begin
   if _data.InArea(x, y) then
     _data.Maze[x, y] := TMazeData.ROAD;
 
-  if finished or (_runningStatus = 0) then
-  begin
-    TAlgoVisHelper.Pause(1);
-    AlgoForm.BGRAVirtualScreen.RedrawBitmap;
-    _runningStatus := 0;
-  end
-  else
-  begin
-    TAlgoVisHelper.Pause(0);
-    _runningStatus += 1;
-  end;
+  //TAlgoVisHelper.Pause(1);
+  //if finished then
+  //begin
+  //  AlgoForm.BGRAVirtualScreen.RedrawBitmap;
+  //  _runningStatus := 0;
+  //end
+  //else
+  //begin
+  //  _runningStatus += 1;
+  //end;
 end;
 
 end.
