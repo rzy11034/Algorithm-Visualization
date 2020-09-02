@@ -42,31 +42,24 @@ begin
 end;
 
 function TRandomQueue.Dequeue: T;
-  function __solution1__: T;
-  var
-    res: T;
-  begin
-    Randomize;
-
-    if Random < 0.5 then
-    begin
-      res := _list.Last;
-      _list.Delete(_list.Count - 1);
-    end
-    else
-    begin
-      res := _list.First;
-      _list.Delete(0);
-    end;
-
-    Result := res;
-  end;
-
+var
+  res: T;
 begin
   if _list.Count = 0 then
     raise Exception.Create('There''s no element to remove in Random Queue');
 
-  Result := __solution1__;
+  if Random < 0.5 then
+  begin
+    res := _list.Last;
+    _list.Delete(_list.Count - 1);
+  end
+  else
+  begin
+    res := _list.First;
+    _list.Delete(0);
+  end;
+
+  Result := res;
 end;
 
 destructor TRandomQueue.Destroy;
@@ -76,43 +69,15 @@ begin
 end;
 
 procedure TRandomQueue.Enqueue(e: T);
-  procedure __solution1__(e: T);
-  var
-    index: integer;
-    temp: T;
-  begin
-    if _list.Count = 0 then
-    begin
-      _list.Add(e);
-      Exit;
-    end;
-
-    Randomize;
-
-    index := Random(_list.Count);
-
-    temp := _list[index];
-    _list[index] := e;
-    _list.Add(temp);
-  end;
-
-  procedure __solution2__(e: T);
-  begin
-    Randomize;
-
-    if Random > 0.5 then
-    begin
-      _list.Add(e);
-    end
-    else
-    begin
-      _list.Insert(0, e);
-    end;
-  end;
-
 begin
-  //__solution1__(e);
-  __solution2__(e);
+  if Random > 0.5 then
+  begin
+    _list.Add(e);
+  end
+  else
+  begin
+    _list.Insert(0, e);
+  end;
 end;
 
 end.

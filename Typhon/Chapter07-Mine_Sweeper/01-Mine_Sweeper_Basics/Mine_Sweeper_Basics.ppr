@@ -1,0 +1,23 @@
+program Mine_Sweeper_Basics;
+
+{$mode objfpc}{$H+}
+
+uses {$IFDEF UNIX}
+  cthreads, {$ENDIF}
+  Interfaces, // this includes the CT adLCL widgetset
+  Forms,
+  DeepStar.Utils.UString,
+  VisibleDSA.AlgoForm,
+  VisibleDSA.AlgoVisHelper,
+  VisibleDSA.AlgoVisualizer,
+  VisibleDSA.MineSweeperData;
+
+{$R *.res}
+
+begin
+  RequireDerivedFormResource := true;
+  Application.Scaled:=True;
+  Application.Initialize;
+  Application.CreateForm(TAlgoForm, AlgoForm);
+  Application.Run;
+end.
