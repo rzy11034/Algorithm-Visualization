@@ -15,8 +15,21 @@ type
   TArr2D_bool = TArray<TArray<boolean>>;
 
   TMineSweeperData = class(TObject)
+  const
+    PNG_0: USTRING = 'PngImage_1';
+    PNG_1: USTRING = 'PngImage_2';
+    PNG_2: USTRING = 'PngImage_3';
+    PNG_3: USTRING = 'PngImage_4';
+    PNG_4: USTRING = 'PngImage_5';
+    PNG_5: USTRING = 'PngImage_6';
+    PNG_6: USTRING = 'PngImage_7';
+    PNG_7: USTRING = 'PngImage_8';
+    PNG_8: USTRING = 'PngImage_9';
+    PNG_BLOCK: USTRING = 'PngImage_10';
+    PNG_FLAG: USTRING = 'PngImage_11';
+    PNG_MINE: USTRING = 'PngImage_12';
+
   private
-    _maze: TArr2D_chr;
     _n: integer;
     _m: integer;
 
@@ -31,7 +44,7 @@ type
     property N: integer read _N;
     property M: integer read _M;
 
-    property Maze: TArr2D_chr read _maze write _maze;
+    property Mines: TArr2D_bool read _mines write _mines;
   end;
 
 implementation

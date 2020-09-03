@@ -61,6 +61,9 @@ type
 
     // Pause
     class procedure Pause(interval: integer);
+
+    // 从Resource Stream 名称绘图
+    class procedure DrawImageFormResourceStream(canvas: TCanvas; stm: TStream; x1, y1, x2, y2: integer);
   end;
 
 implementation
@@ -111,6 +114,26 @@ begin
       x2 := x1;
       y2 := canvas.Height;
       canvas.DrawLine(TPointF.Create(x1, y1), TPointF.Create(x2, y2), 1);
+    finally
+      canvas.EndScene;
+    end;
+  end;
+end;
+
+class procedure TAlgoVisHelper.DrawImageFormResourceStream(canvas: TCanvas; stm: TStream;
+  x1, y1, x2, y2: integer);
+var
+  bmp: TBitmap;
+  srcRect, dstRect: TRectF;
+begin
+  bmp := TBitmap.CreateFromStream(stm);
+  srcRect := bmp.Bounds;
+  dstRect := TRectF.Create(x1, y1, x1 + x2, y1 + y2);
+
+  if canvas.BeginScene() then
+  begin
+    try
+      canvas.DrawBitmap(bmp, srcRect, dstRect, 1);
     finally
       canvas.EndScene;
     end;

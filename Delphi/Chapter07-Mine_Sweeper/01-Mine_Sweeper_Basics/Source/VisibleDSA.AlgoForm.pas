@@ -48,7 +48,7 @@ begin
   Position := TFormPosition.DesktopCenter;
   BorderStyle := TFmxFormBorderStyle.Single;
   Caption := 'AlgoForm: ';
-  _desktopCenter;
+  //_desktopCenter;
 
   _av := TAlgoVisualizer.Create(self);
 end;

@@ -31,7 +31,6 @@ type
 
 
   private
-    _maze: TArr2D_chr;
     _n: integer;
     _m: integer;
 

@@ -9,6 +9,8 @@ uses
   SysUtils,
   Graphics,
   Forms,
+  DeepStar.Utils.UString,
+  BGRABitmap,
   BGRACanvas2D;
 
 const
@@ -59,6 +61,10 @@ type
 
     // Pause
     class procedure Pause(interval: integer);
+
+    // 从Resource Stream 名称绘图
+    class procedure DrawImageFormResourceStream(canvas: TBGRACanvas2D; stm: TStream; x1, y1, x2,
+      y2: integer);
   end;
 
 implementation
@@ -95,6 +101,15 @@ begin
   canvas.beginPath;
   canvas.rect(x1, y1, x2, y2);
   canvas.fill;
+end;
+
+class procedure TAlgoVisHelper.DrawImageFormResourceStream(canvas: TBGRACanvas2D; stm: TStream;
+  x1, y1, x2, y2: integer);
+var
+  bmp: TBGRABitmap;
+begin
+  bmp := TBGRABitmap.Create(stm);
+  canvas.drawImage(bmp, x1, y1, x2, y2);
 end;
 
 class procedure TAlgoVisHelper.Pause(interval: integer);

@@ -1,5 +1,7 @@
 ﻿program Mine_Sweeper_Basics;
 
+
+
 {$R *.dres}
 
 uses

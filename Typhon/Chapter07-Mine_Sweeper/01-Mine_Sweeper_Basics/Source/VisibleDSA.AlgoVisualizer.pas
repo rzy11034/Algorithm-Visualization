@@ -11,9 +11,9 @@ uses
   Forms,
   LCLType,
   BGRACanvas2D,
-  BGRABitmap,
   VisibleDSA.AlgoVisHelper,
-  VisibleDSA.MineSweeperData, DeepStar.Utils.UString;
+  VisibleDSA.MineSweeperData,
+  DeepStar.Utils.UString;
 
 type
   TAlgoVisualizer = class(TObject)
@@ -73,8 +73,8 @@ procedure TAlgoVisualizer.Paint(canvas: TBGRACanvas2D);
 var
   w, h: integer;
   i, j: integer;
-  s: UString;
-  png: TBGRABitmap;
+  str: UString;
+  stm: TResourceStream;
 begin
   w := _width div _data.M;
   h := _height div _data.N;
@@ -83,17 +83,15 @@ begin
   begin
     for j := 0 to _data.M - 1 do
     begin
-      if not _data.Mines[i, j] then
-        s := TMineSweeperData.PNG_BLOCK
+      if _data.Mines[i, j] then
+        str := TMineSweeperData.PNG_MINE
       else
-        s := TMineSweeperData.PNG_MINE;
+        str := TMineSweeperData.PNG_BLOCK;
 
-      png := TBGRABitmap.Create(TResourceStream.Create(HINSTANCE, string(s), RT_RCDATA));
-      canvas.drawImage(png, j*w, i*h, w, h);
+      stm := TResourceStream.Create(HINSTANCE, string(str), RT_RCDATA);
+      TAlgoVisHelper.DrawImageFormResourceStream(canvas, stm, j*w, i*h, w, h);
     end;
   end;
-
-
 end;
 
 procedure TAlgoVisualizer.Run;
