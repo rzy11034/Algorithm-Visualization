@@ -48,18 +48,18 @@
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
         <TopLine Value="38"/>
-        <CursorPos X="20" Y="89"/>
+        <CursorPos X="10" Y="53"/>
         <UsageCount Value="49"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.MineSweeperData.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
-        <TopLine Value="6"/>
+        <TopLine Value="34"/>
         <CursorPos X="20" Y="47"/>
         <UsageCount Value="49"/>
         <Loaded Value="True"/>

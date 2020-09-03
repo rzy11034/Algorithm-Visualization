@@ -46,13 +46,14 @@ uses
 
 constructor TAlgoVisualizer.Create(form: TForm);
 var
-  blockSide, n, m: integer;
+  blockSide, n, m, numberMine: integer;
 begin
   blockSide := 32;
   n := 20;
   m := 20;
+  numberMine := 20;
 
-  _data := TMineSweeperData.Create(n, m, 1);
+  _data := TMineSweeperData.Create(n, m, numberMine);
 
   _width := blockSide * _data.M;
   _height := blockSide * _data.N;
