@@ -1,0 +1,21 @@
+﻿program Interactions_in_Mine_Sweeper;
+
+{$mode objfpc}{$H+}
+
+uses {$IFDEF UNIX}
+  cthreads, {$ENDIF}
+  Interfaces, // this includes the CT adLCL widgetset
+  Forms,
+  VisibleDSA.AlgoForm;
+
+{$R *.res}
+
+begin
+  RequireDerivedFormResource := true;
+  Application.Scaled:=True;
+  Application.Initialize;
+  Application.CreateForm(TAlgoForm, AlgoForm);
+  Application.Run;
+end.
+
+

@@ -10,7 +10,7 @@
         <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
         <CursorPos X="47" Y="18"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="21"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -20,7 +20,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="21"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
@@ -30,7 +30,7 @@
         <EditorIndex Value="1"/>
         <TopLine Value="16"/>
         <CursorPos X="37" Y="31"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="21"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -40,7 +40,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="21"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
@@ -49,23 +49,31 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="21"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.MineSweeperData.pas"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="88"/>
-        <CursorPos X="9" Y="105"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="77"/>
+        <CursorPos X="10" Y="96"/>
+        <UsageCount Value="21"/>
         <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory>
+    <JumpHistory HistoryIndex="2">
       <Position>
         <Filename Value="Source\VisibleDSA.MineSweeperData.pas"/>
         <Caret Line="116" TopLine="91"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.MineSweeperData.pas"/>
+        <Caret Line="105" Column="45" TopLine="99"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.MineSweeperData.pas"/>
+        <Caret Line="75" Column="30" TopLine="55"/>
       </Position>
     </JumpHistory>
     <RunParams>

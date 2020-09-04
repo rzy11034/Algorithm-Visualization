@@ -92,7 +92,7 @@ end;
 
 function TMineSweeperData.IsMine(x, y: integer): boolean;
 begin
-  if InArea(x, y) then
+  if not InArea(x, y) then
     raise Exception.Create('Out of index in isMine function!');
 
   Result := _mines[x, y];

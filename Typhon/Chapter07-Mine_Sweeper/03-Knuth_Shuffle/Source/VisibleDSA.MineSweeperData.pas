@@ -36,8 +36,8 @@ type
 
     _mines: TArr2D_bool;
 
-    procedure _generateMines(mineNumber: integer);
-    procedure _swap(x1, y1, x2, y2: integer);
+    procedure __generateMines(mineNumber: integer);
+    procedure __swap(x1, y1, x2, y2: integer);
 
   public
     constructor Create(n, m, mineNumber: integer);
@@ -78,7 +78,7 @@ begin
     end;
   end;
 
-  _generateMines(mineNumber);
+  __generateMines(mineNumber);
 end;
 
 destructor TMineSweeperData.Destroy;
@@ -93,31 +93,38 @@ end;
 
 function TMineSweeperData.IsMine(x, y: integer): boolean;
 begin
-  if InArea(x, y) then
+  if not InArea(x, y) then
     raise Exception.Create('Out of index in isMine function!');
 
   Result := _mines[x, y];
 end;
 
-procedure TMineSweeperData._generateMines(mineNumber: integer);
+procedure TMineSweeperData.__generateMines(mineNumber: integer);
 var
   i: integer;
-  x1, y1, x2, y2, swapTimes: integer;
+  x, y, iX, iY, randX, randY, rand: integer;
 begin
   for i := 0 to mineNumber - 1 do
   begin
-    x1 := i div _m;
-    y1 := i mod _m;
-    _mines[x1, y1] := true;
+    x := i div _m;
+    y := i mod _m;
+    _mines[x, y] := true;
   end;
 
   for i := (_n * _m) - 1 downto 0 do
   begin
-    { TODO -oAuthor : Note }
+    iX := i div _m;
+    iY := i mod _m;
+
+    rand := Random(i + 1);
+    randX := rand div _m;
+    randY := rand mod _m;
+
+    __swap(iX, iY, randX, randY);
   end;
 end;
 
-procedure TMineSweeperData._swap(x1, y1, x2, y2: integer);
+procedure TMineSweeperData.__swap(x1, y1, x2, y2: integer);
 var
   temp: boolean;
 begin

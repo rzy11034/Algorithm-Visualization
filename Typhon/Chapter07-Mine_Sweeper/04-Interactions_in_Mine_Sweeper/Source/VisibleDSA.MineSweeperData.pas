@@ -16,28 +16,25 @@ type
 
   TMineSweeperData = class(TObject)
   public const
-    PNG_0: UString = '0';
-    PNG_1: UString = '1';
-    PNG_2: UString = '2';
-    PNG_3: UString = '3';
-    PNG_4: UString = '4';
-    PNG_5: UString = '5';
-    PNG_6: UString = '6';
-    PNG_7: UString = '7';
-    PNG_8: UString = '8';
     PNG_BLOCK: UString = 'BLOCK';
     PNG_FLAG: UString = 'FLAG';
     PNG_MINE: UString = 'MINE';
 
+  public
+    class function PNG_NUM(n: integer): UString;
 
   private
     _n: integer;
     _m: integer;
 
+    _flags: TArr2D_bool;
     _mines: TArr2D_bool;
+    _numbers: TArr2D_int;
+    _opened: TArr2D_bool;
 
-    procedure _generateMines(mineNumber: integer);
-    procedure _swap(x1, y1, x2, y2: integer);
+    procedure __calculateNumbers;
+    procedure __generateMines(mineNumber: integer);
+    procedure __swap(x1, y1, x2, y2: integer);
 
   public
     constructor Create(n, m, mineNumber: integer);
@@ -49,6 +46,9 @@ type
     property M: integer read _M;
 
     property Mines: TArr2D_bool read _mines write _mines;
+    property Opened: TArr2D_bool read _opened write _opened;
+    property Flags: TArr2D_bool read _flags write _flags;
+    property Numbers: TArr2D_int read _numbers;
   end;
 
 implementation
@@ -69,16 +69,23 @@ begin
   _m := m;
 
   SetLength(_mines, N, M);
+  SetLength(_opened, N, M);
+  SetLength(_flags, N, M);
+  SetLength(_numbers, N, M);
 
   for i := 0 to N - 1 do
   begin
     for j := 0 to M - 1 do
     begin
       _mines[i, j] := false;
+      _opened[i, j] := false;
+      _flags[i, j] := false;
+      _numbers[i, j] := 0;
     end;
   end;
 
-  _generateMines(mineNumber);
+  __generateMines(mineNumber);
+  __calculateNumbers;
 end;
 
 destructor TMineSweeperData.Destroy;
@@ -99,32 +106,63 @@ begin
   Result := _mines[x, y];
 end;
 
-procedure TMineSweeperData._generateMines(mineNumber: integer);
-var
-  i: integer;
-  x1, y1, x2, y2, swapTimes: integer;
+class function TMineSweeperData.PNG_NUM(n: integer): UString;
 begin
-  for i := 0 to mineNumber - 1 do
+  if (n < 0) or (n > 8) then
+    raise Exception.Create('No such a number image!');
+
+  Result := UString(n.ToString);
+end;
+
+procedure TMineSweeperData.__calculateNumbers;
+var
+  i, j, jj, ii: integer;
+begin
+  for i := 0 to N - 1 do
   begin
-    x1 := i div _m;
-    y1 := i mod _m;
-    _mines[x1, y1] := true;
-  end;
+    for j := 0 to M - 1 do
+    begin
+      if IsMine(i, j) then
+        _numbers[i, j] := -1;
 
-  swapTimes := 10000;
-  for i := 0 to swapTimes-1 do
-  begin
-    x1 := Random(_m);
-    y1 := Random(_n);
-
-    x2 := Random(_m);
-    y2 := Random(_n);
-
-    _swap(x1, y1, x2, y2);
+      for ii := i - 1 to i + 1 do
+      begin
+        for jj := j - 1 to j + 1 do
+        begin
+          if InArea(ii, jj) and IsMine(ii, jj) then
+            _numbers[i, j] += 1;
+        end;
+      end;
+    end;
   end;
 end;
 
-procedure TMineSweeperData._swap(x1, y1, x2, y2: integer);
+procedure TMineSweeperData.__generateMines(mineNumber: integer);
+var
+  i: integer;
+  x, y, iX, iY, randX, randY, rand: integer;
+begin
+  for i := 0 to mineNumber - 1 do
+  begin
+    x := i div _m;
+    y := i mod _m;
+    _mines[x, y] := true;
+  end;
+
+  for i := (_n * _m) - 1 downto 0 do
+  begin
+    iX := i div _m;
+    iY := i mod _m;
+
+    rand := Random(i + 1);
+    randX := rand div _m;
+    randY := rand mod _m;
+
+    __swap(iX, iY, randX, randY);
+  end;
+end;
+
+procedure TMineSweeperData.__swap(x1, y1, x2, y2: integer);
 var
   temp: boolean;
 begin
