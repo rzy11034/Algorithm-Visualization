@@ -9,7 +9,6 @@ uses
   SysUtils,
   Graphics,
   Forms,
-  DeepStar.Utils.UString,
   BGRABitmap,
   BGRACanvas2D;
 

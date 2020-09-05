@@ -8,6 +8,8 @@ uses
   Classes,
   SysUtils,
   Graphics,
+  Controls,
+  Dialogs,
   Forms,
   LCLType,
   BGRACanvas2D,
@@ -21,12 +23,12 @@ type
     D: TArr2D_int = ((-1, 0), (0, 1), (1, 0), (0, -1));
 
   private
-    _runningStatus: integer;
+    //_runningStatus: integer;
     _width: integer;
     _height: integer;
     _data: TMineSweeperData;
 
-    procedure __setData(finished: boolean);
+    procedure __setData(mbLeft: boolean; x, y: integer);
 
   public
     constructor Create(form: TForm);
@@ -61,7 +63,7 @@ begin
   form.ClientWidth := _width;
   form.ClientHeight := _height;
 
-  form.Caption := 'Maze solver visualization --- ' + Format('W: %d, H: %d', [_width, _height]);
+  form.Caption := 'Mine Sweeper --- ' + Format('W: %d, H: %d', [_width, _height]);
 end;
 
 destructor TAlgoVisualizer.Destroy;
@@ -84,12 +86,12 @@ begin
   begin
     for j := 0 to _data.M - 1 do
     begin
-      if _data.Opened[i,j] then
+      if not _data.Opened[i, j] then
       begin
         if _data.IsMine(i, j) then
           str := TMineSweeperData.PNG_MINE
         else
-          str := TMineSweeperData.PNG_NUM(_data.Numbers[i, j])
+          str := TMineSweeperData.PNG_NUM(_data.Numbers[i, j]);
       end
       else
       begin
@@ -107,21 +109,12 @@ end;
 
 procedure TAlgoVisualizer.Run;
 begin
-  __setData(true);
+  //__setData(true);
 end;
 
-procedure TAlgoVisualizer.__setData(finished: boolean);
+procedure TAlgoVisualizer.__setData(mbLeft: boolean; x, y: integer);
 begin
-  if finished or (_runningStatus = 0) then
-  begin
-    TAlgoVisHelper.Pause(0);
-    AlgoForm.BGRAVirtualScreen.RedrawBitmap;
-    _runningStatus := 0;
-  end
-  else
-  begin
-    _runningStatus += 1;
-  end;
+  AlgoForm.BGRAVirtualScreen.RedrawBitmap;
 end;
 
 end.

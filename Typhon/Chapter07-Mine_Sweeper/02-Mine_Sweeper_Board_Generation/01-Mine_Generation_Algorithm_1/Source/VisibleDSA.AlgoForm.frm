@@ -1,4 +1,4 @@
-object AlgoForm: TAlgoForm
+﻿object AlgoForm: TAlgoForm
   Left = 581
   Height = 228
   Top = 149

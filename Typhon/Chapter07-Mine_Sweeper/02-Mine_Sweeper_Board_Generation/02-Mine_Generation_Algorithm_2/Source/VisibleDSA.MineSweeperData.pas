@@ -36,8 +36,8 @@ type
 
     _mines: TArr2D_bool;
 
-    procedure _generateMines(mineNumber: integer);
-    procedure _swap(x1, y1, x2, y2: integer);
+    procedure __generateMines(mineNumber: integer);
+    procedure __swap(x1, y1, x2, y2: integer);
 
   public
     constructor Create(n, m, mineNumber: integer);
@@ -78,7 +78,7 @@ begin
     end;
   end;
 
-  _generateMines(mineNumber);
+  __generateMines(mineNumber);
 end;
 
 destructor TMineSweeperData.Destroy;
@@ -99,7 +99,7 @@ begin
   Result := _mines[x, y];
 end;
 
-procedure TMineSweeperData._generateMines(mineNumber: integer);
+procedure TMineSweeperData.__generateMines(mineNumber: integer);
 var
   i: integer;
   x1, y1, x2, y2, swapTimes: integer;
@@ -120,11 +120,11 @@ begin
     x2 := Random(_m);
     y2 := Random(_n);
 
-    _swap(x1, y1, x2, y2);
+    __swap(x1, y1, x2, y2);
   end;
 end;
 
-procedure TMineSweeperData._swap(x1, y1, x2, y2: integer);
+procedure TMineSweeperData.__swap(x1, y1, x2, y2: integer);
 var
   temp: boolean;
 begin

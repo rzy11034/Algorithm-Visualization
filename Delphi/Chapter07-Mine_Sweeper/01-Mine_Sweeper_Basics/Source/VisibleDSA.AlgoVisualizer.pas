@@ -14,7 +14,7 @@ uses
 
 type
   TAlgoVisualizer = class(TObject)
-  const
+  public const
     D: TArr2D_int = [[-1, 0], [0, 1], [1, 0], [0, -1]];
 
   private
@@ -22,9 +22,9 @@ type
     _width: integer;
     _height: integer;
     _data: TMineSweeperData;
-    _form: TForm;
 
     procedure __setData(finished: boolean);
+    procedure __desktopCenter(form: TForm);
 
   public
     constructor Create(form: TForm);
@@ -47,18 +47,17 @@ var
 begin
   blockSide := 32;
   n := 20;
-  m := 30;
+  m := 20;
 
   _data := TMineSweeperData.Create(n, m, 1);
   _width := blockSide * _data.M;
   _height := blockSide * _data.N;
 
-  _form := form;
-  _form.ClientWidth := _width;
-  _form.ClientHeight := _height;
+  form.ClientWidth := _width;
+  form.ClientHeight := _height;
 
-  _form.Caption := 'Maze solver visualization' +
-    Format('W: %d, H: %d', [_Width, _Height]);;
+  form.Caption := 'Mine Sweeper --- ' + Format('W: %d, H: %d', [_Width, _Height]);
+  __desktopCenter(form);
 end;
 
 destructor TAlgoVisualizer.Destroy;
@@ -73,22 +72,9 @@ var
   i, j: integer;
   str: UString;
   stm: TResourceStream;
-  bmp: TBitmap;
-  r,d: TRect;
 begin
   w := _width div _data.M;
   h := _height div _data.N;
-
-//  stm := TResourceStream.Create(HINSTANCE, TMineSweeperData.PNG_FLAG, RT_RCDATA);
-//  bmp := TBitmap.CreateFromStream(stm);
-//  r := TRect.Create(0, 0, bmp.Width, bmp.Height);
-//  canvas.DrawBitmap(bmp, r, r, 1);
-//  d :=  TRect.Create(100, 100, 132, 132);
-//  canvas.DrawBitmap(bmp, r, d, 1);
-//  d :=  TRect.Create(132, 132, 164, 164);
-//  canvas.DrawBitmap(bmp, r, d, 1);
-//  d :=  TRect.Create(150, 150, bmp.Width, bmp.Height);
-//  canvas.DrawBitmap(bmp, r, d, 1);
 
   for i := 0 to _data.N - 1 do
   begin
@@ -122,6 +108,17 @@ begin
   begin
     _runningStatus := _runningStatus + 1;
   end;
+end;
+
+procedure TAlgoVisualizer.__desktopCenter(form: TForm);
+var
+  top, left: Double;
+begin
+  top := (Screen.Height div 2) - (form.ClientHeight div 2);
+  left := (Screen.Width div 2) - (form.ClientWidth div 2);
+
+  form.top := Trunc(top);
+  form.left := Trunc(left);
 end;
 
 end.

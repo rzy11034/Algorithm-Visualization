@@ -61,7 +61,7 @@ begin
   form.ClientWidth := _width;
   form.ClientHeight := _height;
 
-  form.Caption := 'Maze solver visualization --- ' + Format('W: %d, H: %d', [_width, _height]);
+  form.Caption := 'Mine Sweeper --- ' + Format('W: %d, H: %d', [_width, _height]);
 end;
 
 destructor TAlgoVisualizer.Destroy;

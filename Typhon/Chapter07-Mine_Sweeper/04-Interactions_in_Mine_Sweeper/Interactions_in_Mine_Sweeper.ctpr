@@ -55,7 +55,7 @@
           </CodeGeneration>
           <Linking>
             <Debugging>
-              <DebugInfoType Value="dsDwarf3"/>
+              <DebugInfoType Value="dsDwarf2Set"/>
               <TrashVariables Value="True"/>
             </Debugging>
             <Options>
@@ -124,7 +124,9 @@
         <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
         <FRMtype Value="200"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="AlgoForm"/>
         <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>

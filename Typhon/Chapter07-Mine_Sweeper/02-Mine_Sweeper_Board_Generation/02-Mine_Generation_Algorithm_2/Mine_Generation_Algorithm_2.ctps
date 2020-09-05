@@ -34,33 +34,33 @@
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="-1"/>
-        <TopLine Value="-1"/>
-        <CursorPos X="-1" Y="-1"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="19"/>
+        <CursorPos Y="12"/>
         <UsageCount Value="20"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
         <TopLine Value="40"/>
-        <CursorPos X="10" Y="53"/>
+        <CursorPos X="37" Y="64"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.MineSweeperData.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="85"/>
-        <CursorPos X="10" Y="96"/>
+        <TopLine Value="65"/>
+        <CursorPos X="5" Y="81"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="2">
+    <JumpHistory HistoryIndex="5">
       <Position>
         <Filename Value="Source\VisibleDSA.MineSweeperData.pas"/>
         <Caret Line="40" Column="37" TopLine="23"/>
@@ -71,6 +71,18 @@
       </Position>
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.MineSweeperData.pas"/>
+        <Caret Line="39" Column="17" TopLine="30"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.MineSweeperData.pas"/>
+        <Caret Line="123" Column="7" TopLine="97"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.MineSweeperData.pas"/>
+        <Caret Line="81" Column="5" TopLine="65"/>
       </Position>
     </JumpHistory>
     <RunParams>

@@ -36,7 +36,7 @@ type
 
     _mines: TArr2D_bool;
 
-    procedure _generateMines(mineNumber: integer);
+    procedure __generateMines(mineNumber: integer);
 
   public
     constructor Create(n, m, mineNumber: integer);
@@ -77,7 +77,7 @@ begin
     end;
   end;
 
-  _generateMines(mineNumber);
+  __generateMines(mineNumber);
 end;
 
 destructor TMineSweeperData.Destroy;
@@ -98,7 +98,7 @@ begin
   Result := _mines[x, y];
 end;
 
-procedure TMineSweeperData._generateMines(mineNumber: integer);
+procedure TMineSweeperData.__generateMines(mineNumber: integer);
 var
   i: integer;
   x, y: integer;

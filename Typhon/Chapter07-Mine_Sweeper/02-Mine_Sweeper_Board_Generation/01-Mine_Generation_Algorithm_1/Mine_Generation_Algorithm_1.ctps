@@ -46,7 +46,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="2"/>
         <TopLine Value="37"/>
-        <CursorPos X="52" Y="56"/>
+        <CursorPos X="30" Y="49"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
@@ -55,13 +55,13 @@
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="77"/>
-        <CursorPos X="10" Y="95"/>
+        <TopLine Value="94"/>
+        <CursorPos X="56" Y="40"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="4">
+    <JumpHistory HistoryIndex="6">
       <Position>
         <Filename Value="Source\VisibleDSA.MineSweeperData.pas"/>
         <Caret Line="39" Column="51" TopLine="27"/>
@@ -81,6 +81,14 @@
       <Position>
         <Filename Value="Source\VisibleDSA.MineSweeperData.pas"/>
         <Caret Line="104" Column="16" TopLine="92"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.MineSweeperData.pas"/>
+        <Caret Line="39" Column="28" TopLine="27"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.MineSweeperData.pas"/>
+        <Caret Line="101" Column="30" TopLine="58"/>
       </Position>
     </JumpHistory>
     <RunParams>
