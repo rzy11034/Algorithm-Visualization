@@ -9,7 +9,6 @@
         <Filename Value="Floodfill_in_Mine_Sweeper.ppr"/>
         <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <CursorPos X="5" Y="21"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
@@ -49,6 +48,7 @@
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
         <CursorPos X="30" Y="123"/>
         <UsageCount Value="21"/>
