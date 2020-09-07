@@ -17,6 +17,7 @@ type
     _n: integer;
     _maxTurn: integer;
     _starterBoard: TBoard;
+    _showBoard: TBoard;
 
   public
     constructor Create;
@@ -26,6 +27,7 @@ type
 
     property N: integer read _n;
     property M: integer read _m;
+    property ShowBoard: TBoard read _showBoard;
   end;
 
 implementation
@@ -60,6 +62,8 @@ begin
 
       _n := _starterBoard.N;
       _m := _starterBoard.M;
+
+      _showBoard := TBoard.Create(_starterBoard);
 
     finally
       strList2.Free;

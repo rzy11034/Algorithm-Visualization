@@ -25,7 +25,8 @@ type
     _data: TArr2D_chr;
 
   public
-    constructor Create(strs: TArray_str);
+    constructor Create(strs: TArray_str); overload;
+    constructor Create(b: TBoard); overload;
     destructor Destroy; override;
     function InArea(x, y: integer): boolean;
     procedure Print;
@@ -61,6 +62,22 @@ begin
       raise Exception.Create('All line''s length must be same in Board constructor.');
 
     _data[i] := strs[i].ToCharArray;
+  end;
+end;
+
+constructor TBoard.Create(b: TBoard);
+var
+  i, j: integer;
+begin
+  _n := b.N;
+  _m := b.M;
+
+  for i := 0 to High(b._data) do
+  begin
+    for j := 0 to High(b._data[i]) do
+    begin
+      _data[i, j] := b._data[i, j];
+    end;
   end;
 end;
 

@@ -4,6 +4,9 @@
     <Version Value="12"/>
     <PathDelim Value="\"/>
     <General>
+      <Flags>
+        <UseDesignTimePackages Value="True"/>
+      </Flags>
       <SessionStorage Value="InProjectDir"/>
       <Title Value="Move_the_Box_Solver_Rendering"/>
       <Scaled Value="True"/>
