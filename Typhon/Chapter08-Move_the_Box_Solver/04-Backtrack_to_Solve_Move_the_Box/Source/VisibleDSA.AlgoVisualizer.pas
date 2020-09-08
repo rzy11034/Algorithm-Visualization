@@ -7,6 +7,7 @@ interface
 uses
   Classes,
   SysUtils,
+  JwaWindows,
   Graphics,
   Forms,
   LCLType,
@@ -30,7 +31,7 @@ type
     _colorMap: THashMap_UString_TColor;
 
     procedure __initColorList;
-    procedure __setData(finished: boolean);
+    procedure __setData;
 
   public
     constructor Create(form: TForm);
@@ -65,7 +66,6 @@ begin
   form.ClientHeight := _height;
 
   form.Caption := 'Move the Box Solver --- ' + Format('W: %d, H: %d', [_width, _height]);
-
 end;
 
 destructor TAlgoVisualizer.Destroy;
@@ -106,7 +106,7 @@ begin
 
           color := _colorMap[c];
           TAlgoVisHelper.SetFill(color);
-          TAlgoVisHelper.FillRectangle(canvas, j * w , i * h , w - 2, h - 2);
+          TAlgoVisHelper.FillRectangle(canvas, j * w, i * h, w - 2, h - 2);
         end;
 
       end;
@@ -118,7 +118,12 @@ end;
 
 procedure TAlgoVisualizer.Run;
 begin
-  _data.Print;
+  __setData;
+
+  if _data.Solve then
+    Write('The game has a solution!')
+  else
+    Write('The game does NOT have a solution.');
 end;
 
 procedure TAlgoVisualizer.__initColorList;
@@ -137,9 +142,9 @@ begin
   _colorList.Add(CL_BLUEGREY);
 end;
 
-procedure TAlgoVisualizer.__setData(finished: boolean);
+procedure TAlgoVisualizer.__setData;
 begin
-
+  _data.Print;
 end;
 
 end.

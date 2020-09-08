@@ -24,6 +24,7 @@ type
     destructor Destroy; override;
     function InArea(x, y: integer): boolean;
     procedure Print;
+    function Solve: boolean;
 
     property N: integer read _n;
     property M: integer read _m;
@@ -86,6 +87,19 @@ end;
 procedure TGameData.Print;
 begin
   _starterBoard.Print;
+end;
+
+function TGameData.Solve: boolean;
+  function __solve__(borad: TBoard; turn: integer): boolean;
+  begin
+
+  end;
+
+begin
+  if _maxTurn < 0 then
+    Exit(false);
+
+  Result := __solve__(_starterBoard, _maxTurn);
 end;
 
 end.

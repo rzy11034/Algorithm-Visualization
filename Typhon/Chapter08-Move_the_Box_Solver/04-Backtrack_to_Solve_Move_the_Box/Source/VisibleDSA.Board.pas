@@ -29,6 +29,7 @@ type
     constructor Create(b: TBoard); overload;
     destructor Destroy; override;
     function InArea(x, y: integer): boolean;
+    function IsWin: boolean;
     procedure Print;
 
     property N: integer read _n;
@@ -94,6 +95,18 @@ begin
   Result := (x >= 0) and (x < N) and (y >= 0) and (y < M);
 end;
 
+function TBoard.IsWin: boolean;
+var
+  i, j: integer;
+begin
+  for i := 0 to High(_data) do
+    for j := 0 to High(_data) do
+      if _data[i, j] <> EMPTY then
+        Exit(false);
+
+  Result := true;
+end;
+
 procedure TBoard.Print;
 var
   i, j: integer;
@@ -105,7 +118,7 @@ begin
     for j := 0 to High(_data[i]) do
       s += _data[i, j];
 
-    WriteLn(s);
+    //WriteLn(s);
   end;
 end;
 
