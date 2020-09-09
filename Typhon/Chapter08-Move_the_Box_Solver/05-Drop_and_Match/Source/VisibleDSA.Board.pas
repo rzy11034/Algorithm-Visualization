@@ -20,9 +20,11 @@ type
   private
     _n: integer;
     _m: integer;
-
     _data: TArr2D_chr;
+
     function __getItems(x, y: integer): UChar;
+    procedure __drop;
+    function __match: boolean;
 
   public
     constructor Create(b: TBoard); overload;
@@ -98,8 +100,8 @@ function TBoard.IsWin: boolean;
 var
   i, j: integer;
 begin
-  for i := 0 to High(_data) do
-    for j := 0 to High(_data) do
+  for i := 0 to N - 1 do
+    for j := 0 to M - 1 do
       if _data[i, j] <> EMPTY then
         Exit(false);
 
@@ -123,7 +125,9 @@ end;
 
 procedure TBoard.Run;
 begin
-
+  repeat
+    __drop;
+  until __match = false;
 end;
 
 procedure TBoard.Swap(x1, y1, x2, y2: integer);
@@ -135,12 +139,81 @@ begin
   _data[x2, y2] := temp;
 end;
 
+procedure TBoard.__drop;
+var
+  j, cur, i: integer;
+begin
+  for j := 0 to M - 1 do
+  begin
+    cur := N - 1;
+
+    for i := N - 1 downto 0 do
+    begin
+      if _data[i, j] <> EMPTY then
+      begin
+        Swap(i, j, cur, j);
+        cur -= 1;
+      end;
+    end;
+  end;
+end;
+
 function TBoard.__getItems(x, y: integer): UChar;
 begin
   if not InArea(x, y) then
     raise Exception.Create('x, y are out of index in getData!');
 
   Result := _data[x, y];
+end;
+
+function TBoard.__match: boolean;
+const
+  D: array[0..1, 0..1] of integer = ((0, 1), (1, 0));
+var
+  x, y, i, newX1, newY1, newX2, newY2: integer;
+  tag: array of array of boolean;
+  res: boolean;
+begin
+  res := false;
+  SetLength(tag, N, M);
+
+  for x := 0 to N - 1 do
+  begin
+    for y := 0 to M - 1 do
+    begin
+      if _data[x, y] <> EMPTY then
+      begin
+        for i := 0 to High(D) do
+        begin
+          newX1 := x + D[i, 0];
+          newY1 := y + D[i, 1];
+          newX2 := newX1 + D[i, 0];
+          newY2 := newY1 + D[i, 1];
+
+          if InArea(newX1, newY1) and InArea(newX2, newY2) and
+            (_data[x, y] = _data[newX1, newY1]) and (_data[x, y] = _data[newX2, newY2]) then
+          begin
+            tag[x, y] := true;
+            tag[newX1, newY1] := true;
+            tag[newX2, newY2] := true;
+
+            res := true;
+          end;
+        end;
+      end;
+    end;
+  end;
+
+  for x := 0 to N - 1 do
+  begin
+    for y := 0 to M - 1 do
+    begin
+      if tag[x, y] then
+        _data[x, y] := EMPTY;
+    end;
+  end;
+
+  Result := res;
 end;
 
 end.

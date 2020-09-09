@@ -10,14 +10,14 @@
         <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
         <CursorPos X="16" Y="10"/>
-        <UsageCount Value="25"/>
+        <UsageCount Value="33"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\DeepStar.Utils.UString.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="25"/>
+        <UsageCount Value="33"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
@@ -25,8 +25,8 @@
         <IsPartOfProject Value="True"/>
         <HasResources Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="40"/>
-        <UsageCount Value="25"/>
+        <TopLine Value="55"/>
+        <UsageCount Value="33"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -36,34 +36,33 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="25"/>
+        <UsageCount Value="33"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="113"/>
-        <CursorPos X="5" Y="126"/>
-        <UsageCount Value="25"/>
+        <CursorPos X="64" Y="19"/>
+        <UsageCount Value="33"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.Board.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="3"/>
-        <TopLine Value="109"/>
-        <CursorPos X="7" Y="121"/>
-        <UsageCount Value="25"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="119"/>
+        <CursorPos X="6" Y="144"/>
+        <UsageCount Value="33"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.GameData.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="4"/>
-        <TopLine Value="74"/>
-        <CursorPos X="48" Y="102"/>
-        <UsageCount Value="25"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="105"/>
+        <CursorPos X="32" Y="121"/>
+        <UsageCount Value="33"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -73,7 +72,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="38"/>
         <CursorPos X="12" Y="45"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\win32\windows.pp"/>
@@ -81,7 +80,7 @@
         <UnitName Value="Windows"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="19"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\packages\winunits-jedi\src\jwawindows.pas"/>
@@ -90,7 +89,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="85"/>
         <CursorPos X="26" Y="101"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\lcl\interfaces\win32\win32extra.pas"/>
@@ -98,7 +97,7 @@
         <UnitName Value="Win32Extra"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="85"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\win\wininc\func.inc"/>
@@ -106,7 +105,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="978"/>
         <CursorPos X="10" Y="995"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\packages\winunits-jedi\src\jwawincon.pas"/>
@@ -114,7 +113,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="467"/>
         <CursorPos X="10" Y="435"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\packages\winunits-jedi\src\jwawintype.pas"/>
@@ -122,10 +121,15 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="363"/>
         <CursorPos X="3" Y="380"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\VisibleDSA.Utils.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="16">
+    <JumpHistory HistoryIndex="28">
       <Position>
         <Filename Value="Backtrack_to_Solve_Move_the_Box.ppr"/>
         <Caret Line="19" Column="47"/>
@@ -179,10 +183,6 @@
         <Caret Line="126" Column="5" TopLine="55"/>
       </Position>
       <Position>
-        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
-        <Caret Line="9" Column="22" TopLine="31"/>
-      </Position>
-      <Position>
         <Filename Value="Backtrack_to_Solve_Move_the_Box.ppr"/>
         <Caret Line="7" Column="5"/>
       </Position>
@@ -194,6 +194,58 @@
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <Caret Line="131" TopLine="100"/>
       </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.GameData.pas"/>
+        <Caret Line="102" Column="31" TopLine="85"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="26" Column="38" TopLine="14"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="17" Column="15"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.GameData.pas"/>
+        <Caret Line="116" Column="21" TopLine="98"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.GameData.pas"/>
+        <Caret Line="115" Column="21" TopLine="99"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.GameData.pas"/>
+        <Caret Line="109" Column="10" TopLine="101"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.GameData.pas"/>
+        <Caret Line="111" Column="12" TopLine="99"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.GameData.pas"/>
+        <Caret Line="117" Column="17" TopLine="94"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.GameData.pas"/>
+        <Caret Line="118" Column="17" TopLine="94"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="35" Column="19" TopLine="13"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.GameData.pas"/>
+        <Caret Line="131" Column="21" TopLine="111"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="144" Column="6" TopLine="119"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.GameData.pas"/>
+        <Caret Line="116" Column="15" TopLine="100"/>
+      </Position>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
@@ -202,13 +254,11 @@
       </Modes>
     </RunParams>
     <HistoryLists>
-      <List Name="WorkingDirectory" Type="File" Count="1"/>
       <List Name="LaunchingApplication" Type="File" Count="3">
         <Item1 Value="C:\Windows\system32\cmd.exe /C ${TargetCmdLine}"/>
         <Item2 Value="${CmdExe} ${TargetCmdLine}"/>
         <Item3 Value="&quot;$(Pas2JSBrowser)&quot; &quot;$(Pas2JSProjectURL)&quot;"/>
       </List>
-      <List Name="CommandLineParameters" Count="1"/>
     </HistoryLists>
   </ProjectSession>
 </CONFIG>

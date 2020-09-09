@@ -20,12 +20,16 @@ type
   private
     _n: integer;
     _m: integer;
-
     _data: TArr2D_chr;
+    _preBorad: TBoard;
+    _swapString: UString;
+
     function __getItems(x, y: integer): UChar;
+    procedure __drop;
+    function __match: boolean;
 
   public
-    constructor Create(b: TBoard); overload;
+    constructor Create(board: TBoard; preBorad: TBoard = nil; swapString: UString = ''); overload;
     constructor Create(strs: TArray_str); overload;
     destructor Destroy; override;
     function InArea(x, y: integer): boolean;
@@ -33,6 +37,7 @@ type
     procedure Print;
     procedure Run;
     procedure Swap(x1, y1, x2, y2: integer);
+    procedure PrintSwapInfo;
 
     property N: integer read _n;
     property M: integer read _m;
@@ -66,22 +71,21 @@ begin
   end;
 end;
 
-constructor TBoard.Create(b: TBoard);
+constructor TBoard.Create(board: TBoard; preBorad: TBoard; swapString: UString);
 var
   i, j: integer;
 begin
-  _n := b.N;
-  _m := b.M;
+  _n := board.N;
+  _m := board.M;
 
   SetLength(_data, _n, _m);
 
-  for i := 0 to High(b._data) do
-  begin
-    for j := 0 to High(b._data[i]) do
-    begin
-      _data[i, j] := b._data[i, j];
-    end;
-  end;
+  for i := 0 to High(board._data) do
+    for j := 0 to High(board._data[i]) do
+      _data[i, j] := board._data[i, j];
+
+  _preBorad := preBorad;
+  _swapString := swapString;
 end;
 
 destructor TBoard.Destroy;
@@ -98,11 +102,12 @@ function TBoard.IsWin: boolean;
 var
   i, j: integer;
 begin
-  for i := 0 to High(_data) do
-    for j := 0 to High(_data) do
+  for i := 0 to N - 1 do
+    for j := 0 to M - 1 do
       if _data[i, j] <> EMPTY then
         Exit(false);
 
+  PrintSwapInfo;
   Result := true;
 end;
 
@@ -121,9 +126,19 @@ begin
   end;
 end;
 
+procedure TBoard.PrintSwapInfo;
+begin
+  if _preBorad <> nil then
+    _preBorad.PrintSwapInfo;
+
+  WriteLn(_swapString);
+end;
+
 procedure TBoard.Run;
 begin
-
+  repeat
+    __drop;
+  until __match = false;
 end;
 
 procedure TBoard.Swap(x1, y1, x2, y2: integer);
@@ -135,12 +150,81 @@ begin
   _data[x2, y2] := temp;
 end;
 
+procedure TBoard.__drop;
+var
+  j, cur, i: integer;
+begin
+  for j := 0 to M - 1 do
+  begin
+    cur := N - 1;
+
+    for i := N - 1 downto 0 do
+    begin
+      if _data[i, j] <> EMPTY then
+      begin
+        Swap(i, j, cur, j);
+        cur -= 1;
+      end;
+    end;
+  end;
+end;
+
 function TBoard.__getItems(x, y: integer): UChar;
 begin
   if not InArea(x, y) then
     raise Exception.Create('x, y are out of index in getData!');
 
   Result := _data[x, y];
+end;
+
+function TBoard.__match: boolean;
+const
+  D: array[0..1, 0..1] of integer = ((0, 1), (1, 0));
+var
+  x, y, i, newX1, newY1, newX2, newY2: integer;
+  tag: array of array of boolean;
+  res: boolean;
+begin
+  res := false;
+  SetLength(tag, N, M);
+
+  for x := 0 to N - 1 do
+  begin
+    for y := 0 to M - 1 do
+    begin
+      if _data[x, y] <> EMPTY then
+      begin
+        for i := 0 to High(D) do
+        begin
+          newX1 := x + D[i, 0];
+          newY1 := y + D[i, 1];
+          newX2 := newX1 + D[i, 0];
+          newY2 := newY1 + D[i, 1];
+
+          if InArea(newX1, newY1) and InArea(newX2, newY2) and
+            (_data[x, y] = _data[newX1, newY1]) and (_data[x, y] = _data[newX2, newY2]) then
+          begin
+            tag[x, y] := true;
+            tag[newX1, newY1] := true;
+            tag[newX2, newY2] := true;
+
+            res := true;
+          end;
+        end;
+      end;
+    end;
+  end;
+
+  for x := 0 to N - 1 do
+  begin
+    for y := 0 to M - 1 do
+    begin
+      if tag[x, y] then
+        _data[x, y] := EMPTY;
+    end;
+  end;
+
+  Result := res;
 end;
 
 end.

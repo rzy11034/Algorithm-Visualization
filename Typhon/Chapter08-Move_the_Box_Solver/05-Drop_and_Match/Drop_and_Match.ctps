@@ -9,14 +9,192 @@
         <Filename Value="Drop_and_Match.ppr"/>
         <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
+        <CursorPos X="5" Y="21"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\DeepStar.Utils.UString.pas"/>
+        <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="24"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
+        <FRMtype Value="200"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="AlgoForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="55"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="24"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="76"/>
+        <CursorPos X="31" Y="30"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="202"/>
+        <CursorPos X="17" Y="216"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\VisibleDSA.GameData.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="102"/>
+        <CursorPos X="30" Y="14"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="-1"/>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="182" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="184" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="182" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="184" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="182" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="180" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="182" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="184" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="182" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="184" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="182" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="184" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="186" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="188" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="189" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="190" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="191" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="193" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="194" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="186" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="188" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="189" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="190" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="191" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="193" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="194" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="186" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="182" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="184" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="182" TopLine="175"/>
+      </Position>
+    </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
       <Modes ActiveMode=""/>

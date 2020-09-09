@@ -7,8 +7,7 @@ uses
   cthreads,
   {$ENDIF}
   Interfaces, // this includes the CT adLCL widgetset
-  Forms, unit1
-  { you can add units after this };
+  Forms, VisibleDSA.AlgoForm;
 
 {$R *.res}
 
@@ -16,6 +15,7 @@ begin
   RequireDerivedFormResource:=True;
   Application.Scaled:=True;
   Application.Initialize;
+  Application.CreateForm(TAlgoForm, AlgoForm);
   Application.Run;
 end.
 

@@ -12,9 +12,6 @@ uses
 
 type
   TGameData = class(TObject)
-  private const
-    D: array[0..2, 0..1] of integer = ((-1, 0), (0, 1), (0, -1));
-
   private
     _m: integer;
     _n: integer;
@@ -45,7 +42,7 @@ var
   i: integer;
   strs: array of UString;
 begin
-  fileName := '..\..\..\..\..\Resources\boston_09.txt';
+  fileName := '..\..\..\..\..\Resources\boston_16.txt';
 
   strList1 := TStringList.Create;
   try
@@ -93,10 +90,14 @@ begin
 end;
 
 function TGameData.Solve: boolean;
+const
+  D: array[0..2, 0..1] of integer = ((-1, 0), (0, 1), (0, -1));
+
   function __solve__(borad: TBoard; turn: integer): boolean;
   var
     x, y, newX, newY, i: integer;
     nextBorad: TBoard;
+    swapString: UString;
   begin
     if borad = nil then
       raise Exception.Create('board can not be null in solve function!');
@@ -117,9 +118,14 @@ function TGameData.Solve: boolean;
           begin
             newX := x + D[i, 0];
             newY := y + D[i, 1];
-            nextBorad := TBoard.Create(borad);
-            nextBorad.Swap(x, y, newX, newY);
-            nextBorad.Run;
+
+            if InArea(newX, newY) then
+            begin
+              swapString := UString(Format('swap (%d, %d) and (%d, %d)', [x, y, newX, newY]));
+              nextBorad := TBoard.Create(borad, borad, swapString);
+              nextBorad.Swap(x, y, newX, newY);
+              nextBorad.Run;
+            end;
 
             if __solve__(nextBorad, turn - 1) then
               Exit(true);

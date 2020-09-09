@@ -12,9 +12,6 @@ uses
 
 type
   TGameData = class(TObject)
-  private const
-    D: array[0..2, 0..1] of integer = ((-1, 0), (0, 1), (0, -1));
-
   private
     _m: integer;
     _n: integer;
@@ -93,6 +90,9 @@ begin
 end;
 
 function TGameData.Solve: boolean;
+const
+  D: array[0..2, 0..1] of integer = ((-1, 0), (0, 1), (0, -1));
+
   function __solve__(borad: TBoard; turn: integer): boolean;
   var
     x, y, newX, newY, i: integer;
