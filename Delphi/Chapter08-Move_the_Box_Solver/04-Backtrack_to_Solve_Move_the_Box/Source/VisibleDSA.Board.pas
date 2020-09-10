@@ -1,17 +1,15 @@
 ﻿unit VisibleDSA.Board;
 
-{$mode objfpc}{$H+}
-
 interface
 
 uses
-  Classes,
-  SysUtils,
+  System.Classes,
+  System.SysUtils,
   DeepStar.Utils.UString;
 
 type
-  TArray_str = array of UString;
-  TArr2D_chr = array of array of UChar;
+  TArray_str = TArray<UString>;
+  TArr2D_chr = TArray<TArray<UChar>>;
 
   TBoard = class(TObject)
   public const
@@ -25,12 +23,12 @@ type
     function __getItems(x, y: integer): UChar;
 
   public
-    constructor Create(b: TBoard); overload;
     constructor Create(strs: TArray_str); overload;
+    constructor Create(b: TBoard); overload;
     destructor Destroy; override;
     function InArea(x, y: integer): boolean;
-    function IsWin: boolean;
     procedure Print;
+    function IsWin: boolean;
     procedure Run;
     procedure Swap(x1, y1, x2, y2: integer);
 
@@ -40,6 +38,9 @@ type
   end;
 
 implementation
+
+uses
+  VisibleDSA.AlgoForm;
 
 { TBoard }
 
@@ -115,7 +116,7 @@ begin
   begin
     s := '';
     for j := 0 to High(_data[i]) do
-      s += _data[i, j];
+      s := s + _data[i, j];
 
     WriteLn(s);
   end;

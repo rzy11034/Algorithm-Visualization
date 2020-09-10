@@ -1,17 +1,15 @@
 ﻿unit VisibleDSA.Board;
 
-{$mode objfpc}{$H+}
-
 interface
 
 uses
-  Classes,
-  SysUtils,
+  System.Classes,
+  System.SysUtils,
   DeepStar.Utils.UString;
 
 type
-  TArray_str = array of UString;
-  TArr2D_chr = array of array of UChar;
+  TArray_str = TArray<UString>;
+  TArr2D_chr = TArray<TArray<UChar>>;
 
   TBoard = class(TObject)
   private
@@ -79,9 +77,9 @@ begin
   begin
     s := '';
     for j := 0 to High(_data[i]) do
-      s += _data[i, j];
+      s :=s + _data[i, j];
 
-    WriteLn(s);
+    writeLn(s);
   end;
 end;
 

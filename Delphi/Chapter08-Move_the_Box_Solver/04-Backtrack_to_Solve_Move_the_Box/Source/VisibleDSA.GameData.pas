@@ -1,17 +1,18 @@
 ﻿unit VisibleDSA.GameData;
 
-{$mode objfpc}{$H+}
-
 interface
 
 uses
-  Classes,
-  SysUtils,
-  DeepStar.Utils.UString,
-  VisibleDSA.Board;
+  System.Classes,
+  System.SysUtils,
+  VisibleDSA.Board,
+  DeepStar.Utils.UString;
 
 type
   TGameData = class(TObject)
+  private const
+    D: array [0 .. 2, 0 .. 1] of integer = ((-1, 0), (0, 1), (0, -1));
+
   private
     _m: integer;
     _n: integer;
@@ -40,7 +41,7 @@ var
   fileName: UString;
   strList1, strList2: TStringList;
   i: integer;
-  strs: array of UString;
+  strs: TArray<UString>;
 begin
   fileName := '..\..\..\..\..\Resources\boston_09.txt';
 
@@ -76,6 +77,8 @@ end;
 
 destructor TGameData.Destroy;
 begin
+  FreeAndNil(_starterBoard);
+  FreeAndNil(_showBoard);
   inherited Destroy;
 end;
 
@@ -90,14 +93,10 @@ begin
 end;
 
 function TGameData.Solve: boolean;
-const
-  D: array[0..2, 0..1] of integer = ((-1, 0), (0, 1), (0, -1));
-
   function __solve__(borad: TBoard; turn: integer): boolean;
   var
     x, y, newX, newY, i: integer;
     nextBorad: TBoard;
-    swapString: UString;
   begin
     if borad = nil then
       raise Exception.Create('board can not be null in solve function!');
@@ -121,8 +120,7 @@ const
 
             if InArea(newX, newY) then
             begin
-              swapString := UString(Format('swap (%d, %d) and (%d, %d)', [x, y, newX, newY]));
-              nextBorad := TBoard.Create(borad, borad, swapString);
+              nextBorad := TBoard.Create(borad);
               nextBorad.Swap(x, y, newX, newY);
               nextBorad.Run;
 

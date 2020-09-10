@@ -1,14 +1,12 @@
 ﻿unit VisibleDSA.GameData;
 
-{$mode objfpc}{$H+}
-
 interface
 
 uses
-  Classes,
-  SysUtils,
-  DeepStar.Utils.UString,
-  VisibleDSA.Board;
+  System.Classes,
+  System.SysUtils,
+  VisibleDSA.Board,
+  DeepStar.Utils.UString;
 
 type
   TGameData = class(TObject)
@@ -24,7 +22,6 @@ type
     destructor Destroy; override;
     function InArea(x, y: integer): boolean;
     procedure Print;
-    function Solve: boolean;
 
     property N: integer read _n;
     property M: integer read _m;
@@ -40,7 +37,7 @@ var
   fileName: UString;
   strList1, strList2: TStringList;
   i: integer;
-  strs: array of UString;
+  strs: TArray<UString>;
 begin
   fileName := '..\..\..\..\..\Resources\boston_09.txt';
 
@@ -76,6 +73,8 @@ end;
 
 destructor TGameData.Destroy;
 begin
+  FreeAndNil(_starterBoard);
+  FreeAndNil(_showBoard);
   inherited Destroy;
 end;
 
@@ -87,61 +86,6 @@ end;
 procedure TGameData.Print;
 begin
   _starterBoard.Print;
-end;
-
-function TGameData.Solve: boolean;
-const
-  D: array[0..2, 0..1] of integer = ((-1, 0), (0, 1), (0, -1));
-
-  function __solve__(borad: TBoard; turn: integer): boolean;
-  var
-    x, y, newX, newY, i: integer;
-    nextBorad: TBoard;
-    swapString: UString;
-  begin
-    if borad = nil then
-      raise Exception.Create('board can not be null in solve function!');
-
-    if turn = 0 then
-      Exit(borad.IsWin);
-
-    if borad.IsWin then
-      Exit(true);
-
-    for x := 0 to N - 1 do
-    begin
-      for y := 0 to M - 1 do
-      begin
-        if borad.Items[x, y] <> TBoard.EMPTY then
-        begin
-          for i := 0 to High(D) do
-          begin
-            newX := x + D[i, 0];
-            newY := y + D[i, 1];
-
-            if InArea(newX, newY) then
-            begin
-              swapString := UString(Format('swap (%d, %d) and (%d, %d)', [x, y, newX, newY]));
-              nextBorad := TBoard.Create(borad, borad, swapString);
-              nextBorad.Swap(x, y, newX, newY);
-              nextBorad.Run;
-
-              if __solve__(nextBorad, turn - 1) then
-                Exit(true);
-            end;
-          end;
-        end;
-      end;
-    end;
-
-    Result := false;
-  end;
-
-begin
-  if _maxTurn < 0 then
-    Exit(false);
-
-  Result := __solve__(TBoard.Create(_starterBoard), _maxTurn);
 end;
 
 end.

@@ -9,8 +9,8 @@
         <Filename Value="Move_the_Box_Solver_Rendering.ppr"/>
         <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
-        <CursorPos X="47" Y="19"/>
-        <UsageCount Value="29"/>
+        <CursorPos X="38"/>
+        <UsageCount Value="30"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -20,7 +20,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="29"/>
+        <UsageCount Value="30"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
@@ -29,7 +29,7 @@
         <HasResources Value="True"/>
         <EditorIndex Value="1"/>
         <TopLine Value="43"/>
-        <UsageCount Value="29"/>
+        <UsageCount Value="30"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -38,35 +38,35 @@
         <EditorIndex Value="5"/>
         <TopLine Value="14"/>
         <CursorPos X="48" Y="27"/>
-        <UsageCount Value="29"/>
+        <UsageCount Value="30"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="107"/>
-        <CursorPos X="16" Y="121"/>
-        <UsageCount Value="29"/>
+        <TopLine Value="84"/>
+        <CursorPos X="17" Y="110"/>
+        <UsageCount Value="30"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.Board.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="4"/>
-        <TopLine Value="91"/>
-        <CursorPos X="16" Y="108"/>
-        <UsageCount Value="29"/>
+        <TopLine Value="39"/>
+        <CursorPos X="25" Y="105"/>
+        <UsageCount Value="30"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.GameData.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="4"/>
-        <CursorPos X="22" Y="26"/>
-        <UsageCount Value="29"/>
+        <TopLine Value="62"/>
+        <CursorPos X="26" Y="79"/>
+        <UsageCount Value="30"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -138,12 +138,15 @@
         <CursorPos X="10" Y="97"/>
         <UsageCount Value="10"/>
       </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\lcl\lcltype.pp"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="LCLType"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="28">
-      <Position>
-        <Filename Value="Source\VisibleDSA.Board.pas"/>
-        <Caret Line="135" TopLine="124"/>
-      </Position>
+    <JumpHistory HistoryIndex="29">
       <Position>
         <Filename Value="Source\VisibleDSA.Board.pas"/>
         <Caret Line="138" TopLine="124"/>
@@ -256,10 +259,25 @@
         <Filename Value="Source\VisibleDSA.Board.pas"/>
         <Caret Line="108" Column="12" TopLine="91"/>
       </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="12" Column="3"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="90" Column="31" TopLine="84"/>
+      </Position>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
       <Modes ActiveMode=""/>
     </RunParams>
   </ProjectSession>
+  <Debugging>
+    <Watches>
+      <Item>
+        <Expression Value="_data.ShowBoard"/>
+      </Item>
+    </Watches>
+  </Debugging>
 </CONFIG>

@@ -88,30 +88,26 @@ begin
   h := _height div _data.N;
 
   showBoard := _data.ShowBoard;
-  try
-    for i := 0 to showBoard.N - 1 do
+
+  for i := 0 to showBoard.N - 1 do
+  begin
+    for j := 0 to showBoard.M - 1 do
     begin
-      for j := 0 to showBoard.M - 1 do
+      c := showBoard[i, j];
+
+      if c <> TBoard.EMPTY then
       begin
-        c := showBoard[i, j];
-
-        if c <> TBoard.EMPTY then
+        if not _colorMap.ContainsKey(c) then
         begin
-          if not _colorMap.ContainsKey(c) then
-          begin
-            sz := _colorMap.Count;
-            _colorMap.Add(c, _colorlist[sz]);
-          end;
-
-          color := _colorMap[c];
-          TAlgoVisHelper.SetFill(color);
-          TAlgoVisHelper.FillRectangle(canvas, j * w, i * h, w - 2, h - 2);
+          sz := _colorMap.Count;
+          _colorMap.Add(c, _colorlist[sz]);
         end;
 
+        color := _colorMap[c];
+        TAlgoVisHelper.SetFill(color);
+        TAlgoVisHelper.FillRectangle(canvas, j * w, i * h, w - 2, h - 2);
       end;
     end;
-  finally
-    FreeAndNil(showBoard);
   end;
 end;
 

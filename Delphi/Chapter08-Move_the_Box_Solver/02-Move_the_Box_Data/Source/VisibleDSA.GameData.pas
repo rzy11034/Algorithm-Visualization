@@ -1,14 +1,17 @@
 ﻿unit VisibleDSA.GameData;
 
-{$mode objfpc}{$H+}
-
 interface
 
 uses
-  Classes,
-  SysUtils,
-  DeepStar.Utils.UString,
-  VisibleDSA.Board;
+  System.Classes,
+  System.SysUtils,
+  VisibleDSA.Board,
+  DeepStar.Utils.UString;
+
+type
+  TArr2D_int = TArray<TArray<integer>>;
+  TArr2D_chr = TArray<TArray<UChar>>;
+  TArr2D_bool = TArray<TArray<boolean>>;
 
 type
   TGameData = class(TObject)
@@ -17,17 +20,15 @@ type
     _n: integer;
     _maxTurn: integer;
     _starterBoard: TBoard;
-    _showBoard: TBoard;
 
   public
     constructor Create;
     destructor Destroy; override;
     function InArea(x, y: integer): boolean;
-    procedure Print;
+    procedure PrintStarterBoard;
 
     property N: integer read _n;
     property M: integer read _m;
-    property ShowBoard: TBoard read _showBoard;
   end;
 
 implementation
@@ -39,7 +40,7 @@ var
   fileName: UString;
   strList1, strList2: TStringList;
   i: integer;
-  strs: array of UString;
+  strs: TArray<UString>;
 begin
   fileName := '..\..\..\..\..\Resources\boston_09.txt';
 
@@ -63,8 +64,6 @@ begin
       _n := _starterBoard.N;
       _m := _starterBoard.M;
 
-      _showBoard := TBoard.Create(_starterBoard);
-
     finally
       strList2.Free;
     end;
@@ -75,8 +74,6 @@ end;
 
 destructor TGameData.Destroy;
 begin
-  FreeAndNil(_starterBoard);
-  FreeAndNil(_showBoard);
   inherited Destroy;
 end;
 
@@ -85,7 +82,7 @@ begin
   Result := (x >= 0) and (x < N) and (y >= 0) and (y < M);
 end;
 
-procedure TGameData.Print;
+procedure TGameData.PrintStarterBoard;
 begin
   _starterBoard.Print;
 end;

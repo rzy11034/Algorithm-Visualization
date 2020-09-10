@@ -9,7 +9,7 @@
         <Filename Value="Drop_and_Match.ppr"/>
         <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
-        <CursorPos X="5" Y="21"/>
+        <CursorPos X="23"/>
         <UsageCount Value="24"/>
         <Loaded Value="True"/>
       </Unit>
@@ -48,24 +48,24 @@
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="76"/>
-        <CursorPos X="31" Y="30"/>
+        <TopLine Value="101"/>
+        <CursorPos X="11" Y="118"/>
         <UsageCount Value="24"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.Board.pas"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
-        <TopLine Value="202"/>
-        <CursorPos X="17" Y="216"/>
+        <TopLine Value="114"/>
+        <CursorPos X="26" Y="130"/>
         <UsageCount Value="24"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.GameData.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
         <TopLine Value="102"/>
         <CursorPos X="30" Y="14"/>
@@ -74,14 +74,6 @@
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="Source\VisibleDSA.Board.pas"/>
-        <Caret Line="182" TopLine="175"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.Board.pas"/>
-        <Caret Line="184" TopLine="175"/>
-      </Position>
       <Position>
         <Filename Value="Source\VisibleDSA.Board.pas"/>
         <Caret Line="182" TopLine="175"/>
@@ -193,6 +185,14 @@
       <Position>
         <Filename Value="Source\VisibleDSA.Board.pas"/>
         <Caret Line="182" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="27" Column="32" TopLine="15"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="30" Column="31" TopLine="74"/>
       </Position>
     </JumpHistory>
     <RunParams>
