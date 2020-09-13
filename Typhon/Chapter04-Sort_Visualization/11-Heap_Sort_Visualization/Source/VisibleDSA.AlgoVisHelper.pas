@@ -99,6 +99,7 @@ end;
 
 class procedure TAlgoVisHelper.Pause(interval: integer);
 begin
+  //Application.ProcessMessages;
   Sleep(interval);
 end;
 

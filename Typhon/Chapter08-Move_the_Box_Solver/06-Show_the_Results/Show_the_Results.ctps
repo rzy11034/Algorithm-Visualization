@@ -9,18 +9,15 @@
         <Filename Value="Show_the_Results.ppr"/>
         <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
-        <CursorPos X="29" Y="10"/>
-        <UsageCount Value="22"/>
+        <CursorPos X="25"/>
+        <UsageCount Value="48"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\DeepStar.Utils.UString.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <WindowIndex Value="-1"/>
-        <TopLine Value="-1"/>
-        <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="22"/>
+        <UsageCount Value="48"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
@@ -30,8 +27,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="1"/>
-        <CursorPos X="45" Y="5"/>
-        <UsageCount Value="22"/>
+        <TopLine Value="27"/>
+        <CursorPos X="30" Y="44"/>
+        <UsageCount Value="48"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -39,102 +37,300 @@
         <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <EditorIndex Value="4"/>
-        <TopLine Value="100"/>
-        <CursorPos X="30" Y="120"/>
-        <UsageCount Value="22"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="120"/>
+        <CursorPos X="17" Y="145"/>
+        <UsageCount Value="48"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="-1"/>
-        <TopLine Value="-1"/>
-        <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="22"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="91"/>
+        <CursorPos X="23" Y="121"/>
+        <UsageCount Value="48"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.Board.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="3"/>
-        <TopLine Value="19"/>
-        <CursorPos X="105" Y="154"/>
-        <UsageCount Value="22"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="25"/>
+        <CursorPos X="20" Y="103"/>
+        <UsageCount Value="48"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.GameData.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="2"/>
-        <TopLine Value="111"/>
-        <CursorPos X="27" Y="123"/>
-        <UsageCount Value="22"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="70"/>
+        <CursorPos X="11" Y="87"/>
+        <UsageCount Value="48"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\pl_BGRAbitmap\source\bgracanvas2d.pas"/>
         <FRMtype Value="0"/>
         <UnitName Value="BGRACanvas2D"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="282"/>
+        <CursorPos X="15" Y="299"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\fpcsrc\packages\rtl-generics\src\generics.collections.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="Generics.Collections"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="19"/>
+        <CursorPos X="19" Y="29"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\lcl\postscriptcanvas.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="PostScriptCanvas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2893"/>
+        <CursorPos X="5" Y="2910"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\components\BaseBuildintf\ideexterntoolintf.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="IDEExternToolIntf"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1657"/>
+        <CursorPos X="3" Y="1674"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\components\pl_BGRAbitmap\source\bgrabitmap.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="BGRABitmap"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="75"/>
+        <CursorPos X="37" Y="93"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\components\pl_BGRAbitmap\source\bgrawinbitmap.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="BGRAWinBitmap"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="11"/>
+        <CursorPos X="3" Y="36"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\components\pl_BGRAbitmap\source\bgralclbitmap.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="BGRALCLBitmap"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="3" Y="13"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\components\pl_BGRAbitmap\source\bgradefaultbitmap.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="BGRADefaultBitmap"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="31"/>
+        <CursorPos X="3" Y="48"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\components\pl_BGRAbitmap\source\unibitmap.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1526"/>
+        <CursorPos X="3" Y="1529"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\lcl\graphics.pp"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="Graphics"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="68"/>
+        <CursorPos X="3" Y="85"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\sysutilh.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="271"/>
+        <CursorPos X="4" Y="288"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\inc\textrec.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="32"/>
+        <CursorPos X="3" Y="37"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\components\pl_BGRAbitmap\source\bgracanvas.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="BGRACanvas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="83"/>
+        <CursorPos X="5" Y="100"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\components\pl_BGRAbitmap\source\bgrabitmaptypes.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="BGRABitmapTypes"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="21" Y="26"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\classes\classesh.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="75"/>
+        <CursorPos X="25" Y="77"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\components\pl_BGRAbitmap\source\bgragraphics.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="BGRAGraphics"/>
         <EditorIndex Value="5"/>
-        <TopLine Value="195"/>
-        <CursorPos X="3" Y="89"/>
+        <CursorPos X="12" Y="19"/>
         <UsageCount Value="10"/>
         <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="12">
+    <JumpHistory HistoryIndex="29">
       <Position>
-        <Filename Value="Source\VisibleDSA.Board.pas"/>
-        <Caret Line="31" Column="36" TopLine="14"/>
+        <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
+        <Caret Line="128" TopLine="111"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
+        <Caret Line="129" TopLine="111"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
+        <Caret Line="122" TopLine="111"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
+        <Caret Line="123" TopLine="111"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
+        <Caret Line="121" Column="14" TopLine="111"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
+        <Caret Line="123" TopLine="111"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
+        <Caret Line="130" Column="39" TopLine="108"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
+        <Caret Line="127" Column="15" TopLine="110"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
+        <Caret Line="128" Column="24" TopLine="109"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
+        <Caret Line="131" Column="38" TopLine="114"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
+        <Caret Line="37" Column="3" TopLine="20"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
+        <Caret Line="131" Column="38" TopLine="114"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
+        <Caret Line="22" Column="34" TopLine="20"/>
       </Position>
       <Position>
         <Filename Value="Source\VisibleDSA.Board.pas"/>
-        <Caret Line="72" Column="58" TopLine="66"/>
+        <Caret Line="40" Column="22" TopLine="10"/>
       </Position>
       <Position>
         <Filename Value="Source\VisibleDSA.Board.pas"/>
-        <Caret Line="31" Column="19" TopLine="14"/>
+        <Caret Line="32" Column="99" TopLine="10"/>
       </Position>
       <Position>
-        <Filename Value="Source\VisibleDSA.Board.pas"/>
-        <Caret Line="76" Column="3" TopLine="72"/>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="116" TopLine="86"/>
       </Position>
       <Position>
-        <Filename Value="Source\VisibleDSA.Board.pas"/>
-        <Caret Line="31" Column="73" TopLine="14"/>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="112" Column="58" TopLine="124"/>
       </Position>
       <Position>
-        <Filename Value="Source\VisibleDSA.Board.pas"/>
-        <Caret Line="32" Column="60" TopLine="12"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.Board.pas"/>
-        <Caret Line="30" Column="31"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.Board.pas"/>
-        <Caret Line="221" Column="18" TopLine="206"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.Board.pas"/>
-        <Caret Line="40" Column="24" TopLine="16"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.Board.pas"/>
-        <Caret Line="133" Column="24" TopLine="110"/>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="121" Column="23" TopLine="106"/>
       </Position>
       <Position>
         <Filename Value="Source\VisibleDSA.GameData.pas"/>
-        <Caret Line="45" Column="50" TopLine="43"/>
+        <Caret Line="27" Column="14" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.GameData.pas"/>
+        <Caret Line="145" Column="17" TopLine="118"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="121" Column="23" TopLine="112"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.GameData.pas"/>
+        <Caret Line="26" Column="18" TopLine="9"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.GameData.pas"/>
+        <Caret Line="87" Column="11" TopLine="70"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="37" Column="17" TopLine="20"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.Board.pas"/>
+        <Caret Line="120" Column="3" TopLine="105"/>
       </Position>
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
-        <Caret Line="68" Column="52" TopLine="45"/>
+        <Caret Line="139" Column="21" TopLine="120"/>
       </Position>
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
-        <Caret Line="69" Column="56" TopLine="52"/>
+        <Caret Line="141" Column="28" TopLine="120"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\codetyphon\typhon\components\pl_BGRAbitmap\source\bgracanvas2d.pas"/>
+        <Caret Line="327" Column="14" TopLine="312"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
+        <Caret Line="142" Column="4" TopLine="120"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\codetyphon\typhon\components\pl_BGRAbitmap\source\bgracanvas2d.pas"/>
+        <Caret Line="299" Column="15" TopLine="282"/>
       </Position>
     </JumpHistory>
     <RunParams>

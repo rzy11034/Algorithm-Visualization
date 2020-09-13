@@ -20,9 +20,8 @@
         <ComponentName Value="AlgoForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="41"/>
+        <TopLine Value="56"/>
         <CursorPos X="7" Y="65"/>
         <UsageCount Value="35"/>
         <Loaded Value="True"/>
@@ -31,7 +30,7 @@
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="5"/>
         <TopLine Value="97"/>
         <CursorPos X="20" Y="102"/>
         <UsageCount Value="35"/>
@@ -40,16 +39,17 @@
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="38"/>
-        <CursorPos Y="91"/>
+        <TopLine Value="72"/>
+        <CursorPos X="27" Y="86"/>
         <UsageCount Value="35"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.SelectionSortData.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="4"/>
         <TopLine Value="38"/>
         <CursorPos X="5" Y="66"/>
         <UsageCount Value="35"/>
@@ -129,12 +129,18 @@
         <CursorPos X="34" Y="110"/>
         <UsageCount Value="12"/>
       </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\components\pl_BGRAcontrols\source\bgravirtualscreen.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="BGRAVirtualScreen"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="68"/>
+        <CursorPos X="23" Y="83"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
-        <Caret Line="20" Column="35" TopLine="10"/>
-      </Position>
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
         <Caret Line="21" Column="19" TopLine="10"/>
@@ -250,6 +256,10 @@
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
         <Caret Line="63" Column="21" TopLine="49"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="78" Column="39" TopLine="72"/>
       </Position>
     </JumpHistory>
     <RunParams>

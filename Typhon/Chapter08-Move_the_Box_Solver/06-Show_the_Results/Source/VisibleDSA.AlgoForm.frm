@@ -1,7 +1,7 @@
 ﻿object AlgoForm: TAlgoForm
   Left = 581
   Height = 228
-  Top = 149
+  Top = 152
   Width = 321
   Caption = 'AlgoForm'
   ClientHeight = 228

@@ -1,17 +1,16 @@
 ﻿unit VisibleDSA.AlgoVisualizer;
 
-{$mode objfpc}{$H+}
-
 interface
 
 uses
-  Classes,
-  SysUtils,
-  Graphics,
-  Forms,
-  LCLType,
-  Generics.Collections,
-  BGRACanvas2D,
+  System.Classes,
+  System.SysUtils,
+  System.Types,
+  System.Math,
+  System.Generics.Collections,
+  Winapi.Windows,
+  FMX.Graphics,
+  FMX.Forms,
   VisibleDSA.AlgoVisHelper,
   VisibleDSA.GameData,
   DeepStar.Utils.UString;
@@ -19,8 +18,8 @@ uses
 type
   TAlgoVisualizer = class(TObject)
   private type
-    THashMap_UString_TColor = specialize THashMap<UChar, TColor>;
-    TList_TColor = specialize TList<TColor>;
+    THashMap_UString_TColor = TDictionary<UChar, TColor>;
+    TList_TColor = TList<TColor>;
 
   private
     _width: integer;
@@ -29,14 +28,15 @@ type
     _colorlist: TList_TColor;
     _colorMap: THashMap_UString_TColor;
 
-    procedure __initColorList;
     procedure __setData;
+    procedure __desktopCenter(form: TForm);
+    procedure __initColorList;
 
   public
     constructor Create(form: TForm);
     destructor Destroy; override;
 
-    procedure Paint(canvas: TBGRACanvas2D);
+    procedure Paint(canvas: TCanvas);
     procedure Run;
   end;
 
@@ -53,10 +53,10 @@ var
   blockSide: integer;
 begin
   blockSide := 80;
-  __initColorList;
-  _colorMap := THashMap_UString_TColor.Create;
 
   _data := TGameData.Create;
+  __initColorList;
+  _colorMap := THashMap_UString_TColor.Create;
 
   _width := blockSide * _data.M;
   _height := blockSide * _data.N;
@@ -64,7 +64,9 @@ begin
   form.ClientWidth := _width;
   form.ClientHeight := _height;
 
-  form.Caption := 'Move the Box Solver --- ' + Format('W: %d, H: %d', [_width, _height]);
+  form.Caption := 'Move the Box Solver --- ' + Format('W: %d, H: %d', [_Width, _Height]);
+  __desktopCenter(form);
+  AllocConsole;
 end;
 
 destructor TAlgoVisualizer.Destroy;
@@ -72,10 +74,12 @@ begin
   FreeAndNil(_data);
   FreeAndNil(_colorlist);
   FreeAndNil(_colorMap);
+
+  FreeConsole;
   inherited Destroy;
 end;
 
-procedure TAlgoVisualizer.Paint(canvas: TBGRACanvas2D);
+procedure TAlgoVisualizer.Paint(canvas: TCanvas);
 var
   w, h: integer;
   i, j: integer;
@@ -89,6 +93,7 @@ begin
   h := _height div _data.N;
 
   showBoard := _data.ShowBoard;
+
   for i := 0 to showBoard.N - 1 do
   begin
     for j := 0 to showBoard.M - 1 do
@@ -121,7 +126,23 @@ begin
   if _data.Solve then
     WriteLn('The game has a solution!')
   else
-    WriteLn('The game does NOT have a solution.');
+    WriteLN('The game does NOT have a solution.');
+end;
+
+procedure TAlgoVisualizer.__setData;
+begin
+  _data.Print;
+end;
+
+procedure TAlgoVisualizer.__desktopCenter(form: TForm);
+var
+  top, left: Double;
+begin
+  top := (Screen.Height div 2) - (form.ClientHeight div 2);
+  left := (Screen.Width div 2) - (form.ClientWidth div 2);
+
+  form.top := Trunc(top);
+  form.left := Trunc(left);
 end;
 
 procedure TAlgoVisualizer.__initColorList;
@@ -138,11 +159,6 @@ begin
   _colorList.Add(CL_DEEPORANGE);
   _colorList.Add(CL_BROWN);
   _colorList.Add(CL_BLUEGREY);
-end;
-
-procedure TAlgoVisualizer.__setData;
-begin
-  _data.Print;
 end;
 
 end.

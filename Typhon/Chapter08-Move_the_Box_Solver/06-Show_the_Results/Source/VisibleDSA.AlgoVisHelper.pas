@@ -11,6 +11,7 @@ uses
   Forms,
   DeepStar.Utils.UString,
   BGRABitmap,
+  BGRABitmapTypes,
   BGRACanvas2D;
 
 const
@@ -115,9 +116,33 @@ begin
 end;
 
 class procedure TAlgoVisHelper.DrawText(canvas: TBGRACanvas2D; str: UString; x, y: integer);
+var
+  bmp: TBGRABitmap;
+  rect: TRect;
 begin
-  canvas.fillStyle(_fillColor);
-  canvas.fillText(str, x, y);
+  bmp := TBGRABitmap.Create(canvas.Width, canvas.Height, canvas.getShadowColor);
+  rect := TRect.Create(x, y, x + 80, x + 80);
+
+  //with bmp do
+  //begin
+  //  CanvasBGRA.Font.Quality := TBGRAFontQuality.fqSystemClearType;
+  //  CanvasBGRA.Font.Name := 'default';
+  //  CanvasBGRA.Font.Height := 20;
+  //  CanvasBGRA.Font.Color := CL_WHITE;
+  //  CanvasBGRA.Font.
+  //  CanvasBGRA.TextRect(rect, 0, 0, string(str));
+  //end;
+  //canvas.drawImage(bmp, x, y);
+  //bmp.Free;
+
+  canvas.font := 'default';
+  canvas.textBaseline := 'Top';
+  //canvas.fillStyle(CL_BLACK);
+  canvas.textAlignLCL := TAlignment.taCenter;
+  canvas.lineStyle(TPenStyle.psSolid);
+  canvas.strokeStyle(CL_BLACK);
+  canvas.lineWidth := 10;
+  canvas.strokeText(string(str), x, y);
 end;
 
 class procedure TAlgoVisHelper.Pause(interval: integer);

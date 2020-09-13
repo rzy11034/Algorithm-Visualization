@@ -170,8 +170,8 @@ begin
     end;
   end;
 
-  TAlgoVisHelper.Pause(0);
-  AlgoForm.BGRAVirtualScreen.RedrawBitmap;
+  TAlgoVisHelper.Pause(5);
+  AlgoForm.BGRAVirtualScreen.DiscardBitmap;
 end;
 
 end.

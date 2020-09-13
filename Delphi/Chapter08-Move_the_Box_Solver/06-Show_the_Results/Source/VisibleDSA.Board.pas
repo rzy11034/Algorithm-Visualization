@@ -1,17 +1,15 @@
 ﻿unit VisibleDSA.Board;
 
-{$mode objfpc}{$H+}
-
 interface
 
 uses
-  Classes,
-  SysUtils,
+  System.Classes,
+  System.SysUtils,
   DeepStar.Utils.UString;
 
 type
-  TArray_str = array of UString;
-  TArr2D_chr = array of array of UChar;
+  TArray_str = TArray<UString>;
+  TArr2D_chr = TArray<TArray<UChar>>;
 
   TBoard = class(TObject)
   public const
@@ -33,8 +31,8 @@ type
     constructor Create(strs: TArray_str); overload;
     destructor Destroy; override;
     function InArea(x, y: integer): boolean;
-    function IsWin: boolean;
     procedure Print;
+    function IsWin: boolean;
     procedure Run;
     procedure Swap(x1, y1, x2, y2: integer);
     procedure PrintSwapInfo;
@@ -42,10 +40,12 @@ type
     property N: integer read _n;
     property M: integer read _m;
     property Items[x, y: integer]: UChar read __getItems; default;
-    property SwapString: UString read _swapString;
   end;
 
 implementation
+
+uses
+  VisibleDSA.AlgoForm;
 
 { TBoard }
 
@@ -72,7 +72,7 @@ begin
   end;
 end;
 
-constructor TBoard.Create(board: TBoard; preBorad: TBoard; swapString: UString);
+constructor TBoard.Create(board: TBoard; preBorad: TBoard = nil; swapString: UString = '');
 var
   i, j: integer;
 begin
@@ -103,8 +103,8 @@ function TBoard.IsWin: boolean;
 var
   i, j: integer;
 begin
-  for i := 0 to N - 1 do
-    for j := 0 to M - 1 do
+  for i := 0 to High(_data) do
+    for j := 0 to High(_data[i]) do
       if _data[i, j] <> EMPTY then
         Exit(false);
 
@@ -121,7 +121,7 @@ begin
   begin
     s := '';
     for j := 0 to High(_data[i]) do
-      s += _data[i, j];
+      s := s + _data[i, j];
 
     WriteLn(s);
   end;
@@ -164,7 +164,7 @@ begin
       if _data[i, j] <> EMPTY then
       begin
         Swap(i, j, cur, j);
-        cur -= 1;
+        cur := cur - 1;
       end;
     end;
   end;
@@ -180,7 +180,7 @@ end;
 
 function TBoard.__match: boolean;
 const
-  D: array[0..1, 0..1] of integer = ((0, 1), (1, 0));
+  D: array [0 .. 1, 0 .. 1] of integer = ((0, 1), (1, 0));
 var
   x, y, i, newX1, newY1, newX2, newY2: integer;
   tag: array of array of boolean;

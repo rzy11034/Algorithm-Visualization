@@ -120,8 +120,8 @@ procedure TAlgoVisualizer.__setData(heapIndex: integer);
 begin
   _data.HeapIndex := heapIndex;
 
-  TAlgoVisHelper.Pause(0);
-  AlgoForm.BGRAVirtualScreen.RedrawBitmap;
+  TAlgoVisHelper.Pause(1);
+  AlgoForm.BGRAVirtualScreen.DiscardBitmap;
 end;
 
 end.

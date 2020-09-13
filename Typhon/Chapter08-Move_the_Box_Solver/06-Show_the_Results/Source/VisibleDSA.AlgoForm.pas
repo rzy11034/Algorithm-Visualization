@@ -33,6 +33,8 @@ var
 
 implementation
 
+uses VisibleDSA.AlgoVisHelper;
+
 {$R *.frm}
 
 { TAlgoForm }
