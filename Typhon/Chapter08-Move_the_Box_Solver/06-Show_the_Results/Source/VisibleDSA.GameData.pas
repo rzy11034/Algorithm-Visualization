@@ -42,7 +42,7 @@ var
   i: integer;
   strs: array of UString;
 begin
-  fileName := '..\..\..\..\..\Resources\boston_09.txt';
+  fileName := '..\..\..\..\..\Resources\boston_16.txt';
 
   strList1 := TStringList.Create;
   try

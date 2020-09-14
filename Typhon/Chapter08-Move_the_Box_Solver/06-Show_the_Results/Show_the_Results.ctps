@@ -36,18 +36,18 @@
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="120"/>
-        <CursorPos X="17" Y="145"/>
+        <TopLine Value="108"/>
+        <CursorPos X="23" Y="124"/>
         <UsageCount Value="48"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="91"/>
+        <TopLine Value="121"/>
         <CursorPos X="23" Y="121"/>
         <UsageCount Value="48"/>
         <Loaded Value="True"/>
@@ -55,18 +55,17 @@
       <Unit>
         <Filename Value="Source\VisibleDSA.Board.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="8"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="25"/>
         <CursorPos X="20" Y="103"/>
         <UsageCount Value="48"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.GameData.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="7"/>
-        <TopLine Value="70"/>
-        <CursorPos X="11" Y="87"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="112"/>
+        <CursorPos X="44" Y="43"/>
         <UsageCount Value="48"/>
         <Loaded Value="True"/>
       </Unit>
@@ -74,11 +73,10 @@
         <Filename Value="C:\codetyphon\typhon\components\pl_BGRAbitmap\source\bgracanvas2d.pas"/>
         <FRMtype Value="0"/>
         <UnitName Value="BGRACanvas2D"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="282"/>
         <CursorPos X="15" Y="299"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\packages\rtl-generics\src\generics.collections.pas"/>
@@ -195,23 +193,21 @@
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\classes\classesh.inc"/>
         <FRMtype Value="0"/>
-        <EditorIndex Value="6"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="75"/>
         <CursorPos X="25" Y="77"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\pl_BGRAbitmap\source\bgragraphics.pas"/>
         <FRMtype Value="0"/>
         <UnitName Value="BGRAGraphics"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="-1"/>
         <CursorPos X="12" Y="19"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="29">
+    <JumpHistory HistoryIndex="19">
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
         <Caret Line="128" TopLine="111"/>
@@ -265,52 +261,16 @@
         <Caret Line="22" Column="34" TopLine="20"/>
       </Position>
       <Position>
-        <Filename Value="Source\VisibleDSA.Board.pas"/>
-        <Caret Line="40" Column="22" TopLine="10"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.Board.pas"/>
-        <Caret Line="32" Column="99" TopLine="10"/>
-      </Position>
-      <Position>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <Caret Line="116" TopLine="86"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
-        <Caret Line="112" Column="58" TopLine="124"/>
       </Position>
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <Caret Line="121" Column="23" TopLine="106"/>
       </Position>
       <Position>
-        <Filename Value="Source\VisibleDSA.GameData.pas"/>
-        <Caret Line="27" Column="14" TopLine="10"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.GameData.pas"/>
-        <Caret Line="145" Column="17" TopLine="118"/>
-      </Position>
-      <Position>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <Caret Line="121" Column="23" TopLine="112"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.GameData.pas"/>
-        <Caret Line="26" Column="18" TopLine="9"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.GameData.pas"/>
-        <Caret Line="87" Column="11" TopLine="70"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.Board.pas"/>
-        <Caret Line="37" Column="17" TopLine="20"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.Board.pas"/>
-        <Caret Line="120" Column="3" TopLine="105"/>
       </Position>
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
@@ -321,16 +281,12 @@
         <Caret Line="141" Column="28" TopLine="120"/>
       </Position>
       <Position>
-        <Filename Value="C:\codetyphon\typhon\components\pl_BGRAbitmap\source\bgracanvas2d.pas"/>
-        <Caret Line="327" Column="14" TopLine="312"/>
-      </Position>
-      <Position>
         <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
         <Caret Line="142" Column="4" TopLine="120"/>
       </Position>
       <Position>
-        <Filename Value="C:\codetyphon\typhon\components\pl_BGRAbitmap\source\bgracanvas2d.pas"/>
-        <Caret Line="299" Column="15" TopLine="282"/>
+        <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
+        <Caret Line="126" Column="3" TopLine="107"/>
       </Position>
     </JumpHistory>
     <RunParams>

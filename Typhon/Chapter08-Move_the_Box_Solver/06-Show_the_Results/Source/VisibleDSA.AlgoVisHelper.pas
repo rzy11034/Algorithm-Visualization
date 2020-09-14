@@ -113,36 +113,20 @@ var
 begin
   bmp := TBGRABitmap.Create(stm);
   canvas.drawImage(bmp, x1, y1, x2, y2);
+  bmp.Free;
 end;
 
 class procedure TAlgoVisHelper.DrawText(canvas: TBGRACanvas2D; str: UString; x, y: integer);
 var
   bmp: TBGRABitmap;
-  rect: TRect;
 begin
-  bmp := TBGRABitmap.Create(canvas.Width, canvas.Height, canvas.getShadowColor);
-  rect := TRect.Create(x, y, x + 80, x + 80);
+  bmp := TBGRABitmap.Create(canvas.Width, canvas.Height);
+  bmp.FontHeight := 14;
+  bmp.TextRect(Rect(x, y, x + 80, y + 80), string(str),
+    TAlignment.taCenter, TTextLayout.tlCenter, ColorToBGRA(_fillColor));
 
-  //with bmp do
-  //begin
-  //  CanvasBGRA.Font.Quality := TBGRAFontQuality.fqSystemClearType;
-  //  CanvasBGRA.Font.Name := 'default';
-  //  CanvasBGRA.Font.Height := 20;
-  //  CanvasBGRA.Font.Color := CL_WHITE;
-  //  CanvasBGRA.Font.
-  //  CanvasBGRA.TextRect(rect, 0, 0, string(str));
-  //end;
-  //canvas.drawImage(bmp, x, y);
-  //bmp.Free;
-
-  canvas.font := 'default';
-  canvas.textBaseline := 'Top';
-  //canvas.fillStyle(CL_BLACK);
-  canvas.textAlignLCL := TAlignment.taCenter;
-  canvas.lineStyle(TPenStyle.psSolid);
-  canvas.strokeStyle(CL_BLACK);
-  canvas.lineWidth := 10;
-  canvas.strokeText(string(str), x, y);
+  canvas.drawImage(bmp, 0, 0);
+  bmp.Free;
 end;
 
 class procedure TAlgoVisHelper.Pause(interval: integer);
