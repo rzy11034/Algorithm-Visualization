@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Debug"/>
+    <Units>
+      <Unit>
+        <Filename Value="Fractal_Basics.ppr"/>
+        <FRMtype Value="0"/>
+        <IsPartOfProject Value="True"/>
+        <CursorPos Y="23"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\DeepStar.Utils.UString.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="21"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
+        <FRMtype Value="200"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="34"/>
+        <CursorPos X="3" Y="14"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="21"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="41"/>
+        <CursorPos X="29" Y="55"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\VisibleDSA.FractalData.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="5"/>
+        <CursorPos X="104" Y="20"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\math.pp"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="Math"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="130"/>
+        <CursorPos X="8" Y="142"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\i386\mathu.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="170"/>
+        <CursorPos X="11" Y="187"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="16">
+      <Position>
+        <Filename Value="Fractal_Basics.ppr"/>
+        <Caret Line="23"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.FractalData.pas"/>
+        <Caret Line="23" Column="19" TopLine="4"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="34" Column="6" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\math.pp"/>
+        <Caret Line="1087" Column="14" TopLine="1058"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\math.pp"/>
+        <Caret Line="1075" Column="10" TopLine="1058"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\math.pp"/>
+        <Caret Line="1081" Column="10" TopLine="1058"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\math.pp"/>
+        <Caret Line="963" Column="10" TopLine="946"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\math.pp"/>
+        <Caret Line="881" Column="10" TopLine="864"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\math.pp"/>
+        <Caret Line="1093" Column="10" TopLine="1076"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\i386\mathu.inc"/>
+        <Caret Line="187" Column="11" TopLine="170"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\math.pp"/>
+        <Caret Line="2568" Column="10" TopLine="2551"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\math.pp"/>
+        <Caret Line="172" Column="10" TopLine="155"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\math.pp"/>
+        <Caret Line="147" Column="8" TopLine="130"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="34" Column="6" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="17" Column="3"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="49" Column="24" TopLine="32"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="48" TopLine="42"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
