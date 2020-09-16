@@ -19,13 +19,15 @@ type
     _data: TFractalData;
 
     procedure __setData;
+    procedure __formShow(Sender: TObject);
+    procedure Name;
 
   public
     constructor Create(form: TForm);
     destructor Destroy; override;
 
     procedure Paint(canvas: TBGRACanvas2D);
-    procedure Run;
+    procedure Run(depth: integer);
   end;
 
 implementation
@@ -34,14 +36,19 @@ uses
   Math,
   VisibleDSA.AlgoForm;
 
+var
+  vis: TAlgoVisualizer;
+
 { TAlgoVisualizer }
 
 constructor TAlgoVisualizer.Create(form: TForm);
 var
   depth, w, h: integer;
 begin
+  vis := self;
+  AlgoForm := form as TAlgoForm;
   depth := 6;
-  _data := TFractalData.Create(depth);
+  _data := TFractalData.Create(0);
   w := 3 ** depth;
   h := 3 ** depth;
 
@@ -49,7 +56,7 @@ begin
   form.ClientHeight := h;
   form.Caption := 'Fractal Visualizer --- ' +
     Format('W: %d, H: %d', [form.ClientWidth, form.ClientHeight]);
-
+  form.OnShow := @__formShow;
 end;
 
 destructor TAlgoVisualizer.Destroy;
@@ -92,14 +99,40 @@ begin
   __drawFractal__(0, 0, canvas.Width, canvas.Height, 0);
 end;
 
-procedure TAlgoVisualizer.Run;
+procedure TAlgoVisualizer.Run(depth: integer);
+var
+  i: integer;
 begin
-  __setData;
+  i := 1;
+  while true do
+  begin
+    _data.Depth := i;
+    __setData;
+    i += 1;
+
+    if i >= 7 then
+      i := 1;
+  end;
+end;
+
+procedure TAlgoVisualizer.__formShow(Sender: TObject);
+  procedure __go__;
+  begin
+    vis.Run(0);
+  end;
+
+var
+  thread: TThread;
+begin
+  thread := TThread.CreateAnonymousThread(TProcedure(@__go__));
+  thread.FreeOnTerminate := true;
+  thread.Start;
 end;
 
 procedure TAlgoVisualizer.__setData;
 begin
-  AlgoForm.BGRAVirtualScreen.RedrawBitmap;
+  TAlgoVisHelper.Pause(100);
+  AlgoForm.BGRAVirtualScreen.DiscardBitmap;
 end;
 
 end.
