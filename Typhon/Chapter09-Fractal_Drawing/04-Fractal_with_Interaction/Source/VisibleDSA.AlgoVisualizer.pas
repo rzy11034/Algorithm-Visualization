@@ -17,17 +17,22 @@ type
   TAlgoVisualizer = class(TObject)
   private
     _data: TFractalData;
+    _times: integer;
+    _isForward: boolean;
 
     procedure __setData;
     procedure __formShow(Sender: TObject);
-    procedure Name;
+
 
   public
     constructor Create(form: TForm);
     destructor Destroy; override;
 
     procedure Paint(canvas: TBGRACanvas2D);
-    procedure Run(depth: integer);
+    procedure Run;
+    procedure Add;
+
+    property IsForward: boolean read _IsForward write _IsForward;
   end;
 
 implementation
@@ -46,9 +51,10 @@ var
   depth, w, h: integer;
 begin
   vis := self;
-  AlgoForm := form as TAlgoForm;
+  _isForward := true;
   depth := 6;
   _data := TFractalData.Create(0);
+  _times := 1;
   w := 3 ** depth;
   h := 3 ** depth;
 
@@ -56,7 +62,19 @@ begin
   form.ClientHeight := h;
   form.Caption := 'Fractal Visualizer --- ' +
     Format('W: %d, H: %d', [form.ClientWidth, form.ClientHeight]);
+
   form.OnShow := @__formShow;
+end;
+
+procedure TAlgoVisualizer.Add;
+var
+  f: TForm;
+begin
+  f := TForm.Create(nil);
+
+  TForm.Create(nil).Caption := 'sasdfsd';
+  TForm.Create(nil).Name := 'asdasd';
+
 end;
 
 destructor TAlgoVisualizer.Destroy;
@@ -67,7 +85,12 @@ end;
 
 procedure TAlgoVisualizer.Paint(canvas: TBGRACanvas2D);
 const
-  OFFSET: array of array of integer = ((0, 0), (2, 0), (1, 1), (0, 2), (2, 2));
+  OFFSET: array[0..4] of array[0..1] of integer = (
+    (0, 0),
+    (2, 0),
+    (1, 1),
+    (0, 2),
+    (2, 2));
 
   procedure __drawFractal__(x, y, w, h, depth: integer);
   var
@@ -99,32 +122,40 @@ begin
   __drawFractal__(0, 0, canvas.Width, canvas.Height, 0);
 end;
 
-procedure TAlgoVisualizer.Run(depth: integer);
-var
-  i: integer;
+procedure TAlgoVisualizer.Run;
 begin
-  i := 1;
   while true do
   begin
-    _data.Depth := i;
+    _data.Depth := _times;
     __setData;
-    i += 1;
 
-    if i >= 7 then
-      i := 1;
+    if _isForward then
+    begin
+      _times += 1;
+
+      if _times >= 7 then
+        _isForward := not _isForward;
+    end
+    else
+    begin
+      _times -= 1;
+
+      if _times < 1 then
+        _isForward := not _isForward;
+    end;
   end;
 end;
 
 procedure TAlgoVisualizer.__formShow(Sender: TObject);
-  procedure __go__;
+  procedure __threadExecute__;
   begin
-    vis.Run(0);
+    vis.Run;
   end;
 
 var
   thread: TThread;
 begin
-  thread := TThread.CreateAnonymousThread(TProcedure(@__go__));
+  thread := TThread.CreateAnonymousThread(TProcedure(@__threadExecute__));
   thread.FreeOnTerminate := true;
   thread.Start;
 end;

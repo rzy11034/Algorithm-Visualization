@@ -11,6 +11,7 @@ uses
   Controls,
   Graphics,
   Dialogs,
+  ExtCtrls,
   BGRABitmap,
   BGRAVirtualScreen,
   VisibleDSA.AlgoVisualizer;

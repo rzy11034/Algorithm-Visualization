@@ -1,19 +1,18 @@
 object AlgoForm: TAlgoForm
-  Left = 587
-  Height = 228
+  Left = 583
+  Height = 182
   Top = 156
-  Width = 321
+  Width = 257
   Caption = 'AlgoForm'
-  ClientHeight = 228
-  ClientWidth = 321
-  DesignTimePPI = 120
+  ClientHeight = 182
+  ClientWidth = 257
   OnCreate = FormCreate
   Position = poDesktopCenter
   object BGRAVirtualScreen: TBGRAVirtualScreen
     Left = 0
-    Height = 228
+    Height = 182
     Top = 0
-    Width = 321
+    Width = 257
     OnRedraw = BGRAVirtualScreenRedraw
     Align = alClient
     Alignment = taLeftJustify
