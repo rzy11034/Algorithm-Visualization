@@ -40,7 +40,7 @@ uses
   VisibleDSA.AlgoForm;
 
 var
-  vis: TAlgoVisualizer;
+  Static_Vis: TAlgoVisualizer;
 
 { TAlgoVisualizer }
 
@@ -48,7 +48,7 @@ constructor TAlgoVisualizer.Create(form: TForm);
 var
   depth, w, h: integer;
 begin
-  vis := self;
+  Static_Vis := self;
   _isForward := true;
   depth := 6;
   _data := TFractalData.Create(0);
@@ -71,37 +71,38 @@ begin
 end;
 
 procedure TAlgoVisualizer.Paint(canvas: TBGRACanvas2D);
-const
-  OFFSET: array[0..4] of array[0..1] of integer = (
-    (0, 0),
-    (2, 0),
-    (1, 1),
-    (0, 2),
-    (2, 2));
 
   procedure __drawFractal__(x, y, w, h, depth: integer);
   var
-    h_3, w_3, i: integer;
+    h_3, w_3, i, j: integer;
   begin
+    w_3 := w div 3;
+    h_3 := h div 3;
+
     if depth = _data.Depth then
     begin
       TAlgoVisHelper.SetFill(CL_INDIGO);
-      TAlgoVisHelper.FillRectangle(canvas, x, y, w, h);
+      TAlgoVisHelper.FillRectangle(canvas, x, y, w_3, h_3);
       Exit;
     end;
 
     if (w <= 1) or (h <= 1) then
-    begin
-      TAlgoVisHelper.SetFill(CL_INDIGO);
-      TAlgoVisHelper.FillRectangle(canvas, x, y, Max(w, 1), Max(h, 1));
       Exit;
-    end;
 
-    w_3 := w div 3;
-    h_3 := h div 3;
-    for i := 0 to High(OFFSET) do
+    for i := 0 to 2 do
     begin
-      __drawFractal__(x + OFFSET[i, 0] * w_3, y + OFFSET[i, 1] * h_3, w_3, h_3, depth + 1);
+      for j := 0 to 2 do
+      begin
+        if (i = 1) and (j = 1) then
+        begin
+          TAlgoVisHelper.SetFill(CL_INDIGO);
+          TAlgoVisHelper.FillRectangle(canvas, x + w_3, y + h_3, w_3, h_3);
+        end
+        else
+        begin
+          __drawFractal__(x + i * w_3, y + j * h_3, w_3, h_3, depth + 1);
+        end;
+      end;
     end;
   end;
 
@@ -136,7 +137,7 @@ end;
 procedure TAlgoVisualizer.__formShow(Sender: TObject);
   procedure __threadExecute__;
   begin
-    vis.Run;
+    Static_Vis.Run;
   end;
 
 var
@@ -149,7 +150,7 @@ end;
 
 procedure TAlgoVisualizer.__setData;
 begin
-  TAlgoVisHelper.Pause(100);
+  TAlgoVisHelper.Pause(500);
   AlgoForm.BGRAVirtualScreen.DiscardBitmap;
 end;
 
