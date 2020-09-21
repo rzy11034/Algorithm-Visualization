@@ -38,8 +38,8 @@ uses
 
 procedure TForm2.FormCreate(Sender: TObject);
 begin
-  ClientHeight := Form1.ClientHeight;
-  ClientWidth := Form1.ClientWidth;
+  Height := Form1.ClientHeight;
+  Width := Form1.ClientWidth;
   Position := Form1.Position;
   Caption := 'BGRACanvasBGRA';
 end;
@@ -63,6 +63,10 @@ begin
     ctx.LineTo(ctx.Width, ctx.Height div 2);
 
     ctx.Rectangle(20, 20, 60, 60, false);
+    ctx.Brush.Opacity := 0;
+    ctx.Font.Name := 'Times New Roman';
+    ctx.Font.Height := 200;
+    ctx.TextOut(10,10, 'ABCD');
 
     bmp.Draw(Canvas, 0, 0);
   finally

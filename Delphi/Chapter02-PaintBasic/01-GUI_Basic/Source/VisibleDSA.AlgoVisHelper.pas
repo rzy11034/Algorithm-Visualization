@@ -90,10 +90,10 @@ class procedure TAlgoVisHelper.DrawCoordinates(canvas: TCanvas);
 var
   x1, y1, x2, y2: Integer;
 begin
-  canvas.Stroke.Color := CL_INDIGO;
+  //canvas.Stroke.Color := CL_INDIGO;
   canvas.Stroke.Thickness := 1;
   canvas.Stroke.Kind := TBrushKind.Solid;
-  canvas.Stroke.Dash := TStrokeDash.Dot;
+  canvas.Stroke.Dash := TStrokeDash.Solid;
 
   if canvas.BeginScene then
   begin
@@ -103,14 +103,14 @@ begin
       y1 := canvas.Height div 2;
       x2 := canvas.Width;
       y2 := y1;
-      canvas.DrawLine(TPointF.Create(x1, y1), TPointF.Create(x2, y2), 1);
+      canvas.DrawLine(Point(x1, y1), Point(x2, y2), 1);
 
       // 竖轴
       x1 := canvas.Width div 2;
       y1 := 0;
       x2 := x1;
       y2 := canvas.Height;
-      canvas.DrawLine(TPointF.Create(x1, y1), TPointF.Create(x2, y2), 1);
+      canvas.DrawLine(Point(x1, y1), Point(x2, y2), 1);
     finally
       canvas.EndScene;
     end;

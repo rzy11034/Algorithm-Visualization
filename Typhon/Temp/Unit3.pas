@@ -36,8 +36,8 @@ uses
 
 procedure TForm3.FormCreate(Sender: TObject);
 begin
-  ClientHeight := Form1.ClientHeight;
-  ClientWidth := Form1.ClientWidth;
+  Height := Form1.Height;
+  Width := Form1.Width;
   Position := Form1.Position;
   Caption := 'Canvas';
 end;

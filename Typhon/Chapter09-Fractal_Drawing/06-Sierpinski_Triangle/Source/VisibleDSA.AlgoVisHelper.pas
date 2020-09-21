@@ -106,11 +106,23 @@ begin
 end;
 
 class procedure TAlgoVisHelper.FillRectangle(canvas: TBGRACanvas2D; x1, y1, x2, y2: integer);
+var
+  bmp: TBGRABitmap;
+  ctx: TBGRACanvas2D;
 begin
-  canvas.fillStyle(_fillColor);
-  canvas.beginPath;
-  canvas.rect(x1, y1, x2, y2);
-  canvas.fill;
+  //canvas.fillStyle(_fillColor);
+  //canvas.beginPath;
+  //canvas.rect(x1, y1, x2, y2);
+  //canvas.fill;
+
+  bmp := TBGRABitmap.Create(canvas.Width, canvas.Height);
+  ctx := bmp.Canvas2D;
+
+  ctx.fillStyle(_fillColor);
+  ctx.fillRect(x1, y1, x2, y2);
+
+  canvas.drawImage(bmp, 0, 0);
+  bmp.Free;
 end;
 
 class procedure TAlgoVisHelper.FillTriangle(canvas: TBGRACanvas2D; a, b, c: TPoint);
@@ -127,6 +139,7 @@ begin
   ctx.moveTo(a.X, a.Y);
   ctx.lineTo(b.X, b.Y);
   ctx.lineto(c.X, c.Y);
+  //ctx.lineTo(a.X, a.Y);
   ctx.closePath;
   ctx.fill;
 

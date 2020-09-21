@@ -9,7 +9,6 @@ object AlgoForm: TAlgoForm
   DesignTimePPI = 120
   OnCreate = FormCreate
   Position = poDesktopCenter
-  LCLVersion = '7.2'
   object BGRAVirtualScreen: TBGRAVirtualScreen
     Left = 0
     Height = 169

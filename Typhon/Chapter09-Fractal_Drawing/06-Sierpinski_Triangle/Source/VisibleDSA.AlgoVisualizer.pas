@@ -7,6 +7,7 @@ interface
 uses
   Classes,
   SysUtils,
+  Math,
   Graphics,
   Forms,
   BGRACanvas2D,
@@ -36,7 +37,6 @@ type
 implementation
 
 uses
-  Math,
   VisibleDSA.AlgoForm;
 
 var
@@ -52,7 +52,7 @@ begin
   _isForward := true;
   depth := 9;
   _data := TFractalData.Create(0);
-  _times := 1;
+  _times := 0;
   w := 2 ** depth;
   h := 2 ** depth;
 
@@ -73,6 +73,9 @@ end;
 procedure TAlgoVisualizer.Paint(canvas: TBGRACanvas2D);
 
   procedure __drawFractal__(Ax, Ay, side, depth: integer);
+  var
+    Bx, By, h, Cx, Cy: integer;
+    AB_centerX, AB_centerY, AC_centerX, AC_centerY: integer;
   begin
     if side <= 1 then
     begin
@@ -81,14 +84,36 @@ procedure TAlgoVisualizer.Paint(canvas: TBGRACanvas2D);
       Exit;
     end;
 
+    Bx := Ax + side;
+    By := Ay;
+    h := Round(sin(60 * Pi / 180) * side);
+    Cx := Ax + side div 2;
+    Cy := Ay - h;
+
     if depth = _data.Depth then
     begin
       TAlgoVisHelper.SetFill(CL_INDIGO);
+      TAlgoVisHelper.FillTriangle(canvas, Point(Ax, Ay), Point(Bx, By), Point(Cx, Cy));
+      Exit;
     end;
+
+    AB_centerX := (Ax + Bx) div 2;
+    AB_centerY := (Ay + By) div 2;
+
+    AC_centerX := (Ax + Cx) div 2;
+    AC_centerY := (Ay + Cy) div 2;
+
+    __drawFractal__(Ax, Ay, side div 2, depth + 1);
+    __drawFractal__(AC_centerx, AC_centery, side div 2, depth + 1);
+    __drawFractal__(AB_centerX, AB_centerY, side div 2, depth + 1);
   end;
 
 begin
-  //__drawFractal__(0, canvas.Height, canvas.Width, 9);
+  __drawFractal__(0, canvas.Height, canvas.Width, 0);
+
+  //TAlgoVisHelper.SetFill(CL_INDIGO);
+  //TAlgoVisHelper.FillTriangle(canvas, Point(0, canvas.Height),
+  //  Point(canvas.Width, canvas.Height), Point(canvas.Width div 2, 0));
 end;
 
 procedure TAlgoVisualizer.Run;
@@ -102,7 +127,7 @@ begin
     begin
       _times += 1;
 
-      if _times >= 7 then
+      if _times >= 6 then
         _isForward := not _isForward;
     end
     else
@@ -131,7 +156,8 @@ end;
 
 procedure TAlgoVisualizer.__setData;
 begin
-  TAlgoVisHelper.Pause(500);
+  TAlgoVisHelper.Pause(2000);
+  //AlgoForm.BGRAVirtualScreen.Invalidate;
   AlgoForm.BGRAVirtualScreen.DiscardBitmap;
 end;
 

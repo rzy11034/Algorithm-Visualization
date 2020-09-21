@@ -1,9 +1,10 @@
 object Form1: TForm1
-  Left = 313
-  Height = 361
+  Left = 315
+  Height = 451
   Top = 0
-  Width = 415
+  Width = 519
   Caption = 'Form1'
+  DesignTimePPI = 120
   OnCreate = FormCreate
   OnPaint = FormPaint
   OnShow = FormShow

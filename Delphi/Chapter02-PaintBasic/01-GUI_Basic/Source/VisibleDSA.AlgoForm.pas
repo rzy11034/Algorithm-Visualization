@@ -8,6 +8,7 @@ uses
   System.UITypes,
   System.Classes,
   System.Variants,
+  FMX.Platform.Win,
   FMX.Types,
   FMX.Controls,
   FMX.Forms,
@@ -37,7 +38,8 @@ implementation
 
 procedure TAlgoForm.FormCreate(Sender: TObject);
 begin
-  ClientWidth := 800;
+  TWinWindowHandle.SetForcedScale(1);
+  ClientWidth := 600;
   ClientHeight := 600;
   Position := TFormPosition.ScreenCenter;
   BorderStyle := TFmxFormBorderStyle.Single;

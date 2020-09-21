@@ -3,15 +3,14 @@
   <ProjectSession>
     <PathDelim Value="\"/>
     <Version Value="12"/>
-    <BuildModes Active="Debug"/>
+    <BuildModes Active="Release"/>
     <Units>
       <Unit>
         <Filename Value="Sierpinski_Triangle.ppr"/>
         <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <CursorPos X="5" Y="24"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="24"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -21,7 +20,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="24"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
@@ -32,7 +31,8 @@
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="1"/>
         <TopLine Value="32"/>
-        <UsageCount Value="21"/>
+        <CursorPos Y="54"/>
+        <UsageCount Value="24"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -40,18 +40,19 @@
         <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="131"/>
-        <CursorPos X="46" Y="121"/>
-        <UsageCount Value="21"/>
+        <TopLine Value="207"/>
+        <CursorPos X="32" Y="128"/>
+        <UsageCount Value="24"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="66"/>
-        <CursorPos X="41" Y="86"/>
-        <UsageCount Value="21"/>
+        <TopLine Value="132"/>
+        <CursorPos X="5" Y="160"/>
+        <UsageCount Value="24"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -61,15 +62,14 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="24"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\math.pp"/>
         <FRMtype Value="0"/>
         <UnitName Value="Math"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="1044"/>
-        <CursorPos X="10" Y="1049"/>
+        <TopLine Value="280"/>
         <UsageCount Value="10"/>
       </Unit>
       <Unit>
@@ -118,8 +118,8 @@
         <FRMtype Value="0"/>
         <UnitName Value="BGRAVirtualScreen"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="503"/>
-        <CursorPos Y="515"/>
+        <TopLine Value="357"/>
+        <CursorPos Y="369"/>
         <UsageCount Value="10"/>
       </Unit>
       <Unit>
@@ -130,59 +130,143 @@
         <TopLine Value="157"/>
         <UsageCount Value="10"/>
       </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\inc\mathh.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="88"/>
+        <CursorPos X="15" Y="105"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\win\sysdl.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="44"/>
+        <CursorPos X="10" Y="50"/>
+        <UsageCount Value="10"/>
+      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="12">
+    <JumpHistory HistoryIndex="29">
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
-        <Caret Line="75" Column="41" TopLine="58"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
-        <Caret Line="56" Column="11" TopLine="26"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
-        <Caret Line="73" Column="72" TopLine="48"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
-        <Caret Line="73" Column="37" TopLine="63"/>
+        <Caret Line="99" Column="15" TopLine="82"/>
       </Position>
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
-        <Caret Line="94" Column="44" TopLine="73"/>
+        <Caret Line="100" Column="15" TopLine="82"/>
       </Position>
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
-        <Caret Line="93" Column="28" TopLine="10"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
-        <Caret Line="152" Column="3" TopLine="138"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
-        <Caret Line="14" Column="28"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
-        <Caret Line="154" Column="20" TopLine="130"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
-        <Caret Line="155" Column="16" TopLine="136"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
-        <Caret Line="73" Column="74" TopLine="51"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
-        <Caret Line="76" Column="74" TopLine="55"/>
+        <Caret Line="102" Column="15" TopLine="82"/>
       </Position>
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
-        <Caret Line="94" Column="22" TopLine="72"/>
+        <Caret Line="103" Column="15" TopLine="82"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="106" Column="15" TopLine="83"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="107" Column="15" TopLine="82"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="110" Column="28" TopLine="85"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="100" Column="5" TopLine="84"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="101" Column="10" TopLine="84"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="116" Column="66" TopLine="91"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="111" Column="68" TopLine="100"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="98" Column="27" TopLine="77"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
+        <Caret Line="76" Column="21" TopLine="62"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoForm.pas"/>
+        <Caret TopLine="33"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="115" Column="71" TopLine="91"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="160" Column="38" TopLine="138"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="54" TopLine="40"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="93" Column="27" TopLine="87"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="100" TopLine="87"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="101" TopLine="87"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="103" TopLine="87"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="104" TopLine="87"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="106" TopLine="88"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="93" TopLine="88"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="95" TopLine="88"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="96" TopLine="88"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="97" TopLine="88"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="109" TopLine="91"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="107" TopLine="91"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
+        <Caret Line="93" TopLine="89"/>
       </Position>
     </JumpHistory>
     <RunParams>
@@ -190,4 +274,11 @@
       <Modes ActiveMode=""/>
     </RunParams>
   </ProjectSession>
+  <Debugging>
+    <Watches>
+      <Item>
+        <Expression Value="_data.Depth"/>
+      </Item>
+    </Watches>
+  </Debugging>
 </CONFIG>
