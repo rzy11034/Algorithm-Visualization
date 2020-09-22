@@ -9,9 +9,6 @@ uses
   SysUtils;
 
 type
-
-  { TFractalData }
-
   TFractalData = class(TObject)
   private
     _depth: integer;

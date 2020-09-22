@@ -31,22 +31,23 @@ type
 implementation
 
 uses
-  Math,
   VisibleDSA.AlgoForm;
 
 { TAlgoVisualizer }
 
 constructor TAlgoVisualizer.Create(form: TForm);
 var
-  r: integer;
+  w, h, r: integer;
 begin
-  form.ClientWidth := 800;
-  form.ClientHeight := 800;
-  form.Caption := 'Fractal Visualizer --- ' +
-    Format('W: %d, H: %d', [form.ClientWidth, form.ClientHeight]);
+  w := 800;
+  h := 800;
 
-  r := Min(form.Width, form.Height) div 2 - 2;
-  _data := TCircleData.Create(form.Width div 2, form.Height div 2, r, r div 2, 2);
+  form.ClientWidth := w;
+  form.ClientHeight := h;
+  form.Caption := 'Fractal Visualizer --- ' + Format('W: %d, H: %d', [w, h]);
+
+  r := w div 2 - 2;
+  _data := TCircleData.Create(w div 2, h div 2, r, r div 2, 2);
 end;
 
 destructor TAlgoVisualizer.Destroy;
@@ -81,7 +82,6 @@ end;
 
 procedure TAlgoVisualizer.__setData;
 begin
-
   AlgoForm.BGRAVirtualScreen.RedrawBitmap;
 end;
 

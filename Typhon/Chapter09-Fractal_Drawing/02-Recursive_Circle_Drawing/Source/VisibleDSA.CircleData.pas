@@ -9,9 +9,6 @@ uses
   SysUtils;
 
 type
-
-  { TCircleData }
-
   TCircleData = class(TObject)
   private
     _depth: integer;

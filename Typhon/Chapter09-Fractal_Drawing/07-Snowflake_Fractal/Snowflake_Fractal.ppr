@@ -1,0 +1,24 @@
+program Snowflake_Fractal;
+
+{$mode objfpc}{$H+}
+
+uses
+ {$IFDEF UNIX}
+  cthreads,
+ {$ENDIF}
+ {$IFDEF HASAMIGA}
+  athreads,
+ {$ENDIF}
+  Interfaces, // this includes the CT adLCL widgetset
+  Forms,
+  VisibleDSA.AlgoForm;
+
+{$R *.res}
+
+begin
+  RequireDerivedFormResource := true;
+  Application.Scaled := true;
+  Application.Initialize;
+  Application.CreateForm(TAlgoForm, AlgoForm);
+  Application.Run;
+end.

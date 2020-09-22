@@ -51,17 +51,17 @@ begin
   vis := self;
   _isForward := true;
   depth := 6;
-  _data := TFractalData.Create(0);
   _times := 1;
+
   w := 3 ** depth;
   h := 3 ** depth;
 
   form.ClientWidth := w;
   form.ClientHeight := h;
-  form.Caption := 'Fractal Visualizer --- ' +
-    Format('W: %d, H: %d', [form.ClientWidth, form.ClientHeight]);
-
+  form.Caption := 'Fractal Visualizer --- ' + Format('W: %d, H: %d', [w, h]);
   form.OnShow := @__formShow;
+
+  _data := TFractalData.Create(0);
 end;
 
 destructor TAlgoVisualizer.Destroy;

@@ -49,19 +49,18 @@ var
   depth, w, h: integer;
 begin
   Static_Vis := self;
-  _isForward := true;
   depth := 6;
-  _data := TFractalData.Create(0);
   _times := 1;
+
   w := 3 ** depth;
   h := 3 ** depth;
 
   form.ClientWidth := w;
   form.ClientHeight := h;
-  form.Caption := 'Fractal Visualizer --- ' +
-    Format('W: %d, H: %d', [form.ClientWidth, form.ClientHeight]);
-
+  form.Caption := 'Fractal Visualizer --- ' + Format('W: %d, H: %d', [w, h]);
   form.OnShow := @__formShow;
+
+  _data := TFractalData.Create(depth);
 end;
 
 destructor TAlgoVisualizer.Destroy;
@@ -71,7 +70,6 @@ begin
 end;
 
 procedure TAlgoVisualizer.Paint(canvas: TBGRACanvas2D);
-
   procedure __drawFractal__(x, y, w, h, depth: integer);
   var
     h_3, w_3, i, j: integer;
@@ -150,7 +148,7 @@ end;
 
 procedure TAlgoVisualizer.__setData;
 begin
-  TAlgoVisHelper.Pause(500);
+  TAlgoVisHelper.Pause(100);
   AlgoForm.BGRAVirtualScreen.DiscardBitmap;
 end;
 

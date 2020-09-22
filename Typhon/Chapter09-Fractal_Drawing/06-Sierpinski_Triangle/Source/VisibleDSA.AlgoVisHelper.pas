@@ -106,45 +106,23 @@ begin
 end;
 
 class procedure TAlgoVisHelper.FillRectangle(canvas: TBGRACanvas2D; x1, y1, x2, y2: integer);
-var
-  bmp: TBGRABitmap;
-  ctx: TBGRACanvas2D;
 begin
-  //canvas.fillStyle(_fillColor);
-  //canvas.beginPath;
-  //canvas.rect(x1, y1, x2, y2);
-  //canvas.fill;
-
-  bmp := TBGRABitmap.Create(canvas.Width, canvas.Height);
-  ctx := bmp.Canvas2D;
-
-  ctx.fillStyle(_fillColor);
-  ctx.fillRect(x1, y1, x2, y2);
-
-  canvas.drawImage(bmp, 0, 0);
-  bmp.Free;
+  canvas.fillStyle(_fillColor);
+  canvas.beginPath;
+  canvas.rect(x1, y1, x2, y2);
+  canvas.fill;
 end;
 
 class procedure TAlgoVisHelper.FillTriangle(canvas: TBGRACanvas2D; a, b, c: TPoint);
-var
-  bmp: TBGRABitmap;
-  ctx: TBGRACanvas2D;
 begin
-  bmp := TBGRABitmap.Create(canvas.Width, canvas.Height);
-  ctx := bmp.Canvas2D;
+  canvas.fillStyle(_fillColor);
 
-  ctx.fillStyle(_fillColor);
-
-  ctx.beginPath;
-  ctx.moveTo(a.X, a.Y);
-  ctx.lineTo(b.X, b.Y);
-  ctx.lineto(c.X, c.Y);
-  //ctx.lineTo(a.X, a.Y);
-  ctx.closePath;
-  ctx.fill;
-
-  canvas.drawImage(bmp, 0, 0);
-  bmp.Free;
+  canvas.beginPath;
+  canvas.moveTo(a.X, a.Y);
+  canvas.lineTo(b.X, b.Y);
+  canvas.lineto(c.X, c.Y);
+  canvas.closePath;
+  canvas.fill;
 end;
 
 class procedure TAlgoVisHelper.DrawImageFormResourceStream(canvas: TBGRACanvas2D; stm: TStream;
@@ -171,26 +149,17 @@ begin
 end;
 
 class procedure TAlgoVisHelper.DrawTriangle(canvas: TBGRACanvas2D; a, b, c: TPoint);
-var
-  bmp: TBGRABitmap;
-  ctx: TBGRACanvas2D;
 begin
-  bmp := TBGRABitmap.Create(canvas.Width, canvas.Height);
-  ctx := bmp.Canvas2D;
+  canvas.lineStyle(_strokeStyle);
+  canvas.strokeStyle(_strokeColor);
+  canvas.lineWidth := _strokeWidth;
 
-  ctx.lineStyle(_strokeStyle);
-  ctx.strokeStyle(_strokeColor);
-  ctx.lineWidth := _strokeWidth;
-
-  ctx.beginPath;
-  ctx.moveTo(a.X, a.Y);
-  ctx.lineTo(b.X, b.Y);
-  ctx.lineto(c.X, c.Y);
-  ctx.closePath;
-  ctx.stroke;
-
-  canvas.drawImage(bmp, 0, 0);
-  bmp.Free;
+  canvas.beginPath;
+  canvas.moveTo(a.X, a.Y);
+  canvas.lineTo(b.X, b.Y);
+  canvas.lineto(c.X, c.Y);
+  canvas.closePath;
+  canvas.stroke;
 end;
 
 class procedure TAlgoVisHelper.Pause(interval: integer);

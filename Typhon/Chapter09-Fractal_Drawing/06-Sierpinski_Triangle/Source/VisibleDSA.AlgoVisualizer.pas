@@ -49,19 +49,20 @@ var
   depth, w, h: integer;
 begin
   Static_Vis := self;
+
   _isForward := true;
-  depth := 9;
-  _data := TFractalData.Create(0);
-  _times := 0;
-  w := 2 ** depth;
-  h := 2 ** depth;
+  depth := 6;
+  _times := 1;
+
+  w := 3 ** depth;
+  h := 3 ** depth;
 
   form.ClientWidth := w;
   form.ClientHeight := h;
-  form.Caption := 'Fractal Visualizer --- ' +
-    Format('W: %d, H: %d', [form.ClientWidth, form.ClientHeight]);
-
+  form.Caption := 'Fractal Visualizer --- ' + Format('W: %d, H: %d', [w, h]);
   form.OnShow := @__formShow;
+
+  _data := TFractalData.Create(depth);
 end;
 
 destructor TAlgoVisualizer.Destroy;
@@ -71,12 +72,16 @@ begin
 end;
 
 procedure TAlgoVisualizer.Paint(canvas: TBGRACanvas2D);
+var
+  Count: integer;
 
   procedure __drawFractal__(Ax, Ay, side, depth: integer);
   var
     Bx, By, h, Cx, Cy: integer;
     AB_centerX, AB_centerY, AC_centerX, AC_centerY: integer;
   begin
+    Count += 1;
+
     if side <= 1 then
     begin
       TAlgoVisHelper.SetFill(CL_INDIGO);
@@ -109,8 +114,9 @@ procedure TAlgoVisualizer.Paint(canvas: TBGRACanvas2D);
   end;
 
 begin
+  Count := 0;
   __drawFractal__(0, canvas.Height, canvas.Width, 0);
-
+  AlgoForm.Caption := Format(' Count: %d', [Count]);
   //TAlgoVisHelper.SetFill(CL_INDIGO);
   //TAlgoVisHelper.FillTriangle(canvas, Point(0, canvas.Height),
   //  Point(canvas.Width, canvas.Height), Point(canvas.Width div 2, 0));
@@ -127,7 +133,7 @@ begin
     begin
       _times += 1;
 
-      if _times >= 6 then
+      if _times >= 9 then
         _isForward := not _isForward;
     end
     else
@@ -156,8 +162,7 @@ end;
 
 procedure TAlgoVisualizer.__setData;
 begin
-  TAlgoVisHelper.Pause(2000);
-  //AlgoForm.BGRAVirtualScreen.Invalidate;
+  TAlgoVisHelper.Pause(100);
   AlgoForm.BGRAVirtualScreen.DiscardBitmap;
 end;
 

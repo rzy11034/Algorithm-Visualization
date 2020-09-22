@@ -7,6 +7,7 @@ interface
 uses
   Classes,
   SysUtils,
+  Math,
   Graphics,
   Forms,
   BGRACanvas2D,
@@ -31,7 +32,6 @@ type
 implementation
 
 uses
-  Math,
   VisibleDSA.AlgoForm;
 
 { TAlgoVisualizer }
@@ -41,7 +41,6 @@ var
   depth, w, h: integer;
 begin
   depth := 6;
-  _data := TFractalData.Create(depth);
   w := 3 ** depth;
   h := 3 ** depth;
 
@@ -50,6 +49,7 @@ begin
   form.Caption := 'Fractal Visualizer --- ' +
     Format('W: %d, H: %d', [form.ClientWidth, form.ClientHeight]);
 
+  _data := TFractalData.Create(depth);
 end;
 
 destructor TAlgoVisualizer.Destroy;
