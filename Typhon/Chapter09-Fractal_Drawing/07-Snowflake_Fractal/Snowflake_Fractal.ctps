@@ -50,7 +50,7 @@
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="36"/>
+        <TopLine Value="171"/>
         <CursorPos X="19" Y="193"/>
         <UsageCount Value="27"/>
         <Loaded Value="True"/>
@@ -116,7 +116,7 @@
         <UsageCount Value="10"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="29">
+    <JumpHistory HistoryIndex="27">
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <Caret Line="137" Column="31" TopLine="134"/>
@@ -128,10 +128,6 @@
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
         <Caret Line="120" Column="34" TopLine="107"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
-        <Caret Line="22" Column="3" TopLine="40"/>
       </Position>
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
@@ -148,10 +144,6 @@
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoVisHelper.pas"/>
         <Caret Line="141" Column="77" TopLine="121"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
-        <Caret Line="89" Column="44" TopLine="90"/>
       </Position>
       <Position>
         <Filename Value="Source\VisibleDSA.AlgoVisualizer.pas"/>
