@@ -36,7 +36,7 @@ var
 
 implementation
 
-{$R *.frm}
+{$R *.dfm}
 
 { TAlgoForm }
 

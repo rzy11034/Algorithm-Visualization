@@ -33,7 +33,7 @@ implementation
 uses
   VisibleDSA.AlgoVisHelper;
 
-{$R *.frm}
+{$R *.dfm}
 
 { TAlgoForm }
 
